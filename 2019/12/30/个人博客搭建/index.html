@@ -432,14 +432,27 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%A7%91%E6%99%AE/">
-                                <span class="chip bg-color">科普</span>
+                            <a href="/tags/%E9%85%8D%E7%BD%AE/">
+                                <span class="chip bg-color">配置</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%97%AE%E9%A2%98/">
+                                <span class="chip bg-color">问题</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%A7%91%E6%99%AE/" class="post-category">
+                                科普
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -466,7 +479,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="本文简单介绍Hexo博客搭建流程"><a href="#本文简单介绍Hexo博客搭建流程" class="headerlink" title="本文简单介绍Hexo博客搭建流程"></a>本文简单介绍Hexo博客搭建流程</h2><p>主要是来记录自己的搭建时候出现的问题，以后再搭建的时候回顾，也希望可以对想搭建Hexo博客的同学有一些帮助。</p>
-<img src="/2019/12/30/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/1.jpg" class title="敬礼">
+<img src="/2019/12/30/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/1.jpg" class="" title="敬礼">
 
 <p>大体介绍一下我所了解的博客，分为静态博客和动态博客</p>
 <p><strong>目录结构</strong></p>
@@ -519,7 +532,7 @@
 <blockquote>
 <p>hexo -v</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">hexo: 3.8.0</span><br><span class="line">hexo-cli: 1.1.0</span><br><span class="line">os: Windows_NT 10.0.17134 win32 x64</span><br><span class="line">http_parser: 2.8.0</span><br><span class="line">node: 10.15.3</span><br><span class="line">v8: 6.8.275.32-node.51</span><br><span class="line">uv: 1.23.2</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">ares: 1.15.0</span><br><span class="line">modules: 64</span><br><span class="line">nghttp2: 1.34.0</span><br><span class="line">napi: 3</span><br><span class="line">openssl: 1.1.0j</span><br><span class="line">icu: 62.1</span><br><span class="line">unicode: 11.0</span><br><span class="line">cldr: 33.1</span><br><span class="line">tz: 2018e</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">hexo: 3.8.0</span><br><span class="line">hexo-cli: 1.1.0</span><br><span class="line">os: Windows_NT 10.0.17134 win32 x64</span><br><span class="line">http_parser: 2.8.0</span><br><span class="line">node: 10.15.3</span><br><span class="line">v8: 6.8.275.32-node.51</span><br><span class="line">uv: 1.23.2</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">ares: 1.15.0</span><br><span class="line">modules: 64</span><br><span class="line">nghttp2: 1.34.0</span><br><span class="line">napi: 3</span><br><span class="line">openssl: 1.1.0j</span><br><span class="line">icu: 62.1</span><br><span class="line">unicode: 11.0</span><br><span class="line">cldr: 33.1</span><br><span class="line">tz: 2018e</span><br></pre></td></tr></tbody></table></figure>
 
 
 
@@ -543,9 +556,27 @@
 <p>将会打开本地服务器，在浏览器输入  <a href="localhost:4000/">localhost:4000/</a> ,就可以看到我们的博客了。</p>
 <h3 id="出现的错误"><a href="#出现的错误" class="headerlink" title="出现的错误"></a>出现的错误</h3><p>环境变量问题，Mac下部署一般不会出现错误，但是在Windows下环境变量会出现命令不可识别的问题，需要在Path添加变量，如果实在不行，可以把Nodejs下的文件复制到你新建的文件夹下，但是要在<strong>hexo.init</strong>命令之后。</p>
 <p>下一篇文章介绍一下Hexo如何与Github相结合</p>
-<img src="/2019/12/30/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%92%B8%E9%B1%BC.gif" class title="咸鱼">
+<img src="/2019/12/30/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%92%B8%E9%B1%BC.gif" class="" title="咸鱼">
 
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -560,7 +591,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com" rel="external nofollow noreferrer">TabEsc</a>
+                    <a href="http://yoursite.com" rel="external nofollow noreferrer">TabEscHzw</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -583,7 +614,7 @@
                     All articles in this blog are used except for special statements
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     reprint polocy. If reproduced, please indicate source
-                    <a href="http://yoursite.com" target="_blank">TabEsc</a>
+                    <a href="http://yoursite.com" target="_blank">TabEscHzw</a>
                     !
                 </span>
             </div>
@@ -608,8 +639,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%A7%91%E6%99%AE/">
-                                    <span class="chip bg-color">科普</span>
+                                <a href="/tags/%E9%85%8D%E7%BD%AE/">
+                                    <span class="chip bg-color">配置</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%97%AE%E9%A2%98/">
+                                    <span class="chip bg-color">问题</span>
                                 </a>
                             
                         </div>
@@ -804,8 +839,12 @@
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            TabEsc
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%A7%91%E6%99%AE/" class="post-category">
+                                    科普
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -813,8 +852,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%A7%91%E6%99%AE/">
-                        <span class="chip bg-color">科普</span>
+                    <a href="/tags/%E9%85%8D%E7%BD%AE/">
+                        <span class="chip bg-color">配置</span>
+                    </a>
+                    
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
                     </a>
                     
                 </div>

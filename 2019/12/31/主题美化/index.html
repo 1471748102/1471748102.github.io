@@ -426,14 +426,27 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E4%B8%BB%E9%A2%98/">
-                                <span class="chip bg-color">主题</span>
+                            <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
+                                <span class="chip bg-color">主题搭建</span>
+                            </a>
+                        
+                            <a href="/tags/%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/">
+                                <span class="chip bg-color">主题推荐</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Hexo%E4%B8%BB%E9%A2%98/" class="post-category">
+                                Hexo主题
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -476,7 +489,7 @@
 <p>cd ..</p>
 </blockquote>
 <p>返回到文件夹下，找到_config.yml文件，修改theme后的主题名，然后重新部署即可。</p>
-<img src="/2019/12/31/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/theme.jpg" class>
+<img src="/2019/12/31/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/theme.jpg" class="">
 
 <p>推荐以下几个还不错的主题</p>
 <blockquote>
@@ -496,9 +509,27 @@
 <p>来自于哔哩哔哩UP主<a href="https://space.bilibili.com/157360395" target="_blank" rel="noopener">wallleap</a></p>
 <p>视频来自于<a href="https://www.bilibili.com/video/av74851669?t=202" target="_blank" rel="noopener">网址</a></p>
 <p>估计还有很多不错的主题，多多发现学习！</p>
-<img src="/2019/12/31/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/wink.jpg" class>
+<img src="/2019/12/31/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/wink.jpg" class="">
 
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -513,7 +544,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com" rel="external nofollow noreferrer">TabEsc</a>
+                    <a href="http://yoursite.com" rel="external nofollow noreferrer">TabEscHzw</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -536,7 +567,7 @@
                     All articles in this blog are used except for special statements
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     reprint polocy. If reproduced, please indicate source
-                    <a href="http://yoursite.com" target="_blank">TabEsc</a>
+                    <a href="http://yoursite.com" target="_blank">TabEscHzw</a>
                     !
                 </span>
             </div>
@@ -561,8 +592,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E4%B8%BB%E9%A2%98/">
-                                    <span class="chip bg-color">主题</span>
+                                <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
+                                    <span class="chip bg-color">主题搭建</span>
+                                </a>
+                            
+                                <a href="/tags/%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/">
+                                    <span class="chip bg-color">主题推荐</span>
                                 </a>
                             
                         </div>
@@ -736,9 +771,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="本地图片不显示">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="插入本地图片不显示">
                         
-                        <span class="card-title">本地图片不显示</span>
+                        <span class="card-title">插入本地图片不显示</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -758,8 +793,12 @@ hexo new “主题”
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            TabEsc
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Hexo%E4%B8%BB%E9%A2%98/" class="post-category">
+                                    Hexo主题
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -767,8 +806,12 @@ hexo new “主题”
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%97%AE%E9%A2%98/">
-                        <span class="chip bg-color">问题</span>
+                    <a href="/tags/%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/">
+                        <span class="chip bg-color">插件问题</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%9B%BE%E7%89%87/">
+                        <span class="chip bg-color">图片</span>
                     </a>
                     
                 </div>
@@ -807,8 +850,12 @@ hexo new “主题”
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            TabEsc
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%A7%91%E6%99%AE/" class="post-category">
+                                    科普
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -816,8 +863,12 @@ hexo new “主题”
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%A7%91%E6%99%AE/">
-                        <span class="chip bg-color">科普</span>
+                    <a href="/tags/%E9%85%8D%E7%BD%AE/">
+                        <span class="chip bg-color">配置</span>
+                    </a>
+                    
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
                     </a>
                     
                 </div>

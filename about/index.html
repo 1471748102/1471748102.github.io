@@ -356,16 +356,21 @@
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">5</a></span>
+    <span class="count"><a href="/">6</a></span>
     <span class="name">Posts</span>
 </div>
 
 
 
+<div class="statis">
+    <span class="count"><a href="/categories">3</a></span>
+    <span class="name">Categories</span>
+</div>
+
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">3</a></span>
+    <span class="count"><a href="/tags">8</a></span>
     <span class="name">Tags</span>
 </div>
 
@@ -381,16 +386,21 @@
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">5</a></span>
+    <span class="count"><a href="/">6</a></span>
     <span class="name">Posts</span>
 </div>
 
 
 
+<div class="statis">
+    <span class="count"><a href="/categories">3</a></span>
+    <span class="name">Categories</span>
+</div>
+
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">3</a></span>
+    <span class="count"><a href="/tags">8</a></span>
     <span class="name">Tags</span>
 </div>
 
@@ -534,7 +544,7 @@
                 name: 'Number of posts',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,0,5],
+                data: [0,0,0,0,0,0,0,0,0,0,0,0,6],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -576,7 +586,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [],
+                data: [{"name":"Hexo主题","value":2},{"name":"科普","value":2},{"name":"音乐","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -600,7 +610,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["科普","主题","问题"]
+                data: ["主题搭建","配置","主题推荐","问题","github","网易云音乐链接","插件问题","图片"]
             }
         ],
         yAxis: [
@@ -613,7 +623,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [2,1,1],
+                data: [2,2,1,1,1,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -781,20 +791,50 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/%E7%A7%91%E6%99%AE/">
-                <span class="chip center-align waves-effect waves-light chip-default">科普</span>
+            <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
+                <span class="chip center-align waves-effect waves-light chip-default">主题搭建</span>
             </a>
             
             
             
-            <a href="/tags/%E4%B8%BB%E9%A2%98/">
-                <span class="chip center-align waves-effect waves-light chip-default">主题</span>
+            <a href="/tags/%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/">
+                <span class="chip center-align waves-effect waves-light chip-default">主题推荐</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E9%85%8D%E7%BD%AE/">
+                <span class="chip center-align waves-effect waves-light chip-default">配置</span>
             </a>
             
             
             
             <a href="/tags/%E9%97%AE%E9%A2%98/">
                 <span class="chip center-align waves-effect waves-light chip-default">问题</span>
+            </a>
+            
+            
+            
+            <a href="/tags/github/">
+                <span class="chip center-align waves-effect waves-light chip-default">github</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%93%BE%E6%8E%A5/">
+                <span class="chip center-align waves-effect waves-light chip-default">网易云音乐链接</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/">
+                <span class="chip center-align waves-effect waves-light chip-default">插件问题</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E5%9B%BE%E7%89%87/">
+                <span class="chip center-align waves-effect waves-light chip-default">图片</span>
             </a>
             
             

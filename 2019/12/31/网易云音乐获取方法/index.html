@@ -4,8 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hzw~">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="网易云音乐获取方法, Hzw~">
+    <meta name="description" content="在构建主题的音乐播放时出现了两个问题，在获取音乐封面和歌曲链接时，不知道如何下手
+
+
+在musics.json文件里，有name ,artist,url,cover四个属性，分别是歌曲名字，作者，歌曲链接，歌曲封面，因为我不打算将他放在本地">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hello World | Hzw~</title>
+    <title>网易云音乐获取方法 | Hzw~</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">网易云音乐获取方法</h1>
                 </div>
             </div>
         </div>
@@ -423,12 +426,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
+                                <span class="chip bg-color">主题搭建</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%93%BE%E6%8E%A5/">
+                                <span class="chip bg-color">网易云音乐链接</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E9%9F%B3%E4%B9%90/" class="post-category">
+                                音乐
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -437,7 +457,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-12-30
+                    2019-12-31
                 </div>
                 
 
@@ -454,20 +474,33 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
+                <p>在构建主题的音乐播放时出现了两个问题，在获取音乐封面和歌曲链接时，不知道如何下手</p>
+<img src="/2019/12/31/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/%E8%84%86%E5%BC%B1.jpg" class="">
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
+<p>在musics.json文件里，有name ,artist,url,cover四个属性，分别是歌曲名字，作者，歌曲链接，歌曲封面，因为我不打算将他放在本地，所以直接从 <a href="https://music.163.com/#" target="_blank" rel="noopener">网易云音乐</a> 里面获取，开整！</p>
+<h2 id="封面搜索"><a href="#封面搜索" class="headerlink" title="封面搜索"></a>封面搜索</h2><h3 id="搜索想要导入的歌曲"><a href="#搜索想要导入的歌曲" class="headerlink" title="搜索想要导入的歌曲"></a>搜索想要导入的歌曲</h3><img src="/2019/12/31/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/songmoon.jpg" class="">
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><p>点击F12，然后在键盘上<strong>ctrl+f</strong>同时摁住，打开搜索功能，在搜索框输入<strong>img</strong></p>
+<img src="/2019/12/31/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/img.jpg" class="">
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure>
+<p>此时出现的搜索内容就是封面内容,以jpg结尾</p>
+<blockquote>
+<p><a href="https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg" target="_blank" rel="noopener">https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg</a></p>
+</blockquote>
+<h2 id="歌曲搜索"><a href="#歌曲搜索" class="headerlink" title="歌曲搜索"></a>歌曲搜索</h2><p>将网址栏的内容中最后的数字复制下来</p>
+<img src="/2019/12/31/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/163link.jpg" class="">
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-<script>
+<blockquote>
+<p>1645064</p>
+<p><a href="http://music.163.com/song/media/outer/url?id=temp.mp3" target="_blank" rel="noopener">http://music.163.com/song/media/outer/url?id=temp.mp3</a></p>
+<p>temp就是你上面复制的数字</p>
+</blockquote>
+<h2 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h2><p>最后将你得到的信息都导入musics.json即可</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">{</span></span><br><span class="line">	<span class="attr">"name":</span> <span class="string">"To The Moon"</span><span class="string">,</span></span><br><span class="line">	<span class="attr">"artist":</span> <span class="string">"Kan R. Gao"</span><span class="string">,</span></span><br><span class="line">	<span class="attr">"url":</span> <span class="string">"https://music.163.com/song/media/outer/url?id=1645064.mp3"</span><span class="string">,</span></span><br><span class="line">	<span class="attr">"cover":</span> <span class="string">"https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg"</span></span><br><span class="line"><span class="string">}</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><img src="/2019/12/31/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/not.jpg" class=""><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -500,7 +533,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com" rel="external nofollow noreferrer">TabEsc</a>
+                    <a href="http://yoursite.com" rel="external nofollow noreferrer">TabEscHzw</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -510,7 +543,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2019/12/30/hello-world/">http://yoursite.com/2019/12/30/hello-world/</a>
+                    <a href="http://yoursite.com/2019/12/31/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/">http://yoursite.com/2019/12/31/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -523,7 +556,7 @@
                     All articles in this blog are used except for special statements
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     reprint polocy. If reproduced, please indicate source
-                    <a href="http://yoursite.com" target="_blank">TabEsc</a>
+                    <a href="http://yoursite.com" target="_blank">TabEscHzw</a>
                     !
                 </span>
             </div>
@@ -547,7 +580,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
+                                    <span class="chip bg-color">主题搭建</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%93%BE%E6%8E%A5/">
+                                    <span class="chip bg-color">网易云音乐链接</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -711,57 +752,55 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2019/12/30/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                <a href="/2019/12/31/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="本地个人博客搭建">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="网易云音乐获取方法">
                         
-                        <span class="card-title">本地个人博客搭建</span>
+                        <span class="card-title">网易云音乐获取方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本文简单介绍Hexo博客搭建流程主要是来记录自己的搭建时候出现的问题，以后再搭建的时候回顾，也希望可以对想搭建Hexo博客的同学有一些帮助。
+                            在构建主题的音乐播放时出现了两个问题，在获取音乐封面和歌曲链接时，不知道如何下手
 
 
-大体介绍一下我所了解的博客，分为静态博客和动态博客
-目录结构
-
-安装Node.js
-安装Git
+在musics.json文件里，有name ,artist,url,cover四个属性，分别是歌曲名字，作者，歌曲链接，歌曲封面，因为我不打算将他放在本地
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%A7%91%E6%99%AE/" class="post-category">
-                                    科普
+                            <a href="/categories/%E9%9F%B3%E4%B9%90/" class="post-category">
+                                    音乐
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%85%8D%E7%BD%AE/">
-                        <span class="chip bg-color">配置</span>
+                    <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
+                        <span class="chip bg-color">主题搭建</span>
                     </a>
                     
-                    <a href="/tags/%E9%97%AE%E9%A2%98/">
-                        <span class="chip bg-color">问题</span>
+                    <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%93%BE%E6%8E%A5/">
+                        <span class="chip bg-color">网易云音乐链接</span>
                     </a>
                     
                 </div>
@@ -772,37 +811,57 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/12/30/hello-world/">
+                <a href="/2019/12/31/%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="插入本地图片不显示">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">插入本地图片不显示</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            当我开始写博客的时候
+
+hexo new “主题”
+
+当插入本地图片的时候发现图片竟然不显示，插入链接的时候就是正常的，所以我去查询了这个问题。
+插件的安装与配置首先我们需要安装一个图片路径转换的插件，这个插件名字是hexo-asset-i
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-31
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            TabEsc
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Hexo%E4%B8%BB%E9%A2%98/" class="post-category">
+                                    Hexo主题
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/">
+                        <span class="chip bg-color">插件问题</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%9B%BE%E7%89%87/">
+                        <span class="chip bg-color">图片</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
