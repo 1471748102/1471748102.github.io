@@ -4,15 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="个 人 博 客 搭 建 一, Hexo">
-    <meta name="description" content="本文简单介绍Hexo博客搭建流程主要是来记录自己的搭建时候出现的问题，以后再搭建的时候回顾，也希望可以对想搭建Hexo博客的同学有一些帮助。
+    <meta name="keywords" content="连接Github与本地, Hexo">
+    <meta name="description" content="上一篇文章讲了怎么在本地部署Hexo，但仅仅在本地看是不够的，我们需要将他部署到远端，Github就是一个很好的托管网站，但是网速有点慢，也可以选择Coding，Gitee等网站，步骤都是一样的。
+下面就开始吧
 
 
-大体介绍一下我所了解的博客，分为静态博客和动态博客
-目录结构
-
-安装Node.js
-安装Git">
+配置Github仓库创建">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>个 人 博 客 搭 建 一 | Hexo</title>
+    <title>连接Github与本地 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +307,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">个 人 博 客 搭 建 一</h1>
+                    <h1 class="description center-align post-title">连接Github与本地</h1>
                 </div>
             </div>
         </div>
@@ -448,7 +445,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-12-30
+                    2019-12-31
                 </div>
                 
 
@@ -465,85 +462,51 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="本文简单介绍Hexo博客搭建流程"><a href="#本文简单介绍Hexo博客搭建流程" class="headerlink" title="本文简单介绍Hexo博客搭建流程"></a>本文简单介绍Hexo博客搭建流程</h2><p>主要是来记录自己的搭建时候出现的问题，以后再搭建的时候回顾，也希望可以对想搭建Hexo博客的同学有一些帮助。</p>
-<img src="/2019/12/30/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/1.jpg" class title="敬礼">
+                <p>上一篇文章讲了怎么在本地部署Hexo，但仅仅在本地看是不够的，我们需要将他部署到远端，Github就是一个很好的托管网站，但是网速有点慢，也可以选择Coding，Gitee等网站，步骤都是一样的。</p>
+<p>下面就开始吧</p>
+<img src="/2019/12/31/%E9%93%BE%E6%8E%A5Github%E4%B8%8E%E6%9C%AC%E5%9C%B0/%E6%9D%B0%E5%B0%BC%E9%BE%9F.jpg" class title="憨憨敬礼">
 
-<p>大体介绍一下我所了解的博客，分为静态博客和动态博客</p>
-<p><strong>目录结构</strong></p>
-<ul>
-<li>安装Node.js</li>
-<li>安装Git</li>
-<li>安装Hexo</li>
-<li>连接Github与本地</li>
-<li>写文章，发布文章</li>
-</ul>
-<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>打开<a href="https://nodejs.org" target="_blank" rel="noopener">官方网站</a></p>
-<p>下载LTS版本，如下图所示</p>
+<h3 id="配置Github仓库"><a href="#配置Github仓库" class="headerlink" title="配置Github仓库"></a>配置Github仓库</h3><p><strong>创建仓库</strong></p>
+<img src="/2019/12/31/%E9%93%BE%E6%8E%A5Github%E4%B8%8E%E6%9C%AC%E5%9C%B0/%E4%BB%93%E5%BA%93.png" class>
 
+<p>新建仓库名必须和自己的用户名保持一致，结尾以github.io结尾，如下</p>
+<img src="/2019/12/31/%E9%93%BE%E6%8E%A5Github%E4%B8%8E%E6%9C%AC%E5%9C%B0/%E4%BB%93%E5%BA%93%E5%90%8D.jpg" class>
 
-<p>下载完成后，一路Next即可。</p>
-<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>打开<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">官方网站</a></p>
-<p>根据系统选择版本，这里建议先学习一下廖雪峰老师的Git教程 <a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">链接</a>，讲得非常好。</p>
-<img src="https://caiyantao.gitee.io/2019/04/13/Hexo-%E4%B8%80/b6b73bbf60b6f803973119b88274ef6.png" style="zoom:50%;">
+<p>因为我的已经注册过了，所以报错！</p>
+<h3 id="添加Git工具"><a href="#添加Git工具" class="headerlink" title="添加Git工具"></a>添加Git工具</h3><p>在Git Bash终端输入</p>
+<blockquote>
+<p>npm install hexo-deployer-git –save</p>
+</blockquote>
+<h3 id="添加公钥"><a href="#添加公钥" class="headerlink" title="添加公钥"></a>添加公钥</h3><p>这个过程的目的是在你的电脑和Github之间建立联系，保证安全性，，只有你可以操作。</p>
+<p>首先查看<strong>C:Users\用户名</strong>下是否有.ssh文件</p>
+<p>若是没有，输入</p>
+<blockquote>
+<p>ssh-keygen -t rsa -C “你的邮箱地址”</p>
+</blockquote>
+<p>之后 一直回车即可，大约三个就行</p>
+<p>然后会出现.ssh文件，打开这个文件，找到id_rsa.pub，复制里面的内容（用Notepad++打开）</p>
+<p>打开github网页，在右上方头像那里会展开一系列选项，选择settings，点击<strong>SSH and GPG keys</strong>，将你刚在复制的内容黏贴，名字随便取。</p>
+<h3 id="部署-config-yml"><a href="#部署-config-yml" class="headerlink" title="部署_config.yml"></a>部署_config.yml</h3><p>先打开你的仓库，将你仓库的网络地址复制下来</p>
+<p>打开_config.ynl文件，划到最下方，部署以下内容</p>
+<blockquote>
+<p>deploy:<br>  type: git<br>  repo: “黏贴你刚才复制的仓库地址”<br>  branch: master</p>
+</blockquote>
+<p>使用 hexo d部署</p>
+<p>这样就基本完成了。</p>
+<p>记住以下命令：</p>
+<blockquote>
+<p>hexo clean 清理缓存文件</p>
+<p>hexo g         生成</p>
+<p>hexo s          启动服务</p>
+<p>hexo d          部署到远端</p>
+</blockquote>
+<p>在本地看一眼，没有问题使用</p>
+<blockquote>
+<p>hexo d</p>
+</blockquote>
+<p>部署到远端。</p>
+<p>这一切都是在你建立的那个文件夹下运行的，如果想要运行看看自己的博客，只需要在网站上输入你的个人网址就行，一般是你的用户名+github.io，这是我的个人博客<a href="https://1471748102.github.io" target="_blank" rel="noopener">https://1471748102.github.io</a>,欢迎来指教！</p>
 
-<p>下载完成后就一路Next即可，之后在开始菜单栏就会看到Git Bash，我们将会在这里操作。</p>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><ol>
-<li>建立一个文件夹，用来存放自己的博客文件，在该目录下右键运行Git Bash Here</li>
-</ol>
-<p>可以先测试是否安装成功,在终端执行以下命令</p>
-<blockquote>
-<p>node -v</p>
-</blockquote>
-<blockquote>
-<p>npm -v</p>
-</blockquote>
-<p>如果正常出现<strong>版本号</strong>就代表成功安装，可以继续以下的步骤，否则就要重新安装。</p>
-<ol start="2">
-<li>使用淘宝镜像可以提高下载速度</li>
-</ol>
-<p>终端输入</p>
-<blockquote>
-<p>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p>
-</blockquote>
-<p>会出现以下界面：</p>
-<img src="https://caiyantao.gitee.io/2019/04/13/Hexo-%E4%B8%80/78f8c8ad15c264bcbe15f787bfd73bc.png" style="zoom:70%;">
-
-<ol start="3">
-<li>安装Hexo</li>
-</ol>
-<p>终端输入</p>
-<blockquote>
-<p>cnpm install -g hexo-cli</p>
-</blockquote>
-<p>验证是否成功</p>
-<blockquote>
-<p>hexo -v</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">hexo: 3.8.0</span><br><span class="line">hexo-cli: 1.1.0</span><br><span class="line">os: Windows_NT 10.0.17134 win32 x64</span><br><span class="line">http_parser: 2.8.0</span><br><span class="line">node: 10.15.3</span><br><span class="line">v8: 6.8.275.32-node.51</span><br><span class="line">uv: 1.23.2</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">ares: 1.15.0</span><br><span class="line">modules: 64</span><br><span class="line">nghttp2: 1.34.0</span><br><span class="line">napi: 3</span><br><span class="line">openssl: 1.1.0j</span><br><span class="line">icu: 62.1</span><br><span class="line">unicode: 11.0</span><br><span class="line">cldr: 33.1</span><br><span class="line">tz: 2018e</span><br></pre></td></tr></table></figure>
-
-
-
-<p>如果出现失败，一般是环境变量出现错误，编辑一下环境变量。</p>
-<ol start="4">
-<li>初始化Hexo</li>
-</ol>
-<blockquote>
-<p>hexo init</p>
-</blockquote>
-<p>需要等待一段时间，他会在文件夹里部署一些文件</p>
-<p>这样本地的网站配置就部署好了，输入</p>
-<blockquote>
-<p>hexo g </p>
-</blockquote>
-<p>将会生成静态网页</p>
-<p>然后输入</p>
-<blockquote>
-<p>hexo s</p>
-</blockquote>
-<p>将会打开本地服务器，在浏览器输入  <a href="localhost:4000/">localhost:4000/</a> ,就可以看到我们的博客了。</p>
-<h3 id="出现的错误"><a href="#出现的错误" class="headerlink" title="出现的错误"></a>出现的错误</h3><p>环境变量问题，Mac下部署一般不会出现错误，但是在Windows下环境变量会出现命令不可识别的问题，需要在Path添加变量，如果实在不行，可以把Nodejs下的文件复制到你新建的文件夹下，但是要在<strong>hexo.init</strong>命令之后。</p>
-<p>下一篇文章介绍一下Hexo如何与Github相结合</p>
-<img src="/2019/12/30/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%92%B8%E9%B1%BC.gif" class title="咸鱼">
 
 
             </div>
@@ -570,7 +533,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2019/12/30/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">http://yoursite.com/2019/12/30/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</a>
+                    <a href="http://yoursite.com/2019/12/31/%E9%93%BE%E6%8E%A5Github%E4%B8%8E%E6%9C%AC%E5%9C%B0/">http://yoursite.com/2019/12/31/%E9%93%BE%E6%8E%A5Github%E4%B8%8E%E6%9C%AC%E5%9C%B0/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -775,9 +738,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2019/12/31/%E9%93%BE%E6%8E%A5Github%E4%B8%8E%E6%9C%AC%E5%9C%B0/">
                     <div class="card-image">
@@ -799,9 +763,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-31
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -810,6 +774,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -828,19 +793,26 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/12/30/hello-world/">
+                <a href="/2019/12/30/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="个 人 博 客 搭 建 一">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">个 人 博 客 搭 建 一</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            本文简单介绍Hexo博客搭建流程主要是来记录自己的搭建时候出现的问题，以后再搭建的时候回顾，也希望可以对想搭建Hexo博客的同学有一些帮助。
+
+
+大体介绍一下我所了解的博客，分为静态博客和动态博客
+目录结构
+
+安装Node.js
+安装Git
                         
                     </div>
                     <div class="publish-info">
@@ -854,6 +826,14 @@
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%A7%91%E6%99%AE/">
+                        <span class="chip bg-color">科普</span>
+                    </a>
+                    
                 </div>
                 
             </div>
