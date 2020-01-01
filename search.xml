@@ -25,10 +25,12 @@
 <p>temp就是你上面复制的数字</p>
 </blockquote>
 <h2 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h2><p>最后将你得到的信息都导入musics.json即可</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="string">{</span></span><br><span class="line">	<span class="attr">"name":</span> <span class="string">"To The Moon"</span><span class="string">,</span></span><br><span class="line">	<span class="attr">"artist":</span> <span class="string">"Kan R. Gao"</span><span class="string">,</span></span><br><span class="line">	<span class="attr">"url":</span> <span class="string">"https://music.163.com/song/media/outer/url?id=1645064.mp3"</span><span class="string">,</span></span><br><span class="line">	<span class="attr">"cover":</span> <span class="string">"https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg"</span></span><br><span class="line"><span class="string">}</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-
+<pre class=" language-yaml"><code class="language-yaml"><span class="token punctuation">{</span>
+    <span class="token key atrule">"name"</span><span class="token punctuation">:</span> <span class="token string">"To The Moon"</span><span class="token punctuation">,</span>
+    <span class="token key atrule">"artist"</span><span class="token punctuation">:</span> <span class="token string">"Kan R. Gao"</span><span class="token punctuation">,</span>
+    <span class="token key atrule">"url"</span><span class="token punctuation">:</span> <span class="token string">"https://music.163.com/song/media/outer/url?id=1645064.mp3"</span><span class="token punctuation">,</span>
+    <span class="token key atrule">"cover"</span><span class="token punctuation">:</span> <span class="token string">"https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg"</span>
+<span class="token punctuation">}</span></code></pre>
 <h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><img src="/2019/12/31/wang-yi-yun-yin-le-huo-qu-fang-fa/not.jpg" class=""><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -69,20 +71,74 @@
 <p>npm install <a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="noopener">https://github.com/CodeFalling/hexo-asset-image</a> –save</p>
 </blockquote>
 <p>安装成功后需要修改/node_modules/hexo-asset-image/index.js文件，将内容更换</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">'use strict';</span><br><span class="line">var cheerio = require('cheerio');</span><br><span class="line"></span><br><span class="line">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span><br><span class="line">function getPosition(str, m, i) {</span><br><span class="line">  return str.split(m, i).join(m).length;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">var version = String(hexo.version).split('.');</span><br><span class="line">hexo.extend.filter.register('after_post_render', function(data){</span><br><span class="line">  var config = hexo.config;</span><br><span class="line">  if(config.post_asset_folder){</span><br><span class="line">    	var link = data.permalink;</span><br><span class="line">	if(version.length &gt; 0 &amp;&amp; Number(version[0]) == 3)</span><br><span class="line">	   var beginPos = getPosition(link, '/', 1) + 1;</span><br><span class="line">	else</span><br><span class="line">	   var beginPos = getPosition(link, '/', 3) + 1;</span><br><span class="line">	// In hexo 3.1.1, the permalink of "about" page is like ".../about/index.html".</span><br><span class="line">	var endPos = link.lastIndexOf('/') + 1;</span><br><span class="line">    link = link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    var toprocess = ['excerpt', 'more', 'content'];</span><br><span class="line">    for(var i = 0; i &lt; toprocess.length; i++){</span><br><span class="line">      var key = toprocess[i];</span><br><span class="line"> </span><br><span class="line">      var $ = cheerio.load(data[key], {</span><br><span class="line">        ignoreWhitespace: false,</span><br><span class="line">        xmlMode: false,</span><br><span class="line">        lowerCaseTags: false,</span><br><span class="line">        decodeEntities: false</span><br><span class="line">      });</span><br><span class="line"></span><br><span class="line">      $('img').each(function(){</span><br><span class="line">		if ($(this).attr('src')){</span><br><span class="line">			// For windows style path, we replace '\' to '/'.</span><br><span class="line">			var src = $(this).attr('src').replace('\\', '/');</span><br><span class="line">			if(!/http[s]*.*|\/\/.*/.test(src) &amp;&amp;</span><br><span class="line">			   !/^\s*\//.test(src)) {</span><br><span class="line">			  // For "about" page, the first part of "src" can't be removed.</span><br><span class="line">			  // In addition, to support multi-level local directory.</span><br><span class="line">			  var linkArray = link.split('/').filter(function(elem){</span><br><span class="line">				return elem != '';</span><br><span class="line">			  });</span><br><span class="line">			  var srcArray = src.split('/').filter(function(elem){</span><br><span class="line">				return elem != '' &amp;&amp; elem != '.';</span><br><span class="line">			  });</span><br><span class="line">			  if(srcArray.length &gt; 1)</span><br><span class="line">				srcArray.shift();</span><br><span class="line">			  src = srcArray.join('/');</span><br><span class="line">			  $(this).attr('src', config.root + link + src);</span><br><span class="line">			  console.info&amp;&amp;console.info("update link as:--&gt;"+config.root + link + src);</span><br><span class="line">			}</span><br><span class="line">		}else{</span><br><span class="line">			console.info&amp;&amp;console.info("no src attr, skipped...");</span><br><span class="line">			console.info&amp;&amp;console.info($(this));</span><br><span class="line">		}</span><br><span class="line">      });</span><br><span class="line">      data[key] = $.html();</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+<pre><code>---
+'use strict';
+var cheerio = require('cheerio');
 
-<h3 id="更改-config-yml文件"><a href="#更改-config-yml文件" class="headerlink" title="更改_config.yml文件"></a>更改_config.yml文件</h3><p>找到更改false为true，如下</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></tbody></table></figure>
+// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string
+function getPosition(str, m, i) {
+  return str.split(m, i).join(m).length;
+}
 
-<p>这样就会在_posts文件夹下创建一个同名的文件夹，将你需要的图片放在这个文件夹下，</p>
+var version = String(hexo.version).split('.');
+hexo.extend.filter.register('after_post_render', function(data){
+  var config = hexo.config;
+  if(config.post_asset_folder){
+        var link = data.permalink;
+    if(version.length &gt; 0 &amp;&amp; Number(version[0]) == 3)
+       var beginPos = getPosition(link, '/', 1) + 1;
+    else
+       var beginPos = getPosition(link, '/', 3) + 1;
+    // In hexo 3.1.1, the permalink of "about" page is like ".../about/index.html".
+    var endPos = link.lastIndexOf('/') + 1;
+    link = link.substring(beginPos, endPos);
+
+    var toprocess = ['excerpt', 'more', 'content'];
+    for(var i = 0; i &lt; toprocess.length; i++){
+      var key = toprocess[i];
+
+      var $ = cheerio.load(data[key], {
+        ignoreWhitespace: false,
+        xmlMode: false,
+        lowerCaseTags: false,
+        decodeEntities: false
+      });
+
+      $('img').each(function(){
+        if ($(this).attr('src')){
+            // For windows style path, we replace '\' to '/'.
+            var src = $(this).attr('src').replace('\\', '/');
+            if(!/http[s]*.*|\/\/.*/.test(src) &amp;&amp;
+               !/^\s*\//.test(src)) {
+              // For "about" page, the first part of "src" can't be removed.
+              // In addition, to support multi-level local directory.
+              var linkArray = link.split('/').filter(function(elem){
+                return elem != '';
+              });
+              var srcArray = src.split('/').filter(function(elem){
+                return elem != '' &amp;&amp; elem != '.';
+              });
+              if(srcArray.length &gt; 1)
+                srcArray.shift();
+              src = srcArray.join('/');
+              $(this).attr('src', config.root + link + src);
+              console.info&amp;&amp;console.info("update link as:--&gt;"+config.root + link + src);
+            }
+        }else{
+            console.info&amp;&amp;console.info("no src attr, skipped...");
+            console.info&amp;&amp;console.info($(this));
+        }
+      });
+      data[key] = $.html();
+    }
+  }
+});
+
+---</code></pre><h3 id="更改-config-yml文件"><a href="#更改-config-yml文件" class="headerlink" title="更改_config.yml文件"></a>更改_config.yml文件</h3><p>找到更改false为true，如下</p>
+<pre><code>post_asset_folder: true</code></pre><p>这样就会在_posts文件夹下创建一个同名的文件夹，将你需要的图片放在这个文件夹下，</p>
 <h3 id="图片引用"><a href="#图片引用" class="headerlink" title="图片引用"></a>图片引用</h3><p>然后在你的.md文件里引用图片时候，用</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{% asset_img example.jpg This is </span><br><span class="line">an example image %}</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-
-
-<p>example.jpg是你的图片名称。</p>
+<pre><code>{% asset_img example.jpg This is 
+an example image %}</code></pre><p>example.jpg是你的图片名称。</p>
 <p>This is an example image是你的图片描述。</p>
 <h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>解决后当你使用hexo d时，会出现</p>
 <blockquote>
@@ -331,11 +387,23 @@
 <blockquote>
 <p>hexo -v</p>
 </blockquote>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">hexo: 3.8.0</span><br><span class="line">hexo-cli: 1.1.0</span><br><span class="line">os: Windows_NT 10.0.17134 win32 x64</span><br><span class="line">http_parser: 2.8.0</span><br><span class="line">node: 10.15.3</span><br><span class="line">v8: 6.8.275.32-node.51</span><br><span class="line">uv: 1.23.2</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">ares: 1.15.0</span><br><span class="line">modules: 64</span><br><span class="line">nghttp2: 1.34.0</span><br><span class="line">napi: 3</span><br><span class="line">openssl: 1.1.0j</span><br><span class="line">icu: 62.1</span><br><span class="line">unicode: 11.0</span><br><span class="line">cldr: 33.1</span><br><span class="line">tz: 2018e</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<p>如果出现失败，一般是环境变量出现错误，编辑一下环境变量。</p>
+<pre><code>hexo: 3.8.0
+hexo-cli: 1.1.0
+os: Windows_NT 10.0.17134 win32 x64
+http_parser: 2.8.0
+node: 10.15.3
+v8: 6.8.275.32-node.51
+uv: 1.23.2
+zlib: 1.2.11
+ares: 1.15.0
+modules: 64
+nghttp2: 1.34.0
+napi: 3
+openssl: 1.1.0j
+icu: 62.1
+unicode: 11.0
+cldr: 33.1
+tz: 2018e</code></pre><p>如果出现失败，一般是环境变量出现错误，编辑一下环境变量。</p>
 <ol start="4">
 <li>初始化Hexo</li>
 </ol>
@@ -388,17 +456,13 @@
     <title>Hello World</title>
     <url>/2019/12/30/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
-
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
-
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure>
-
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure>
-
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 <script>
         document.querySelectorAll('.github-emoji')

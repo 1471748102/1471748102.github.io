@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="zh-CN">
 
 
 <head>
@@ -31,7 +31,7 @@ hexo new “主题”
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -130,7 +130,7 @@ hexo new “主题”
   
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
 </ul>
@@ -458,7 +458,7 @@ hexo new “主题”
             <div class="post-info">
                 
                 <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
                     2019-12-31
                 </div>
                 
@@ -467,8 +467,8 @@ hexo new “主题”
 
                 
                 <div class="info-break-policy">
-                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    614
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    612
                 </div>
                 
 
@@ -476,7 +476,7 @@ hexo new “主题”
 
                 
                     <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
                         <span id="busuanzi_value_page_pv"></span>
                     </div>
 				
@@ -496,20 +496,74 @@ hexo new “主题”
 <p>npm install <a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="noopener">https://github.com/CodeFalling/hexo-asset-image</a> –save</p>
 </blockquote>
 <p>安装成功后需要修改/node_modules/hexo-asset-image/index.js文件，将内容更换</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">'use strict';</span><br><span class="line">var cheerio = require('cheerio');</span><br><span class="line"></span><br><span class="line">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span><br><span class="line">function getPosition(str, m, i) {</span><br><span class="line">  return str.split(m, i).join(m).length;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">var version = String(hexo.version).split('.');</span><br><span class="line">hexo.extend.filter.register('after_post_render', function(data){</span><br><span class="line">  var config = hexo.config;</span><br><span class="line">  if(config.post_asset_folder){</span><br><span class="line">    	var link = data.permalink;</span><br><span class="line">	if(version.length &gt; 0 &amp;&amp; Number(version[0]) == 3)</span><br><span class="line">	   var beginPos = getPosition(link, '/', 1) + 1;</span><br><span class="line">	else</span><br><span class="line">	   var beginPos = getPosition(link, '/', 3) + 1;</span><br><span class="line">	// In hexo 3.1.1, the permalink of "about" page is like ".../about/index.html".</span><br><span class="line">	var endPos = link.lastIndexOf('/') + 1;</span><br><span class="line">    link = link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    var toprocess = ['excerpt', 'more', 'content'];</span><br><span class="line">    for(var i = 0; i &lt; toprocess.length; i++){</span><br><span class="line">      var key = toprocess[i];</span><br><span class="line"> </span><br><span class="line">      var $ = cheerio.load(data[key], {</span><br><span class="line">        ignoreWhitespace: false,</span><br><span class="line">        xmlMode: false,</span><br><span class="line">        lowerCaseTags: false,</span><br><span class="line">        decodeEntities: false</span><br><span class="line">      });</span><br><span class="line"></span><br><span class="line">      $('img').each(function(){</span><br><span class="line">		if ($(this).attr('src')){</span><br><span class="line">			// For windows style path, we replace '\' to '/'.</span><br><span class="line">			var src = $(this).attr('src').replace('\\', '/');</span><br><span class="line">			if(!/http[s]*.*|\/\/.*/.test(src) &amp;&amp;</span><br><span class="line">			   !/^\s*\//.test(src)) {</span><br><span class="line">			  // For "about" page, the first part of "src" can't be removed.</span><br><span class="line">			  // In addition, to support multi-level local directory.</span><br><span class="line">			  var linkArray = link.split('/').filter(function(elem){</span><br><span class="line">				return elem != '';</span><br><span class="line">			  });</span><br><span class="line">			  var srcArray = src.split('/').filter(function(elem){</span><br><span class="line">				return elem != '' &amp;&amp; elem != '.';</span><br><span class="line">			  });</span><br><span class="line">			  if(srcArray.length &gt; 1)</span><br><span class="line">				srcArray.shift();</span><br><span class="line">			  src = srcArray.join('/');</span><br><span class="line">			  $(this).attr('src', config.root + link + src);</span><br><span class="line">			  console.info&amp;&amp;console.info("update link as:--&gt;"+config.root + link + src);</span><br><span class="line">			}</span><br><span class="line">		}else{</span><br><span class="line">			console.info&amp;&amp;console.info("no src attr, skipped...");</span><br><span class="line">			console.info&amp;&amp;console.info($(this));</span><br><span class="line">		}</span><br><span class="line">      });</span><br><span class="line">      data[key] = $.html();</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+<pre><code>---
+'use strict';
+var cheerio = require('cheerio');
 
-<h3 id="更改-config-yml文件"><a href="#更改-config-yml文件" class="headerlink" title="更改_config.yml文件"></a>更改_config.yml文件</h3><p>找到更改false为true，如下</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></tbody></table></figure>
+// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string
+function getPosition(str, m, i) {
+  return str.split(m, i).join(m).length;
+}
 
-<p>这样就会在_posts文件夹下创建一个同名的文件夹，将你需要的图片放在这个文件夹下，</p>
+var version = String(hexo.version).split('.');
+hexo.extend.filter.register('after_post_render', function(data){
+  var config = hexo.config;
+  if(config.post_asset_folder){
+        var link = data.permalink;
+    if(version.length &gt; 0 &amp;&amp; Number(version[0]) == 3)
+       var beginPos = getPosition(link, '/', 1) + 1;
+    else
+       var beginPos = getPosition(link, '/', 3) + 1;
+    // In hexo 3.1.1, the permalink of "about" page is like ".../about/index.html".
+    var endPos = link.lastIndexOf('/') + 1;
+    link = link.substring(beginPos, endPos);
+
+    var toprocess = ['excerpt', 'more', 'content'];
+    for(var i = 0; i &lt; toprocess.length; i++){
+      var key = toprocess[i];
+
+      var $ = cheerio.load(data[key], {
+        ignoreWhitespace: false,
+        xmlMode: false,
+        lowerCaseTags: false,
+        decodeEntities: false
+      });
+
+      $('img').each(function(){
+        if ($(this).attr('src')){
+            // For windows style path, we replace '\' to '/'.
+            var src = $(this).attr('src').replace('\\', '/');
+            if(!/http[s]*.*|\/\/.*/.test(src) &amp;&amp;
+               !/^\s*\//.test(src)) {
+              // For "about" page, the first part of "src" can't be removed.
+              // In addition, to support multi-level local directory.
+              var linkArray = link.split('/').filter(function(elem){
+                return elem != '';
+              });
+              var srcArray = src.split('/').filter(function(elem){
+                return elem != '' &amp;&amp; elem != '.';
+              });
+              if(srcArray.length &gt; 1)
+                srcArray.shift();
+              src = srcArray.join('/');
+              $(this).attr('src', config.root + link + src);
+              console.info&amp;&amp;console.info("update link as:--&gt;"+config.root + link + src);
+            }
+        }else{
+            console.info&amp;&amp;console.info("no src attr, skipped...");
+            console.info&amp;&amp;console.info($(this));
+        }
+      });
+      data[key] = $.html();
+    }
+  }
+});
+
+---</code></pre><h3 id="更改-config-yml文件"><a href="#更改-config-yml文件" class="headerlink" title="更改_config.yml文件"></a>更改_config.yml文件</h3><p>找到更改false为true，如下</p>
+<pre><code>post_asset_folder: true</code></pre><p>这样就会在_posts文件夹下创建一个同名的文件夹，将你需要的图片放在这个文件夹下，</p>
 <h3 id="图片引用"><a href="#图片引用" class="headerlink" title="图片引用"></a>图片引用</h3><p>然后在你的.md文件里引用图片时候，用</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">{% asset_img example.jpg This is </span><br><span class="line">an example image %}</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-
-
-<p>example.jpg是你的图片名称。</p>
+<pre><code>{% asset_img example.jpg This is 
+an example image %}</code></pre><p>example.jpg是你的图片名称。</p>
 <p>This is an example image是你的图片描述。</p>
 <h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>解决后当你使用hexo d时，会出现</p>
 <blockquote>
@@ -558,7 +612,7 @@ hexo new “主题”
             <div class="reprint__author">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-user">
-                        Author:
+                        文章作者:
                     </i>
                 </span>
                 <span class="reprint-info">
@@ -568,7 +622,7 @@ hexo new “主题”
             <div class="reprint__type">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-link">
-                        Link:
+                        文章链接:
                     </i>
                 </span>
                 <span class="reprint-info">
@@ -578,13 +632,13 @@ hexo new “主题”
             <div class="reprint__notice">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-copyright">
-                        Reprint policy:
+                        版权声明:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    All articles in this blog are used except for special statements
+                    本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    reprint polocy. If reproduced, please indicate source
+                    许可协议。转载请注明来源
                     <a href="http://yoursite.com" target="_blank">TabEscHzw</a>
                     !
                 </span>
@@ -594,7 +648,7 @@ hexo new “主题”
 
     <script async defer>
       document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
         M.toast({html: toastHTML})
       });
 
@@ -783,7 +837,7 @@ hexo new “主题”
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
                 <a href="/2019/12/31/wang-yi-yun-yin-le-huo-qu-fang-fa/">
                     <div class="card-image">
@@ -838,7 +892,7 @@ hexo new “主题”
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2019/12/31/zhu-ti-mei-hua/">
@@ -924,7 +978,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
     </div>
@@ -1102,8 +1156,8 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
-            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
                    class="search-input">
         </div>
         <div id="searchResult"></div>
