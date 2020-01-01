@@ -4,20 +4,20 @@
     <title>网易云音乐获取方法</title>
     <url>/2019/12/31/wang-yi-yun-yin-le-huo-qu-fang-fa/</url>
     <content><![CDATA[<p>在构建主题的音乐播放时出现了两个问题，在获取音乐封面和歌曲链接时，不知道如何下手</p>
-<img src="/2019/12/31/wang-yi-yun-yin-le-huo-qu-fang-fa/%E8%84%86%E5%BC%B1.jpg" class="">
+<img src="/2019/12/31/wang-yi-yun-yin-le-huo-qu-fang-fa/%E8%84%86%E5%BC%B1.jpg" class>
 
 <p>在musics.json文件里，有name ,artist,url,cover四个属性，分别是歌曲名字，作者，歌曲链接，歌曲封面，因为我不打算将他放在本地，所以直接从 <a href="https://music.163.com/#" target="_blank" rel="noopener">网易云音乐</a> 里面获取，开整！</p>
-<h2 id="封面搜索"><a href="#封面搜索" class="headerlink" title="封面搜索"></a>封面搜索</h2><h3 id="搜索想要导入的歌曲"><a href="#搜索想要导入的歌曲" class="headerlink" title="搜索想要导入的歌曲"></a>搜索想要导入的歌曲</h3><img src="/2019/12/31/wang-yi-yun-yin-le-huo-qu-fang-fa/songmoon.jpg" class="">
+<h2 id="封面搜索"><a href="#封面搜索" class="headerlink" title="封面搜索"></a>封面搜索</h2><h3 id="搜索想要导入的歌曲"><a href="#搜索想要导入的歌曲" class="headerlink" title="搜索想要导入的歌曲"></a>搜索想要导入的歌曲</h3><img src="/2019/12/31/wang-yi-yun-yin-le-huo-qu-fang-fa/songmoon.jpg" class>
 
 <h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><p>点击F12，然后在键盘上<strong>ctrl+f</strong>同时摁住，打开搜索功能，在搜索框输入<strong>img</strong></p>
-<img src="/2019/12/31/wang-yi-yun-yin-le-huo-qu-fang-fa/img.jpg" class="">
+<img src="/2019/12/31/wang-yi-yun-yin-le-huo-qu-fang-fa/img.jpg" class>
 
 <p>此时出现的搜索内容就是封面内容,以jpg结尾</p>
 <blockquote>
 <p><a href="https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg" target="_blank" rel="noopener">https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg</a></p>
 </blockquote>
 <h2 id="歌曲搜索"><a href="#歌曲搜索" class="headerlink" title="歌曲搜索"></a>歌曲搜索</h2><p>将网址栏的内容中最后的数字复制下来</p>
-<img src="/2019/12/31/wang-yi-yun-yin-le-huo-qu-fang-fa/163link.jpg" class="">
+<img src="/2019/12/31/wang-yi-yun-yin-le-huo-qu-fang-fa/163link.jpg" class>
 
 <blockquote>
 <p>1645064</p>
@@ -31,7 +31,7 @@
     <span class="token key atrule">"url"</span><span class="token punctuation">:</span> <span class="token string">"https://music.163.com/song/media/outer/url?id=1645064.mp3"</span><span class="token punctuation">,</span>
     <span class="token key atrule">"cover"</span><span class="token punctuation">:</span> <span class="token string">"https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg"</span>
 <span class="token punctuation">}</span></code></pre>
-<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><img src="/2019/12/31/wang-yi-yun-yin-le-huo-qu-fang-fa/not.jpg" class=""><script>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><img src="/2019/12/31/wang-yi-yun-yin-le-huo-qu-fang-fa/not.jpg" class><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -156,7 +156,7 @@ an example image %}</code></pre><p>example.jpg是你的图片名称。</p>
 <li><a href="https://blog.csdn.net/xjm850552586/article/details/84101345" target="_blank" rel="noopener">https://blog.csdn.net/xjm850552586/article/details/84101345</a></li>
 <li><a href="https://blog.csdn.net/weixin_36401046/article/details/52940313" target="_blank" rel="noopener">https://blog.csdn.net/weixin_36401046/article/details/52940313</a></li>
 </ul>
-<img src="/2019/12/31/ben-di-tu-pian-bu-xian-shi/crycat.jpg" class="" title="拜拜">
+<img src="/2019/12/31/ben-di-tu-pian-bu-xian-shi/crycat.jpg" class title="拜拜">
 
 <script>
         document.querySelectorAll('.github-emoji')
@@ -205,7 +205,7 @@ an example image %}</code></pre><p>example.jpg是你的图片名称。</p>
 <p>cd ..</p>
 </blockquote>
 <p>返回到文件夹下，找到_config.yml文件，修改theme后的主题名，然后重新部署即可。</p>
-<img src="/2019/12/31/zhu-ti-mei-hua/theme.jpg" class="">
+<img src="/2019/12/31/zhu-ti-mei-hua/theme.jpg" class>
 
 <p>推荐以下几个还不错的主题</p>
 <blockquote>
@@ -225,7 +225,7 @@ an example image %}</code></pre><p>example.jpg是你的图片名称。</p>
 <p>来自于哔哩哔哩UP主<a href="https://space.bilibili.com/157360395" target="_blank" rel="noopener">wallleap</a></p>
 <p>视频来自于<a href="https://www.bilibili.com/video/av74851669?t=202" target="_blank" rel="noopener">网址</a></p>
 <p>估计还有很多不错的主题，多多发现学习！</p>
-<img src="/2019/12/31/zhu-ti-mei-hua/wink.jpg" class="">
+<img src="/2019/12/31/zhu-ti-mei-hua/wink.jpg" class>
 
 <script>
         document.querySelectorAll('.github-emoji')
@@ -259,13 +259,13 @@ an example image %}</code></pre><p>example.jpg是你的图片名称。</p>
     <url>/2019/12/31/lian-jie-github-yu-ben-di/</url>
     <content><![CDATA[<p>上一篇文章讲了怎么在本地部署Hexo，但仅仅在本地看是不够的，我们需要将他部署到远端，Github就是一个很好的托管网站，但是网速有点慢，也可以选择Coding，Gitee等网站，步骤都是一样的。</p>
 <p>下面就开始吧</p>
-<img src="/2019/12/31/lian-jie-github-yu-ben-di/%E6%9D%B0%E5%B0%BC%E9%BE%9F.jpg" class="" title="憨憨敬礼">
+<img src="/2019/12/31/lian-jie-github-yu-ben-di/%E6%9D%B0%E5%B0%BC%E9%BE%9F.jpg" class title="憨憨敬礼">
 
 <h3 id="配置Github仓库"><a href="#配置Github仓库" class="headerlink" title="配置Github仓库"></a>配置Github仓库</h3><p><strong>创建仓库</strong></p>
-<img src="/2019/12/31/lian-jie-github-yu-ben-di/%E4%BB%93%E5%BA%93.png" class="">
+<img src="/2019/12/31/lian-jie-github-yu-ben-di/%E4%BB%93%E5%BA%93.png" class>
 
 <p>新建仓库名必须和自己的用户名保持一致，结尾以github.io结尾，如下</p>
-<img src="/2019/12/31/lian-jie-github-yu-ben-di/%E4%BB%93%E5%BA%93%E5%90%8D.jpg" class="">
+<img src="/2019/12/31/lian-jie-github-yu-ben-di/%E4%BB%93%E5%BA%93%E5%90%8D.jpg" class>
 
 <p>因为我的已经注册过了，所以报错！</p>
 <h3 id="添加Git工具"><a href="#添加Git工具" class="headerlink" title="添加Git工具"></a>添加Git工具</h3><p>在Git Bash终端输入</p>
@@ -334,7 +334,7 @@ an example image %}</code></pre><p>example.jpg是你的图片名称。</p>
     <title>本地个人博客搭建</title>
     <url>/2019/12/30/ge-ren-bo-ke-da-jian/</url>
     <content><![CDATA[<h2 id="本文简单介绍Hexo博客搭建流程"><a href="#本文简单介绍Hexo博客搭建流程" class="headerlink" title="本文简单介绍Hexo博客搭建流程"></a>本文简单介绍Hexo博客搭建流程</h2><p>主要是来记录自己的搭建时候出现的问题，以后再搭建的时候回顾，也希望可以对想搭建Hexo博客的同学有一些帮助。</p>
-<img src="/2019/12/30/ge-ren-bo-ke-da-jian/1.jpg" class="" title="敬礼">
+<img src="/2019/12/30/ge-ren-bo-ke-da-jian/1.jpg" class title="敬礼">
 
 <p>大体介绍一下我所了解的博客，分为静态博客和动态博客</p>
 <p><strong>目录结构</strong></p>
@@ -423,7 +423,7 @@ tz: 2018e</code></pre><p>如果出现失败，一般是环境变量出现错误�
 <p>将会打开本地服务器，在浏览器输入  <a href="localhost:4000/">localhost:4000/</a> ,就可以看到我们的博客了。</p>
 <h3 id="出现的错误"><a href="#出现的错误" class="headerlink" title="出现的错误"></a>出现的错误</h3><p>环境变量问题，Mac下部署一般不会出现错误，但是在Windows下环境变量会出现命令不可识别的问题，需要在Path添加变量，如果实在不行，可以把Nodejs下的文件复制到你新建的文件夹下，但是要在<strong>hexo.init</strong>命令之后。</p>
 <p>下一篇文章介绍一下Hexo如何与Github相结合</p>
-<img src="/2019/12/30/ge-ren-bo-ke-da-jian/%E5%92%B8%E9%B1%BC.gif" class="" title="咸鱼">
+<img src="/2019/12/30/ge-ren-bo-ke-da-jian/%E5%92%B8%E9%B1%BC.gif" class title="咸鱼">
 
 <script>
         document.querySelectorAll('.github-emoji')
