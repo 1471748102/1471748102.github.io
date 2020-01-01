@@ -4,11 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="网易云音乐获取方法, Hzw~">
-    <meta name="description" content="在构建主题的音乐播放时出现了两个问题，在获取音乐封面和歌曲链接时，不知道如何下手
+    <meta name="keywords" content="连接Github与本地, Hzw~">
+    <meta name="description" content="上一篇文章讲了怎么在本地部署Hexo，但仅仅在本地看是不够的，我们需要将他部署到远端，Github就是一个很好的托管网站，但是网速有点慢，也可以选择Coding，Gitee等网站，步骤都是一样的。
+下面就开始吧
 
 
-在musics.json文件里，有name ,artist,url,cover四个属性，分别是歌曲名字，作者，歌曲链接，歌曲封面，因为我不打算将他放在本地">
+配置Github仓库创建">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>网易云音乐获取方法 | Hzw~</title>
+    <title>连接Github与本地 | Hzw~</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -306,12 +307,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">网易云音乐获取方法</h1>
+                    <h1 class="description center-align post-title">连接Github与本地</h1>
                 </div>
             </div>
         </div>
@@ -428,12 +429,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
-                                <span class="chip bg-color">主题搭建</span>
+                            <a href="/tags/%E9%85%8D%E7%BD%AE/">
+                                <span class="chip bg-color">配置</span>
                             </a>
                         
-                            <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%93%BE%E6%8E%A5/">
-                                <span class="chip bg-color">网易云音乐链接</span>
+                            <a href="/tags/github/">
+                                <span class="chip bg-color">github</span>
                             </a>
                         
                     </div>
@@ -444,8 +445,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%9F%B3%E4%B9%90/" class="post-category">
-                                音乐
+                            <a href="/categories/%E7%A7%91%E6%99%AE/" class="post-category">
+                                科普
                             </a>
                         
                     </div>
@@ -464,43 +465,73 @@
                 
 
                 
-
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    556
+                </div>
                 
 
                 
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
 
         </div>
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>在构建主题的音乐播放时出现了两个问题，在获取音乐封面和歌曲链接时，不知道如何下手</p>
-<img src="/2019/12/31/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/%E8%84%86%E5%BC%B1.jpg" class>
+                <p>上一篇文章讲了怎么在本地部署Hexo，但仅仅在本地看是不够的，我们需要将他部署到远端，Github就是一个很好的托管网站，但是网速有点慢，也可以选择Coding，Gitee等网站，步骤都是一样的。</p>
+<p>下面就开始吧</p>
+<img src="/2019/12/31/lian-jie-github-yu-ben-di/%E6%9D%B0%E5%B0%BC%E9%BE%9F.jpg" class="" title="憨憨敬礼">
 
-<p>在musics.json文件里，有name ,artist,url,cover四个属性，分别是歌曲名字，作者，歌曲链接，歌曲封面，因为我不打算将他放在本地，所以直接从 <a href="https://music.163.com/#" target="_blank" rel="noopener">网易云音乐</a> 里面获取，开整！</p>
-<h2 id="封面搜索"><a href="#封面搜索" class="headerlink" title="封面搜索"></a>封面搜索</h2><h3 id="搜索想要导入的歌曲"><a href="#搜索想要导入的歌曲" class="headerlink" title="搜索想要导入的歌曲"></a>搜索想要导入的歌曲</h3><img src="/2019/12/31/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/songmoon.jpg" class>
+<h3 id="配置Github仓库"><a href="#配置Github仓库" class="headerlink" title="配置Github仓库"></a>配置Github仓库</h3><p><strong>创建仓库</strong></p>
+<img src="/2019/12/31/lian-jie-github-yu-ben-di/%E4%BB%93%E5%BA%93.png" class="">
 
-<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><p>点击F12，然后在键盘上<strong>ctrl+f</strong>同时摁住，打开搜索功能，在搜索框输入<strong>img</strong></p>
-<img src="/2019/12/31/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/img.jpg" class>
+<p>新建仓库名必须和自己的用户名保持一致，结尾以github.io结尾，如下</p>
+<img src="/2019/12/31/lian-jie-github-yu-ben-di/%E4%BB%93%E5%BA%93%E5%90%8D.jpg" class="">
 
-<p>此时出现的搜索内容就是封面内容,以jpg结尾</p>
+<p>因为我的已经注册过了，所以报错！</p>
+<h3 id="添加Git工具"><a href="#添加Git工具" class="headerlink" title="添加Git工具"></a>添加Git工具</h3><p>在Git Bash终端输入</p>
 <blockquote>
-<p><a href="https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg" target="_blank" rel="noopener">https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg</a></p>
+<p>npm install hexo-deployer-git –save</p>
 </blockquote>
-<h2 id="歌曲搜索"><a href="#歌曲搜索" class="headerlink" title="歌曲搜索"></a>歌曲搜索</h2><p>将网址栏的内容中最后的数字复制下来</p>
-<img src="/2019/12/31/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/163link.jpg" class>
-
+<h3 id="添加公钥"><a href="#添加公钥" class="headerlink" title="添加公钥"></a>添加公钥</h3><p>这个过程的目的是在你的电脑和Github之间建立联系，保证安全性，，只有你可以操作。</p>
+<p>首先查看<strong>C:Users\用户名</strong>下是否有.ssh文件</p>
+<p>若是没有，输入</p>
 <blockquote>
-<p>1645064</p>
-<p><a href="http://music.163.com/song/media/outer/url?id=temp.mp3" target="_blank" rel="noopener">http://music.163.com/song/media/outer/url?id=temp.mp3</a></p>
-<p>temp就是你上面复制的数字</p>
+<p>ssh-keygen -t rsa -C “你的邮箱地址”</p>
 </blockquote>
-<h2 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h2><p>最后将你得到的信息都导入musics.json即可</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">{</span></span><br><span class="line">	<span class="attr">"name":</span> <span class="string">"To The Moon"</span><span class="string">,</span></span><br><span class="line">	<span class="attr">"artist":</span> <span class="string">"Kan R. Gao"</span><span class="string">,</span></span><br><span class="line">	<span class="attr">"url":</span> <span class="string">"https://music.163.com/song/media/outer/url?id=1645064.mp3"</span><span class="string">,</span></span><br><span class="line">	<span class="attr">"cover":</span> <span class="string">"https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg"</span></span><br><span class="line"><span class="string">}</span></span><br></pre></td></tr></tbody></table></figure>
+<p>之后 一直回车即可，大约三个就行</p>
+<p>然后会出现.ssh文件，打开这个文件，找到id_rsa.pub，复制里面的内容（用Notepad++打开）</p>
+<p>打开github网页，在右上方头像那里会展开一系列选项，选择settings，点击<strong>SSH and GPG keys</strong>，将你刚在复制的内容黏贴，名字随便取。</p>
+<h3 id="部署-config-yml"><a href="#部署-config-yml" class="headerlink" title="部署_config.yml"></a>部署_config.yml</h3><p>先打开你的仓库，将你仓库的网络地址复制下来</p>
+<p>打开_config.ynl文件，划到最下方，部署以下内容</p>
+<blockquote>
+<p>deploy:<br>  type: git<br>  repo: “黏贴你刚才复制的仓库地址”<br>  branch: master</p>
+</blockquote>
+<p>使用 hexo d部署</p>
+<p>这样就基本完成了。</p>
+<p>记住以下命令：</p>
+<blockquote>
+<p>hexo clean 清理缓存文件</p>
+<p>hexo g         生成</p>
+<p>hexo s          启动服务</p>
+<p>hexo d          部署到远端</p>
+</blockquote>
+<p>在本地看一眼，没有问题使用</p>
+<blockquote>
+<p>hexo d</p>
+</blockquote>
+<p>部署到远端。</p>
+<p>这一切都是在你建立的那个文件夹下运行的，如果想要运行看看自己的博客，只需要在网站上输入你的个人网址就行，一般是你的用户名+github.io，这是我的个人博客<a href="https://1471748102.github.io" target="_blank" rel="noopener">https://1471748102.github.io</a>,欢迎来指教！</p>
 
 
-
-<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><img src="/2019/12/31/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/not.jpg" class><script>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -543,7 +574,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2019/12/31/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/">http://yoursite.com/2019/12/31/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/</a>
+                    <a href="http://yoursite.com/2019/12/31/lian-jie-github-yu-ben-di/">http://yoursite.com/2019/12/31/lian-jie-github-yu-ben-di/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -581,12 +612,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
-                                    <span class="chip bg-color">主题搭建</span>
+                                <a href="/tags/%E9%85%8D%E7%BD%AE/">
+                                    <span class="chip bg-color">配置</span>
                                 </a>
                             
-                                <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%93%BE%E6%8E%A5/">
-                                    <span class="chip bg-color">网易云音乐链接</span>
+                                <a href="/tags/github/">
+                                    <span class="chip bg-color">github</span>
                                 </a>
                             
                         </div>
@@ -752,92 +783,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
-            <div class="card">
-                <a href="/2019/12/31/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="网易云音乐获取方法">
-                        
-                        <span class="card-title">网易云音乐获取方法</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            在构建主题的音乐播放时出现了两个问题，在获取音乐封面和歌曲链接时，不知道如何下手
-
-
-在musics.json文件里，有name ,artist,url,cover四个属性，分别是歌曲名字，作者，歌曲链接，歌曲封面，因为我不打算将他放在本地
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-31
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E9%9F%B3%E4%B9%90/" class="post-category">
-                                    音乐
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
-                        <span class="chip bg-color">主题搭建</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%93%BE%E6%8E%A5/">
-                        <span class="chip bg-color">网易云音乐链接</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2019/12/31/%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA/">
+                <a href="/2019/12/31/zhu-ti-mei-hua/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="插入本地图片不显示">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="主题美化">
                         
-                        <span class="card-title">插入本地图片不显示</span>
+                        <span class="card-title">主题美化</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            当我开始写博客的时候
-
-hexo new “主题”
-
-当插入本地图片的时候发现图片竟然不显示，插入链接的时候就是正常的，所以我去查询了这个问题。
-插件的安装与配置首先我们需要安装一个图片路径转换的插件，这个插件名字是hexo-asset-i
+                            刚开始的默认界面挺不错，但有的同学希望更美观一些，hexo有许多的主题可以应用，看起来更加赏心悦目，接下来我就先介绍一下怎么更换主题，最后推荐几款我比较喜欢的主题。
+主题搭建比如我想用indigo这个主题，可以在Git Bsah输入以下代码
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-31
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-31
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -853,12 +822,72 @@ hexo new “主题”
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/">
-                        <span class="chip bg-color">插件问题</span>
+                    <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
+                        <span class="chip bg-color">主题搭建</span>
                     </a>
                     
-                    <a href="/tags/%E5%9B%BE%E7%89%87/">
-                        <span class="chip bg-color">图片</span>
+                    <a href="/tags/%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/">
+                        <span class="chip bg-color">主题推荐</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/12/30/ge-ren-bo-ke-da-jian/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="本地个人博客搭建">
+                        
+                        <span class="card-title">本地个人博客搭建</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            本文简单介绍Hexo博客搭建流程主要是来记录自己的搭建时候出现的问题，以后再搭建的时候回顾，也希望可以对想搭建Hexo博客的同学有一些帮助。
+
+
+大体介绍一下我所了解的博客，分为静态博客和动态博客
+目录结构
+
+安装Node.js
+安装Git
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%A7%91%E6%99%AE/" class="post-category">
+                                    科普
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%85%8D%E7%BD%AE/">
+                        <span class="chip bg-color">配置</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%97%AE%E9%A2%98/">
+                        <span class="chip bg-color">问题</span>
                     </a>
                     
                 </div>

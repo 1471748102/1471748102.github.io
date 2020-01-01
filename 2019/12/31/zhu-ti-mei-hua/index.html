@@ -4,13 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="插入本地图片不显示, Hzw~">
-    <meta name="description" content="当我开始写博客的时候
-
-hexo new “主题”
-
-当插入本地图片的时候发现图片竟然不显示，插入链接的时候就是正常的，所以我去查询了这个问题。
-插件的安装与配置首先我们需要安装一个图片路径转换的插件，这个插件名字是hexo-asset-i">
+    <meta name="keywords" content="主题美化, Hzw~">
+    <meta name="description" content="刚开始的默认界面挺不错，但有的同学希望更美观一些，hexo有许多的主题可以应用，看起来更加赏心悦目，接下来我就先介绍一下怎么更换主题，最后推荐几款我比较喜欢的主题。
+主题搭建比如我想用indigo这个主题，可以在Git Bsah输入以下代码">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +14,7 @@ hexo new “主题”
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>插入本地图片不显示 | Hzw~</title>
+    <title>主题美化 | Hzw~</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +304,12 @@ hexo new “主题”
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">插入本地图片不显示</h1>
+                    <h1 class="description center-align post-title">主题美化</h1>
                 </div>
             </div>
         </div>
@@ -430,12 +426,12 @@ hexo new “主题”
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/">
-                                <span class="chip bg-color">插件问题</span>
+                            <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
+                                <span class="chip bg-color">主题搭建</span>
                             </a>
                         
-                            <a href="/tags/%E5%9B%BE%E7%89%87/">
-                                <span class="chip bg-color">图片</span>
+                            <a href="/tags/%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/">
+                                <span class="chip bg-color">主题推荐</span>
                             </a>
                         
                     </div>
@@ -466,58 +462,64 @@ hexo new “主题”
                 
 
                 
-
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    351
+                </div>
                 
 
                 
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
 
         </div>
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>当我开始写博客的时候</p>
+                <p>刚开始的默认界面挺不错，但有的同学希望更美观一些，hexo有许多的主题可以应用，看起来更加赏心悦目，接下来我就先介绍一下怎么更换主题，最后推荐几款我比较喜欢的主题。</p>
+<h3 id="主题搭建"><a href="#主题搭建" class="headerlink" title="主题搭建"></a>主题搭建</h3><p>比如我想用indigo这个主题，可以在Git Bsah输入以下代码：</p>
 <blockquote>
-<p>hexo new “主题”</p>
+<p>git clone <a href="https://github.com/yscoder/hexo-theme-indigo.git" target="_blank" rel="noopener">https://github.com/yscoder/hexo-theme-indigo.git</a>  themes/indigo</p>
 </blockquote>
-<p>当插入本地图片的时候发现图片竟然不显示，插入链接的时候就是正常的，所以我去查询了这个问题。</p>
-<h3 id="插件的安装与配置"><a href="#插件的安装与配置" class="headerlink" title="插件的安装与配置"></a>插件的安装与配置</h3><p>首先我们需要安装一个图片路径转换的插件，这个插件名字是<strong>hexo-asset-image</strong></p>
+<p>因为主题大多是国外的，下载比较慢，所以要等一会。</p>
+<p>根据主题不同，所以修改主题名就行。</p>
+<p>下载完成后</p>
 <blockquote>
-<p>npm install <a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="noopener">https://github.com/CodeFalling/hexo-asset-image</a> –save</p>
+<p>cd themes</p>
+<p>ls -l</p>
 </blockquote>
-<p>安装成功后需要修改/node_modules/hexo-asset-image/index.js文件，将内容更换</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">'use strict';</span><br><span class="line">var cheerio = require('cheerio');</span><br><span class="line"></span><br><span class="line">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span><br><span class="line">function getPosition(str, m, i) {</span><br><span class="line">  return str.split(m, i).join(m).length;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">var version = String(hexo.version).split('.');</span><br><span class="line">hexo.extend.filter.register('after_post_render', function(data){</span><br><span class="line">  var config = hexo.config;</span><br><span class="line">  if(config.post_asset_folder){</span><br><span class="line">    	var link = data.permalink;</span><br><span class="line">	if(version.length &gt; 0 &amp;&amp; Number(version[0]) == 3)</span><br><span class="line">	   var beginPos = getPosition(link, '/', 1) + 1;</span><br><span class="line">	else</span><br><span class="line">	   var beginPos = getPosition(link, '/', 3) + 1;</span><br><span class="line">	// In hexo 3.1.1, the permalink of "about" page is like ".../about/index.html".</span><br><span class="line">	var endPos = link.lastIndexOf('/') + 1;</span><br><span class="line">    link = link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    var toprocess = ['excerpt', 'more', 'content'];</span><br><span class="line">    for(var i = 0; i &lt; toprocess.length; i++){</span><br><span class="line">      var key = toprocess[i];</span><br><span class="line"> </span><br><span class="line">      var $ = cheerio.load(data[key], {</span><br><span class="line">        ignoreWhitespace: false,</span><br><span class="line">        xmlMode: false,</span><br><span class="line">        lowerCaseTags: false,</span><br><span class="line">        decodeEntities: false</span><br><span class="line">      });</span><br><span class="line"></span><br><span class="line">      $('img').each(function(){</span><br><span class="line">		if ($(this).attr('src')){</span><br><span class="line">			// For windows style path, we replace '\' to '/'.</span><br><span class="line">			var src = $(this).attr('src').replace('\\', '/');</span><br><span class="line">			if(!/http[s]*.*|\/\/.*/.test(src) &amp;&amp;</span><br><span class="line">			   !/^\s*\//.test(src)) {</span><br><span class="line">			  // For "about" page, the first part of "src" can't be removed.</span><br><span class="line">			  // In addition, to support multi-level local directory.</span><br><span class="line">			  var linkArray = link.split('/').filter(function(elem){</span><br><span class="line">				return elem != '';</span><br><span class="line">			  });</span><br><span class="line">			  var srcArray = src.split('/').filter(function(elem){</span><br><span class="line">				return elem != '' &amp;&amp; elem != '.';</span><br><span class="line">			  });</span><br><span class="line">			  if(srcArray.length &gt; 1)</span><br><span class="line">				srcArray.shift();</span><br><span class="line">			  src = srcArray.join('/');</span><br><span class="line">			  $(this).attr('src', config.root + link + src);</span><br><span class="line">			  console.info&amp;&amp;console.info("update link as:--&gt;"+config.root + link + src);</span><br><span class="line">			}</span><br><span class="line">		}else{</span><br><span class="line">			console.info&amp;&amp;console.info("no src attr, skipped...");</span><br><span class="line">			console.info&amp;&amp;console.info($(this));</span><br><span class="line">		}</span><br><span class="line">      });</span><br><span class="line">      data[key] = $.html();</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="更改-config-yml文件"><a href="#更改-config-yml文件" class="headerlink" title="更改_config.yml文件"></a>更改_config.yml文件</h3><p>找到更改false为true，如下</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这样就会在_posts文件夹下创建一个同名的文件夹，将你需要的图片放在这个文件夹下，</p>
-<h3 id="图片引用"><a href="#图片引用" class="headerlink" title="图片引用"></a>图片引用</h3><p>然后在你的.md文件里引用图片时候，用</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">{% asset_img example.jpg This is </span><br><span class="line">an example image %}</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-
-
-<p>example.jpg是你的图片名称。</p>
-<p>This is an example image是你的图片描述。</p>
-<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>解决后当你使用hexo d时，会出现</p>
+<p>查看下载文件</p>
 <blockquote>
-<p>$ hexo d<br>ERROR Deployer not found: git</p>
+<p>cd ..</p>
 </blockquote>
-<p>输入以下命令</p>
+<p>返回到文件夹下，找到_config.yml文件，修改theme后的主题名，然后重新部署即可。</p>
+<img src="/2019/12/31/zhu-ti-mei-hua/theme.jpg" class="">
+
+<p>推荐以下几个还不错的主题</p>
 <blockquote>
-<p>npm install <code>--</code>save hexo-deployer-git</p>
+<ol>
+<li><p>Sakura 非常炫，缺点加载慢 <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" rel="noopener">https://github.com/honjun/hexo-theme-sakura</a> </p>
+</li>
+<li><p>Matery 预加载，强推 <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="noopener">https://github.com/blinkfox/hexo-theme-matery</a> </p>
+</li>
+<li><p>3-hexo 三段式，适合博文多的 <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" rel="noopener">https://github.com/yelog/hexo-theme-3-hexo</a> </p>
+</li>
+<li><p>Butterfly 也是个好看的  </p>
+</li>
+<li><p>Next 功能集成多，简洁</p>
+</li>
+</ol>
 </blockquote>
-<p>就可以解决了！</p>
-<p>参考以下链接：</p>
-<ul>
-<li><a href="https://blog.csdn.net/xjm850552586/article/details/84101345" target="_blank" rel="noopener">https://blog.csdn.net/xjm850552586/article/details/84101345</a></li>
-<li><a href="https://blog.csdn.net/Strong997/article/details/97767929" target="_blank" rel="noopener">https://blog.csdn.net/Strong997/article/details/97767929</a></li>
-<li><a href="https://blog.csdn.net/xjm850552586/article/details/84101345" target="_blank" rel="noopener">https://blog.csdn.net/xjm850552586/article/details/84101345</a></li>
-<li><a href="https://blog.csdn.net/weixin_36401046/article/details/52940313" target="_blank" rel="noopener">https://blog.csdn.net/weixin_36401046/article/details/52940313</a></li>
-</ul>
-<img src="/2019/12/31/%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA/crycat.jpg" class title="拜拜">
+<p>来自于哔哩哔哩UP主<a href="https://space.bilibili.com/157360395" target="_blank" rel="noopener">wallleap</a></p>
+<p>视频来自于<a href="https://www.bilibili.com/video/av74851669?t=202" target="_blank" rel="noopener">网址</a></p>
+<p>估计还有很多不错的主题，多多发现学习！</p>
+<img src="/2019/12/31/zhu-ti-mei-hua/wink.jpg" class="">
 
 <script>
         document.querySelectorAll('.github-emoji')
@@ -562,7 +564,7 @@ hexo new “主题”
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2019/12/31/%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA/">http://yoursite.com/2019/12/31/%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA/</a>
+                    <a href="http://yoursite.com/2019/12/31/zhu-ti-mei-hua/">http://yoursite.com/2019/12/31/zhu-ti-mei-hua/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -600,12 +602,12 @@ hexo new “主题”
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/">
-                                    <span class="chip bg-color">插件问题</span>
+                                <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
+                                    <span class="chip bg-color">主题搭建</span>
                                 </a>
                             
-                                <a href="/tags/%E5%9B%BE%E7%89%87/">
-                                    <span class="chip bg-color">图片</span>
+                                <a href="/tags/%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/">
+                                    <span class="chip bg-color">主题推荐</span>
                                 </a>
                             
                         </div>
@@ -775,82 +777,30 @@ hexo new “主题”
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2019/12/31/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/">
+                <a href="/2019/12/31/ben-di-tu-pian-bu-xian-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="网易云音乐获取方法">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="插入本地图片不显示">
                         
-                        <span class="card-title">网易云音乐获取方法</span>
+                        <span class="card-title">插入本地图片不显示</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在构建主题的音乐播放时出现了两个问题，在获取音乐封面和歌曲链接时，不知道如何下手
+                            当我开始写博客的时候
 
+hexo new “主题”
 
-在musics.json文件里，有name ,artist,url,cover四个属性，分别是歌曲名字，作者，歌曲链接，歌曲封面，因为我不打算将他放在本地
+当插入本地图片的时候发现图片竟然不显示，插入链接的时候就是正常的，所以我去查询了这个问题。
+插件的安装与配置首先我们需要安装一个图片路径转换的插件，这个插件名字是hexo-asset-i
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="far fa-clock fa-fw icon-date"></i>2019-12-31
                         </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E9%9F%B3%E4%B9%90/" class="post-category">
-                                    音乐
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
-                        <span class="chip bg-color">主题搭建</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%93%BE%E6%8E%A5/">
-                        <span class="chip bg-color">网易云音乐链接</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/12/31/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="主题美化">
-                        
-                        <span class="card-title">主题美化</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            刚开始的默认界面挺不错，但有的同学希望更美观一些，hexo有许多的主题可以应用，看起来更加赏心悦目，接下来我就先介绍一下怎么更换主题，最后推荐几款我比较喜欢的主题。
-主题搭建比如我想用indigo这个主题，可以在Git Bsah输入以下代码
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-31
-                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -866,12 +816,69 @@ hexo new “主题”
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
-                        <span class="chip bg-color">主题搭建</span>
+                    <a href="/tags/%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/">
+                        <span class="chip bg-color">插件问题</span>
                     </a>
                     
-                    <a href="/tags/%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/">
-                        <span class="chip bg-color">主题推荐</span>
+                    <a href="/tags/%E5%9B%BE%E7%89%87/">
+                        <span class="chip bg-color">图片</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/12/31/lian-jie-github-yu-ben-di/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="连接Github与本地">
+                        
+                        <span class="card-title">连接Github与本地</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            上一篇文章讲了怎么在本地部署Hexo，但仅仅在本地看是不够的，我们需要将他部署到远端，Github就是一个很好的托管网站，但是网速有点慢，也可以选择Coding，Gitee等网站，步骤都是一样的。
+下面就开始吧
+
+
+配置Github仓库创建
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-31
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%A7%91%E6%99%AE/" class="post-category">
+                                    科普
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%85%8D%E7%BD%AE/">
+                        <span class="chip bg-color">配置</span>
+                    </a>
+                    
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
                     </a>
                     
                 </div>
