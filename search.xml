@@ -67,7 +67,7 @@
 <p>当插入本地图片的时候发现图片竟然不显示，插入链接的时候就是正常的，所以我去查询了这个问题。</p>
 <h3 id="插件的安装与配置"><a href="#插件的安装与配置" class="headerlink" title="插件的安装与配置"></a>插件的安装与配置</h3><p>首先我们需要安装一个图片路径转换的插件，这个插件名字是<strong>hexo-asset-image</strong></p>
 <blockquote>
-<p>npm install <a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="noopener">https://github.com/CodeFalling/hexo-asset-image</a> –save</p>
+<p>npm install <a href="https://github.com/CodeFalling/hexo-asset-image">https://github.com/CodeFalling/hexo-asset-image</a> –save</p>
 </blockquote>
 <p>安装成功后需要修改/node_modules/hexo-asset-image/index.js文件，将内容更换</p>
 <pre><code>---
@@ -189,7 +189,7 @@ an example image %}</code></pre><p>example.jpg是你的图片名称。</p>
     <content><![CDATA[<p>刚开始的默认界面挺不错，但有的同学希望更美观一些，hexo有许多的主题可以应用，看起来更加赏心悦目，接下来我就先介绍一下怎么更换主题，最后推荐几款我比较喜欢的主题。</p>
 <h3 id="主题搭建"><a href="#主题搭建" class="headerlink" title="主题搭建"></a>主题搭建</h3><p>比如我想用indigo这个主题，可以在Git Bsah输入以下代码：</p>
 <blockquote>
-<p>git clone <a href="https://github.com/yscoder/hexo-theme-indigo.git" target="_blank" rel="noopener">https://github.com/yscoder/hexo-theme-indigo.git</a>  themes/indigo</p>
+<p>git clone <a href="https://github.com/yscoder/hexo-theme-indigo.git">https://github.com/yscoder/hexo-theme-indigo.git</a>  themes/indigo</p>
 </blockquote>
 <p>因为主题大多是国外的，下载比较慢，所以要等一会。</p>
 <p>根据主题不同，所以修改主题名就行。</p>
@@ -208,11 +208,11 @@ an example image %}</code></pre><p>example.jpg是你的图片名称。</p>
 <p>推荐以下几个还不错的主题</p>
 <blockquote>
 <ol>
-<li><p>Sakura 非常炫，缺点加载慢 <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" rel="noopener">https://github.com/honjun/hexo-theme-sakura</a> </p>
+<li><p>Sakura 非常炫，缺点加载慢 <a href="https://github.com/honjun/hexo-theme-sakura">https://github.com/honjun/hexo-theme-sakura</a> </p>
 </li>
-<li><p>Matery 预加载，强推 <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="noopener">https://github.com/blinkfox/hexo-theme-matery</a> </p>
+<li><p>Matery 预加载，强推 <a href="https://github.com/blinkfox/hexo-theme-matery">https://github.com/blinkfox/hexo-theme-matery</a> </p>
 </li>
-<li><p>3-hexo 三段式，适合博文多的 <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" rel="noopener">https://github.com/yelog/hexo-theme-3-hexo</a> </p>
+<li><p>3-hexo 三段式，适合博文多的 <a href="https://github.com/yelog/hexo-theme-3-hexo">https://github.com/yelog/hexo-theme-3-hexo</a> </p>
 </li>
 <li><p>Butterfly 也是个好看的  </p>
 </li>
@@ -447,7 +447,7 @@ tz: 2018e</code></pre><p>如果出现失败，一般是环境变量出现错误�
   <entry>
     <title>Hello World</title>
     <url>/2019/12/30/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
