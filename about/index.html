@@ -604,7 +604,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"科普","value":2},{"name":"Hexo主题","value":2},{"name":"音乐","value":1}],
+                data: [{"name":"Hexo主题","value":2},{"name":"科普","value":2},{"name":"音乐","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -628,7 +628,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["配置","主题搭建","问题","主题推荐","github","网易云音乐链接","插件问题","图片"]
+                data: ["主题搭建","配置","主题推荐","问题","网易云音乐链接","插件问题","图片","github"]
             }
         ],
         yAxis: [
@@ -809,18 +809,6 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/%E9%85%8D%E7%BD%AE/">
-                <span class="chip center-align waves-effect waves-light chip-default">配置</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E9%97%AE%E9%A2%98/">
-                <span class="chip center-align waves-effect waves-light chip-default">问题</span>
-            </a>
-            
-            
-            
             <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
                 <span class="chip center-align waves-effect waves-light chip-default">主题搭建</span>
             </a>
@@ -833,8 +821,14 @@
             
             
             
-            <a href="/tags/github/">
-                <span class="chip center-align waves-effect waves-light chip-default">github</span>
+            <a href="/tags/%E9%85%8D%E7%BD%AE/">
+                <span class="chip center-align waves-effect waves-light chip-default">配置</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E9%97%AE%E9%A2%98/">
+                <span class="chip center-align waves-effect waves-light chip-default">问题</span>
             </a>
             
             
@@ -853,6 +847,12 @@
             
             <a href="/tags/%E5%9B%BE%E7%89%87/">
                 <span class="chip center-align waves-effect waves-light chip-default">图片</span>
+            </a>
+            
+            
+            
+            <a href="/tags/github/">
+                <span class="chip center-align waves-effect waves-light chip-default">github</span>
             </a>
             
             
@@ -1064,6 +1064,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script></body>
+</body>
 
 </html>
