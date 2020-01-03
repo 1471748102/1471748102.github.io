@@ -820,8 +820,8 @@ an example image <span class="token operator">%</span><span class="token punctua
         <category>博客</category>
       </categories>
       <tags>
-        <tag>github</tag>
         <tag>配置</tag>
+        <tag>github</tag>
       </tags>
   </entry>
   <entry>
@@ -925,8 +925,8 @@ tz: 2018e</code></pre>
         <category>博客</category>
       </categories>
       <tags>
-        <tag>问题</tag>
         <tag>配置</tag>
+        <tag>问题</tag>
       </tags>
   </entry>
 </search>
