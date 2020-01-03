@@ -520,7 +520,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"科普","value":2},{"name":"Hexo主题","value":2},{"name":"音乐","value":1}],
+                data: [{"name":"Hexo主题","value":2},{"name":"科普","value":2},{"name":"音乐","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -544,7 +544,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["配置","主题搭建","问题","主题推荐","网易云音乐链接","插件问题","图片","github"]
+                data: ["主题搭建","配置","主题推荐","问题","github","插件问题","图片","网易云音乐链接"]
             }
         ],
         yAxis: [
@@ -725,18 +725,6 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/%E9%85%8D%E7%BD%AE/">
-                <span class="chip center-align waves-effect waves-light chip-default">配置</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E9%97%AE%E9%A2%98/">
-                <span class="chip center-align waves-effect waves-light chip-default">问题</span>
-            </a>
-            
-            
-            
             <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
                 <span class="chip center-align waves-effect waves-light chip-default">主题搭建</span>
             </a>
@@ -749,8 +737,20 @@
             
             
             
-            <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%93%BE%E6%8E%A5/">
-                <span class="chip center-align waves-effect waves-light chip-default">网易云音乐链接</span>
+            <a href="/tags/%E9%85%8D%E7%BD%AE/">
+                <span class="chip center-align waves-effect waves-light chip-default">配置</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E9%97%AE%E9%A2%98/">
+                <span class="chip center-align waves-effect waves-light chip-default">问题</span>
+            </a>
+            
+            
+            
+            <a href="/tags/github/">
+                <span class="chip center-align waves-effect waves-light chip-default">github</span>
             </a>
             
             
@@ -767,8 +767,8 @@
             
             
             
-            <a href="/tags/github/">
-                <span class="chip center-align waves-effect waves-light chip-default">github</span>
+            <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%93%BE%E6%8E%A5/">
+                <span class="chip center-align waves-effect waves-light chip-default">网易云音乐链接</span>
             </a>
             
             
@@ -964,8 +964,6 @@ $(function () {
 </script>
 
     
-    <script src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7/libs/others/clicklove.js" async="async"></script>
-    
     
     <script async src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7/libs/others/busuanzi.pure.mini.js"></script>
     
@@ -983,6 +981,11 @@ $(function () {
     
     <script src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7/libs/instantpage/instantpage.js" type="module"></script>
     
+	
+	<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+	<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+	<script type="text/javascript" src="/js/fireworks.js"></script>
+
 
 </body>
 
