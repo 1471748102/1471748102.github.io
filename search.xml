@@ -1,155 +1,484 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>网易云音乐获取方法</title>
-      <link href="/2019/12/31/wang-yi-yun-yin-le-huo-qu-fang-fa/"/>
-      <url>/2019/12/31/wang-yi-yun-yin-le-huo-qu-fang-fa/</url>
-      
-        <content type="html"><![CDATA[<p>在构建主题的音乐播放时出现了两个问题，在获取音乐封面和歌曲链接时，不知道如何下手</p><img src="/2019/12/31/wang-yi-yun-yin-le-huo-qu-fang-fa/%E8%84%86%E5%BC%B1.jpg" class=""><p>在musics.json文件里，有name ,artist,url,cover四个属性，分别是歌曲名字，作者，歌曲链接，歌曲封面，因为我不打算将他放在本地，所以直接从 <a href="https://music.163.com/#" target="_blank" rel="noopener">网易云音乐</a> 里面获取，开整！</p><h2 id="封面搜索"><a href="#封面搜索" class="headerlink" title="封面搜索"></a>封面搜索</h2><h3 id="搜索想要导入的歌曲"><a href="#搜索想要导入的歌曲" class="headerlink" title="搜索想要导入的歌曲"></a>搜索想要导入的歌曲</h3><p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/songmoon.jpg" alt=""></p><h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><p>点击F12，然后在键盘上<strong>ctrl+f</strong>同时摁住，打开搜索功能，在搜索框输入<strong>img</strong></p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/img.jpg" style="zoom:80%;"><p>此时出现的搜索内容就是封面内容,以jpg结尾</p><blockquote><p><a href="https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg" target="_blank" rel="noopener">https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg</a></p></blockquote><h2 id="歌曲搜索"><a href="#歌曲搜索" class="headerlink" title="歌曲搜索"></a>歌曲搜索</h2><p>将网址栏的内容中最后的数字复制下来</p><p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/163link.jpg" alt=""></p><blockquote><p>1645064</p><p><a href="http://music.163.com/song/media/outer/url?id=temp.mp3" target="_blank" rel="noopener">http://music.163.com/song/media/outer/url?id=temp.mp3</a></p><p>temp就是你上面复制的数字</p></blockquote><h2 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h2><p>最后将你得到的信息都导入musics.json即可</p><pre class=" language-yaml"><code class="language-yaml"><span class="token punctuation">{</span>    <span class="token key atrule">"name"</span><span class="token punctuation">:</span> <span class="token string">"To The Moon"</span><span class="token punctuation">,</span>    <span class="token key atrule">"artist"</span><span class="token punctuation">:</span> <span class="token string">"Kan R. Gao"</span><span class="token punctuation">,</span>    <span class="token key atrule">"url"</span><span class="token punctuation">:</span> <span class="token string">"https://music.163.com/song/media/outer/url?id=1645064.mp3"</span><span class="token punctuation">,</span>    <span class="token key atrule">"cover"</span><span class="token punctuation">:</span> <span class="token string">"https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg"</span><span class="token punctuation">}</span></code></pre><h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/not.jpg" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
+<search>
+  <entry>
+    <title>网易云音乐获取方法</title>
+    <url>/2019/12/31/wang-yi-yun-yin-le-huo-qu-fang-fa/</url>
+    <content><![CDATA[<h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>在构建主题的音乐播放时出现了两个问题，因为主题的音乐播放是在saorce/musics.json文件下存储的，但是如果想播放音乐，就要有相关的资源。但是我在获取音乐封面和歌曲链接时，却不知道如何下手。</p>
+<img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.2/img/cuiruo.jpg" style="zoom:67%;">
+
+<p>在musics.json文件里，有<strong>name</strong> ,<strong>artist</strong>,<strong>url</strong>,<strong>cover</strong>四个属性，分别是歌曲名字，作者，歌曲链接，歌曲封面，因为我不打算将他放在本地，所以直接从 <a href="https://music.163.com/#" target="_blank" rel="noopener">网易云音乐</a> 里面获取，开整！</p>
+<p>PS:本方法是要手动配置的，估计学了Python之后就会智能很多，等我学了Python之后再来更新这篇文章。</p>
+<h3 id="一、封面搜索"><a href="#一、封面搜索" class="headerlink" title="一、封面搜索"></a>一、封面搜索</h3><ol>
+<li><strong>在网易云搜索想要导入的歌曲</strong></li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/songmoon.jpg" alt=""></p>
+<ol start="2">
+<li><strong>查询</strong></li>
+</ol>
+<p>点击F12，然后在键盘上<strong>ctrl+f</strong>同时摁住，打开搜索功能，在搜索框输入<strong>img</strong></p>
+<img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/img.jpg" style="zoom:80%;">
+
+<p>此时出现的搜索内容就是封面内容,以jpg结尾</p>
+<blockquote>
+<p><a href="https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg二" target="_blank" rel="noopener">https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg二</a></p>
+</blockquote>
+<h3 id="二、歌曲搜索"><a href="#二、歌曲搜索" class="headerlink" title="二、歌曲搜索"></a>二、歌曲搜索</h3><p>将网址栏的内容中最后的<strong>数字</strong>复制下来</p>
+<p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/163link.jpg" alt=""></p>
+<blockquote>
+<p>例如：1645064</p>
+<p><a href="http://music.163.com/song/media/outer/url?id=temp.mp3" target="_blank" rel="noopener">http://music.163.com/song/media/outer/url?id=temp.mp3</a></p>
+<p>temp就是你上面复制的数字</p>
+<p>歌曲链接就是：<a href="http://music.163.com/song/media/outer/url?id=1645064.mp3" target="_blank" rel="noopener">http://music.163.com/song/media/outer/url?id=1645064.mp3</a></p>
+</blockquote>
+<h3 id="三、导入"><a href="#三、导入" class="headerlink" title="三、导入"></a>三、导入</h3><p>最后将你得到的信息都导入musics.json即可</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token punctuation">{</span>
+    <span class="token key atrule">"name"</span><span class="token punctuation">:</span> <span class="token string">"To The Moon"</span><span class="token punctuation">,</span>
+    <span class="token key atrule">"artist"</span><span class="token punctuation">:</span> <span class="token string">"Kan R. Gao"</span><span class="token punctuation">,</span>
+    <span class="token key atrule">"url"</span><span class="token punctuation">:</span> <span class="token string">"https://music.163.com/song/media/outer/url?id=1645064.mp3"</span><span class="token punctuation">,</span>
+    <span class="token key atrule">"cover"</span><span class="token punctuation">:</span> <span class="token string">"https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg"</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h3><p>方法有点出乎意料之外，但是解决了问题<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span>,虽然不够智能，之后再改进.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/not.jpg" alt=""></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
       <categories>
-          
-          <category> 音乐 </category>
-          
+        <category>音乐</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 主题搭建 </tag>
-            
-            <tag> 网易云音乐链接 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>插入本地图片不显示</title>
-      <link href="/2019/12/31/ben-di-tu-pian-bu-xian-shi/"/>
-      <url>/2019/12/31/ben-di-tu-pian-bu-xian-shi/</url>
-      
-        <content type="html"><![CDATA[<p>当我开始写博客的时候</p><blockquote><p>hexo new “主题”</p></blockquote><p>当插入本地图片的时候发现图片竟然不显示，插入链接的时候就是正常的，所以我去查询了这个问题。</p><h3 id="插件的安装与配置"><a href="#插件的安装与配置" class="headerlink" title="插件的安装与配置"></a>插件的安装与配置</h3><p>首先我们需要安装一个图片路径转换的插件，这个插件名字是<strong>hexo-asset-image</strong></p><blockquote><p>npm install <a href="https://github.com/CodeFalling/hexo-asset-image">https://github.com/CodeFalling/hexo-asset-image</a> –save</p></blockquote><p>安装成功后需要修改/node_modules/hexo-asset-image/index.js文件，将内容更换</p><pre><code>---'use strict';var cheerio = require('cheerio');// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-stringfunction getPosition(str, m, i) {  return str.split(m, i).join(m).length;}var version = String(hexo.version).split('.');hexo.extend.filter.register('after_post_render', function(data){  var config = hexo.config;  if(config.post_asset_folder){        var link = data.permalink;    if(version.length &gt; 0 &amp;&amp; Number(version[0]) == 3)       var beginPos = getPosition(link, '/', 1) + 1;    else       var beginPos = getPosition(link, '/', 3) + 1;    // In hexo 3.1.1, the permalink of "about" page is like ".../about/index.html".    var endPos = link.lastIndexOf('/') + 1;    link = link.substring(beginPos, endPos);    var toprocess = ['excerpt', 'more', 'content'];    for(var i = 0; i &lt; toprocess.length; i++){      var key = toprocess[i];      var $ = cheerio.load(data[key], {        ignoreWhitespace: false,        xmlMode: false,        lowerCaseTags: false,        decodeEntities: false      });      $('img').each(function(){        if ($(this).attr('src')){            // For windows style path, we replace '\' to '/'.            var src = $(this).attr('src').replace('\\', '/');            if(!/http[s]*.*|\/\/.*/.test(src) &amp;&amp;               !/^\s*\//.test(src)) {              // For "about" page, the first part of "src" can't be removed.              // In addition, to support multi-level local directory.              var linkArray = link.split('/').filter(function(elem){                return elem != '';              });              var srcArray = src.split('/').filter(function(elem){                return elem != '' &amp;&amp; elem != '.';              });              if(srcArray.length &gt; 1)                srcArray.shift();              src = srcArray.join('/');              $(this).attr('src', config.root + link + src);              console.info&amp;&amp;console.info("update link as:--&gt;"+config.root + link + src);            }        }else{            console.info&amp;&amp;console.info("no src attr, skipped...");            console.info&amp;&amp;console.info($(this));        }      });      data[key] = $.html();    }  }});---</code></pre><h3 id="更改-config-yml文件"><a href="#更改-config-yml文件" class="headerlink" title="更改_config.yml文件"></a>更改_config.yml文件</h3><p>找到更改false为true，如下</p><pre><code>post_asset_folder: true</code></pre><p>这样就会在_posts文件夹下创建一个同名的文件夹，将你需要的图片放在这个文件夹下，</p><h3 id="图片引用"><a href="#图片引用" class="headerlink" title="图片引用"></a>图片引用</h3><p>然后在你的.md文件里引用图片时候，用</p><pre><code>{% asset_img example.jpg This is an example image %}</code></pre><p>example.jpg是你的图片名称。</p><p>This is an example image是你的图片描述。</p><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>解决后当你使用hexo d时，会出现</p><blockquote><p>$ hexo d<br>ERROR Deployer not found: git</p></blockquote><p>输入以下命令</p><blockquote><p>npm install <code>--</code>save hexo-deployer-git</p></blockquote><p>就可以解决了！</p><p>参考以下链接：</p><ul><li><a href="https://blog.csdn.net/xjm850552586/article/details/84101345" target="_blank" rel="noopener">https://blog.csdn.net/xjm850552586/article/details/84101345</a></li><li><a href="https://blog.csdn.net/Strong997/article/details/97767929" target="_blank" rel="noopener">https://blog.csdn.net/Strong997/article/details/97767929</a></li><li><a href="https://blog.csdn.net/xjm850552586/article/details/84101345" target="_blank" rel="noopener">https://blog.csdn.net/xjm850552586/article/details/84101345</a></li><li><a href="https://blog.csdn.net/weixin_36401046/article/details/52940313" target="_blank" rel="noopener">https://blog.csdn.net/weixin_36401046/article/details/52940313</a></li></ul><p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/crycat.jpg" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
+      <tags>
+        <tag>网易云音乐链接</tag>
+        <tag>主题搭建</tag>
+        <tag>音乐播放</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World！</title>
+    <url>/2019/12/31/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<p>逐步将之前的文件按上传到这里，记录学习，生活。</p>
+<img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.2/img/t11.jpg" style="zoom:50%;">
+
+
+
+
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
       <categories>
-          
-          <category> Hexo主题 </category>
-          
+        <category>配置</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 插件问题 </tag>
-            
-            <tag> 图片 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>主题美化</title>
-      <link href="/2019/12/31/zhu-ti-mei-hua/"/>
-      <url>/2019/12/31/zhu-ti-mei-hua/</url>
-      
-        <content type="html"><![CDATA[<p>刚开始的默认界面挺不错，但有的同学希望更美观一些，hexo有许多的主题可以应用，看起来更加赏心悦目，接下来我就先介绍一下怎么更换主题，最后推荐几款我比较喜欢的主题。</p><h3 id="主题搭建"><a href="#主题搭建" class="headerlink" title="主题搭建"></a>主题搭建</h3><p>比如我想用indigo这个主题，可以在Git Bsah输入以下代码：</p><blockquote><p>git clone <a href="https://github.com/yscoder/hexo-theme-indigo.git">https://github.com/yscoder/hexo-theme-indigo.git</a>  themes/indigo</p></blockquote><p>因为主题大多是国外的，下载比较慢，所以要等一会。</p><p>根据主题不同，所以修改主题名就行。</p><p>下载完成后</p><blockquote><p>cd themes</p><p>ls -l</p></blockquote><p>查看下载文件</p><blockquote><p>cd ..</p></blockquote><p>返回到文件夹下，找到_config.yml文件，修改theme后的主题名，然后重新部署即可。</p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/theme.jpg" style="zoom: 50%;"><p>推荐以下几个还不错的主题</p><blockquote><ol><li><p>Sakura 非常炫，缺点加载慢 <a href="https://github.com/honjun/hexo-theme-sakura">https://github.com/honjun/hexo-theme-sakura</a> </p></li><li><p>Matery 预加载，强推 <a href="https://github.com/blinkfox/hexo-theme-matery">https://github.com/blinkfox/hexo-theme-matery</a> </p></li><li><p>3-hexo 三段式，适合博文多的 <a href="https://github.com/yelog/hexo-theme-3-hexo">https://github.com/yelog/hexo-theme-3-hexo</a> </p></li><li><p>Butterfly 也是个好看的  </p></li><li><p>Next 功能集成多，简洁</p></li></ol></blockquote><p>来自于哔哩哔哩UP主<a href="https://space.bilibili.com/157360395" target="_blank" rel="noopener">wallleap</a></p><p>视频来自于<a href="https://www.bilibili.com/video/av74851669?t=202" target="_blank" rel="noopener">网址</a></p><p>估计还有很多不错的主题，多多发现学习！</p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.3/img/wink.jpg" style="zoom: 67%;"><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
+      <tags>
+        <tag>Hello World</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>插入本地图片不显示</title>
+    <url>/2019/12/31/ben-di-tu-pian-bu-xian-shi/</url>
+    <content><![CDATA[<h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>当我开始写博客的时候</p>
+<pre class=" language-bash"><code class="language-bash">hexo new <span class="token string">"主题"</span></code></pre>
+<p>当插入本地图片的时候发现图片竟然不显示，插入链接的时候就是正常的，所以我去查询了这个问题。</p>
+<h3 id="插件的安装与配置"><a href="#插件的安装与配置" class="headerlink" title="插件的安装与配置"></a>插件的安装与配置</h3><p>首先我们需要安装一个图片路径转换的插件，这个插件名字是<strong>hexo-asset-image</strong></p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> https://github.com/CodeFalling/hexo-asset-image --save</code></pre>
+<p>安装成功后需要修改/node_modules/hexo-asset-image/index.js文件，将内容更换</p>
+<pre><code>---
+'use strict';
+var cheerio = require('cheerio');
+
+// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string
+function getPosition(str, m, i) {
+  return str.split(m, i).join(m).length;
+}
+
+var version = String(hexo.version).split('.');
+hexo.extend.filter.register('after_post_render', function(data){
+  var config = hexo.config;
+  if(config.post_asset_folder){
+        var link = data.permalink;
+    if(version.length &gt; 0 &amp;&amp; Number(version[0]) == 3)
+       var beginPos = getPosition(link, '/', 1) + 1;
+    else
+       var beginPos = getPosition(link, '/', 3) + 1;
+    // In hexo 3.1.1, the permalink of "about" page is like ".../about/index.html".
+    var endPos = link.lastIndexOf('/') + 1;
+    link = link.substring(beginPos, endPos);
+
+    var toprocess = ['excerpt', 'more', 'content'];
+    for(var i = 0; i &lt; toprocess.length; i++){
+      var key = toprocess[i];
+
+      var $ = cheerio.load(data[key], {
+        ignoreWhitespace: false,
+        xmlMode: false,
+        lowerCaseTags: false,
+        decodeEntities: false
+      });
+
+      $('img').each(function(){
+        if ($(this).attr('src')){
+            // For windows style path, we replace '\' to '/'.
+            var src = $(this).attr('src').replace('\\', '/');
+            if(!/http[s]*.*|\/\/.*/.test(src) &amp;&amp;
+               !/^\s*\//.test(src)) {
+              // For "about" page, the first part of "src" can't be removed.
+              // In addition, to support multi-level local directory.
+              var linkArray = link.split('/').filter(function(elem){
+                return elem != '';
+              });
+              var srcArray = src.split('/').filter(function(elem){
+                return elem != '' &amp;&amp; elem != '.';
+              });
+              if(srcArray.length &gt; 1)
+                srcArray.shift();
+              src = srcArray.join('/');
+              $(this).attr('src', config.root + link + src);
+              console.info&amp;&amp;console.info("update link as:--&gt;"+config.root + link + src);
+            }
+        }else{
+            console.info&amp;&amp;console.info("no src attr, skipped...");
+            console.info&amp;&amp;console.info($(this));
+        }
+      });
+      data[key] = $.html();
+    }
+  }
+});
+
+---</code></pre><h3 id="更改-config-yml文件"><a href="#更改-config-yml文件" class="headerlink" title="更改_config.yml文件"></a>更改_config.yml文件</h3><p>找到更改false为true，如下</p>
+<pre class=" language-yml"><code class="language-yml">post_asset_folder: true</code></pre>
+<p>这样就会在_posts文件夹下创建一个同名的文件夹，将你需要的图片放在这个文件夹下，</p>
+<h3 id="图片引用"><a href="#图片引用" class="headerlink" title="图片引用"></a>图片引用</h3><p>然后在你的.md文件里引用图片时候，用</p>
+<pre class=" language-js"><code class="language-js"><span class="token punctuation">{</span><span class="token operator">%</span> asset_img example<span class="token punctuation">.</span>jpg This is 
+an example image <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<p>example.jpg是你的图片名称。</p>
+<p>This is an example image是你的图片描述。</p>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>解决后当你使用hexo d时，会出现</p>
+<blockquote>
+<p>$ hexo d<br>ERROR Deployer not found: git</p>
+</blockquote>
+<p>输入以下命令</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> <span class="token variable"><span class="token variable">`</span>--<span class="token variable">`</span></span>save hexo-deployer-git</code></pre>
+<p>就可以解决了！</p>
+<p>参考以下链接：</p>
+<ul>
+<li><a href="https://blog.csdn.net/xjm850552586/article/details/84101345" target="_blank" rel="noopener">https://blog.csdn.net/xjm850552586/article/details/84101345</a></li>
+<li><a href="https://blog.csdn.net/Strong997/article/details/97767929" target="_blank" rel="noopener">https://blog.csdn.net/Strong997/article/details/97767929</a></li>
+<li><a href="https://blog.csdn.net/xjm850552586/article/details/84101345" target="_blank" rel="noopener">https://blog.csdn.net/xjm850552586/article/details/84101345</a></li>
+<li><a href="https://blog.csdn.net/weixin_36401046/article/details/52940313" target="_blank" rel="noopener">https://blog.csdn.net/weixin_36401046/article/details/52940313</a></li>
+</ul>
+<p>解决完这个问题之后，我发现个人博客不用插入本地图片，使用图床，将图片部署到远端，使用的时候引入链接就行，我枯了，人不学不知道啊！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/crycat.jpg" alt=""></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
       <categories>
-          
-          <category> Hexo主题 </category>
-          
+        <category>博客</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 主题搭建 </tag>
-            
-            <tag> 主题推荐 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>连接Github与本地</title>
-      <link href="/2019/12/31/lian-jie-github-yu-ben-di/"/>
-      <url>/2019/12/31/lian-jie-github-yu-ben-di/</url>
-      
-        <content type="html"><![CDATA[<p>上一篇文章讲了怎么在本地部署Hexo，但仅仅在本地看是不够的，我们需要将他部署到远端，Github就是一个很好的托管网站，但是网速有点慢，也可以选择Coding，Gitee等网站，步骤都是一样的。</p><p>下面就开始吧</p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/jienihui.jpg" alt="憨憨敬礼" style="zoom:67%;"><h3 id="配置Github仓库"><a href="#配置Github仓库" class="headerlink" title="配置Github仓库"></a>配置Github仓库</h3><p><strong>创建仓库</strong></p><p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/cangku.png" alt=""></p><p>新建仓库名必须和自己的用户名保持一致，结尾以github.io结尾，如下</p><p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/cangkuming.jpg" alt=""></p><p>因为我的已经注册过了，所以报错！</p><h3 id="添加Git工具"><a href="#添加Git工具" class="headerlink" title="添加Git工具"></a>添加Git工具</h3><p>在Git Bash终端输入</p><blockquote><p>npm install hexo-deployer-git –save</p></blockquote><h3 id="添加公钥"><a href="#添加公钥" class="headerlink" title="添加公钥"></a>添加公钥</h3><p>这个过程的目的是在你的电脑和Github之间建立联系，保证安全性，，只有你可以操作。</p><p>首先查看<strong>C:Users\用户名</strong>下是否有.ssh文件</p><p>若是没有，输入</p><blockquote><p>ssh-keygen -t rsa -C “你的邮箱地址”</p></blockquote><p>之后 一直回车即可，大约三个就行</p><p>然后会出现.ssh文件，打开这个文件，找到id_rsa.pub，复制里面的内容（用Notepad++打开）</p><p>打开github网页，在右上方头像那里会展开一系列选项，选择settings，点击<strong>SSH and GPG keys</strong>，将你刚在复制的内容黏贴，名字随便取。</p><h3 id="部署-config-yml"><a href="#部署-config-yml" class="headerlink" title="部署_config.yml"></a>部署_config.yml</h3><p>先打开你的仓库，将你仓库的网络地址复制下来</p><p>打开_config.ynl文件，划到最下方，部署以下内容</p><blockquote><p>deploy:<br>  type: git<br>  repo: “黏贴你刚才复制的仓库地址”<br>  branch: master</p></blockquote><p>使用 hexo d部署</p><p>这样就基本完成了。</p><p>记住以下命令：</p><blockquote><p>hexo clean 清理缓存文件</p><p>hexo g         生成</p><p>hexo s          启动服务</p><p>hexo d          部署到远端</p></blockquote><p>在本地看一眼，没有问题使用</p><blockquote><p>hexo d</p></blockquote><p>部署到远端。</p><p>这一切都是在你建立的那个文件夹下运行的，如果想要运行看看自己的博客，只需要在网站上输入你的个人网址就行，一般是你的用户名+github.io，这是我的个人博客<a href="https://1471748102.github.io" target="_blank" rel="noopener">https://1471748102.github.io</a>,欢迎来指教！</p><p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/reshui.jpg" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
+      <tags>
+        <tag>问题</tag>
+        <tag>图片</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>主题美化</title>
+    <url>/2019/12/31/zhu-ti-mei-hua/</url>
+    <content><![CDATA[<h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>刚开始的默认界面其实还不错，但有的同学希望更美观一些，hexo有许多的主题，为了看起来更加赏心悦目，功能也更丰富，接下来我就先介绍一下怎么更换主题，然后推荐几款我比较喜欢的主题。</p>
+<h3 id="主题搭建"><a href="#主题搭建" class="headerlink" title="主题搭建"></a>主题搭建</h3><p>比如我想用indigo这个主题，可以在Git Bsah输入以下代码：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/yscoder/hexo-theme-indigo.git  themes/indigo</code></pre>
+<p>因为主题大多是国外的，下载比较慢，所以要等一会。</p>
+<p>根据主题不同，所以修改主题名就行。</p>
+<p>下载完成之后</p>
+<p>切换到themes文件夹下：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">cd</span> themes</code></pre>
+<p>查看所有文件：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">ls</span> -l</code></pre>
+<p>返回到文件夹下，找到_config.yml文件，修改theme后的主题名，然后重新部署即可。</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">cd</span> <span class="token punctuation">..</span></code></pre>
+<img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/theme.jpg" style="zoom: 50%;">
+
+<h3 id="主题推荐"><a href="#主题推荐" class="headerlink" title="主题推荐"></a>主题推荐</h3><p>推荐以下几个还不错的主题</p>
+<blockquote>
+<ol>
+<li><p>Sakura 非常炫，缺点加载慢 <a href="https://github.com/honjun/hexo-theme-sakura">https://github.com/honjun/hexo-theme-sakura</a> </p>
+</li>
+<li><p>Matery 预加载，强推 <a href="https://github.com/blinkfox/hexo-theme-matery">https://github.com/blinkfox/hexo-theme-matery</a> </p>
+</li>
+<li><p>3-hexo 三段式，适合博文多的 <a href="https://github.com/yelog/hexo-theme-3-hexo">https://github.com/yelog/hexo-theme-3-hexo</a> </p>
+</li>
+<li><p>Butterfly 也是个好看的  </p>
+</li>
+<li><p>Next 功能集成多，简洁</p>
+</li>
+</ol>
+</blockquote>
+<p>来自于哔哩哔哩UP主<a href="https://space.bilibili.com/157360395" target="_blank" rel="noopener">wallleap</a></p>
+<p>视频来自于<a href="https://www.bilibili.com/video/av74851669?t=202" target="_blank" rel="noopener">网址</a></p>
+<p>估计还有很多不错的主题，多多发现学习！</p>
+<img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.3/img/wink.jpg" style="zoom: 50%;">
+
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
       <categories>
-          
-          <category> 科普 </category>
-          
+        <category>博客</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 配置 </tag>
-            
-            <tag> github </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>本地个人博客搭建</title>
-      <link href="/2019/12/30/ge-ren-bo-ke-da-jian/"/>
-      <url>/2019/12/30/ge-ren-bo-ke-da-jian/</url>
-      
-        <content type="html"><![CDATA[<h2 id="本文简单介绍Hexo博客搭建流程"><a href="#本文简单介绍Hexo博客搭建流程" class="headerlink" title="本文简单介绍Hexo博客搭建流程"></a>本文简单介绍Hexo博客搭建流程</h2><p>主要是来记录自己的搭建时候出现的问题，以后再搭建的时候回顾，也希望可以对想搭建Hexo博客的同学有一些帮助。</p><p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/1.jpg" alt=""></p><p>大体介绍一下我所了解的博客，分为静态博客和动态博客</p><p><strong>目录结构</strong></p><ul><li>安装Node.js</li><li>安装Git</li><li>安装Hexo</li><li>连接Github与本地</li><li>写文章，发布文章</li></ul><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>打开<a href="https://nodejs.org" target="_blank" rel="noopener">官方网站</a></p><p>下载LTS版本，如下图所示</p><p>下载完成后，一路Next即可。</p><h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>打开<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">官方网站</a></p><p>根据系统选择版本，这里建议先学习一下廖雪峰老师的Git教程 <a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">链接</a>，讲得非常好。</p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/git.png" style="zoom:80%;"><p>下载完成后就一路Next即可，之后在开始菜单栏就会看到Git Bash，我们将会在这里操作。</p><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><ol><li>建立一个文件夹，用来存放自己的博客文件，在该目录下右键运行Git Bash Here</li></ol><p>可以先测试是否安装成功,在终端执行以下命令</p><blockquote><p>node -v</p></blockquote><blockquote><p>npm -v</p></blockquote><p>如果正常出现<strong>版本号</strong>就代表成功安装，可以继续以下的步骤，否则就要重新安装。</p><ol start="2"><li>使用淘宝镜像可以提高下载速度</li></ol><p>终端输入</p><blockquote><p>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p></blockquote><p>会出现以下界面：</p><p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/npm.png" alt=""></p><ol start="3"><li>安装Hexo</li></ol><p>终端输入</p><blockquote><p>cnpm install -g hexo-cli</p></blockquote><p>验证是否成功</p><blockquote><p>hexo -v</p></blockquote><pre><code>hexo: 3.8.0hexo-cli: 1.1.0os: Windows_NT 10.0.17134 win32 x64http_parser: 2.8.0node: 10.15.3v8: 6.8.275.32-node.51uv: 1.23.2zlib: 1.2.11ares: 1.15.0modules: 64nghttp2: 1.34.0napi: 3openssl: 1.1.0jicu: 62.1unicode: 11.0cldr: 33.1tz: 2018e</code></pre><p>如果出现失败，一般是环境变量出现错误，编辑一下环境变量。</p><ol start="4"><li>初始化Hexo</li></ol><blockquote><p>hexo init</p></blockquote><p>需要等待一段时间，他会在文件夹里部署一些文件</p><p>这样本地的网站配置就部署好了，输入</p><blockquote><p>hexo g </p></blockquote><p>将会生成静态网页</p><p>然后输入</p><blockquote><p>hexo s</p></blockquote><p>将会打开本地服务器，在浏览器输入  <a href="localhost:4000/">localhost:4000/</a> ,就可以看到我们的博客了。</p><h3 id="出现的错误"><a href="#出现的错误" class="headerlink" title="出现的错误"></a>出现的错误</h3><p>环境变量问题，Mac下部署一般不会出现错误，但是在Windows下环境变量会出现命令不可识别的问题，需要在Path添加变量，如果实在不行，可以把Nodejs下的文件复制到你新建的文件夹下，但是要在<strong>hexo.init</strong>命令之后。</p><p>下一篇文章介绍一下Hexo如何与Github相结合</p><p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/xianyu.gif" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
+      <tags>
+        <tag>主题更改</tag>
+        <tag>主题推荐</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>连接Github与本地</title>
+    <url>/2019/12/31/lian-jie-github-yu-ben-di/</url>
+    <content><![CDATA[<h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>上一篇文章讲了怎么在本地部署Hexo，但仅仅部署在本地不够酷，我们需要将他部署到远端，Github是一个很好的托管网站，但是网速有点慢，也可以选择Coding，Gitee等网站，步骤都是一样的。</p>
+<p>下面就开始吧</p>
+<img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/jienihui.jpg" alt="憨憨敬礼" style="zoom: 50%;">
+
+<h3 id="配置Github仓库"><a href="#配置Github仓库" class="headerlink" title="配置Github仓库"></a>配置Github仓库</h3><ol>
+<li><strong>创建仓库</strong></li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/cangku.png" alt=""></p>
+<p>新建仓库名必须和自己的用户名保持一致，结尾以github.io结尾，如下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/cangkuming.jpg" alt=""></p>
+<p>因为我的已经注册过了，所以才报错！</p>
+<ol start="2">
+<li><strong>添加Git工具</strong></li>
+</ol>
+<p>在Git Bash终端输入</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save</code></pre>
+<ol start="3">
+<li><strong>添加公钥</strong></li>
+</ol>
+<p>这个过程的目的是在你的电脑和Github之间建立联系，保证安全性，，只有你可以操作。</p>
+<p>首先查看<strong>C:Users\用户名</strong>下是否有.ssh文件</p>
+<p>若是没有，输入</p>
+<pre class=" language-bash"><code class="language-bash">ssh-keygen -t rsa -C <span class="token string">"你的邮箱地址"</span></code></pre>
+<p>之后 一直回车即可，大约三个就行</p>
+<p>然后会出现.ssh文件，打开这个文件，找到id_rsa.pub，复制里面的内容（用<a href="https://notepad-plus.en.softonic.com/" target="_blank" rel="noopener">Notepad++</a>打开）</p>
+<p>打开github网页，在右上方头像那里会展开一系列选项，选择settings，点击<strong>SSH and GPG keys</strong>，将你刚在复制的内容黏贴，名字随便取。</p>
+<h3 id="部署-config-yml"><a href="#部署-config-yml" class="headerlink" title="部署_config.yml"></a>部署_config.yml</h3><p>先打开你的仓库，将你仓库的网络地址复制下来</p>
+<p>打开_config.ynl文件，划到最下方，部署以下内容</p>
+<blockquote>
+<p>deploy:<br>  type: git<br>  repo: “黏贴你刚才复制的仓库地址”<br>  branch: master</p>
+</blockquote>
+<p>使用 hexo d部署</p>
+<p>这样就基本完成了。</p>
+<p>记住以下命令：</p>
+<blockquote>
+<p>hexo clean 清理缓存文件</p>
+<p>hexo g         生成</p>
+<p>hexo s          启动服务</p>
+<p>hexo d          部署到远端</p>
+</blockquote>
+<p>在本地看一眼，没有问题使用</p>
+<blockquote>
+<p>hexo d</p>
+</blockquote>
+<p>部署到远端。</p>
+<p>这一切都是在你建立的那个文件夹下运行的，如果想要运行看看自己的博客，只需要在网站上输入你的个人网址就行，一般是你的用户名+github.io，这是我的个人博客<a href="https://1471748102.github.io" target="_blank" rel="noopener">https://1471748102.github.io</a>,欢迎来指教！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/reshui.jpg" alt=""></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
       <categories>
-          
-          <category> 科普 </category>
-          
+        <category>博客</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 配置 </tag>
-            
-            <tag> 问题 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2019/12/30/hello-world/"/>
-      <url>/2019/12/30/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>配置</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>本地个人博客搭建</title>
+    <url>/2019/12/30/ge-ren-bo-ke-da-jian/</url>
+    <content><![CDATA[<h2 id="本文简单介绍Hexo博客搭建流程"><a href="#本文简单介绍Hexo博客搭建流程" class="headerlink" title="本文简单介绍Hexo博客搭建流程"></a>本文简单介绍Hexo博客搭建流程</h2><p>主要是来记录自己的搭建时候出现的问题，以后再搭建的时候回顾，也希望可以对想搭建Hexo博客的同学有一些帮助。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/1.jpg" alt=""></p>
+<p>大体介绍一下我所了解的博客，分为静态博客和动态博客</p>
+<p><strong>目录结构</strong></p>
+<ul>
+<li>安装Node.js</li>
+<li>安装Git</li>
+<li>安装Hexo</li>
+<li>连接Github与本地</li>
+<li>写文章，发布文章</li>
+</ul>
+<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>打开<a href="https://nodejs.org" target="_blank" rel="noopener">官方网站</a></p>
+<p>下载LTS版本，如下图所示</p>
+<img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.2/img/nodejs.png" style="zoom:50%;">
+
+<p>下载完成后，一路Next即可。</p>
+<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>打开<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">官方网站</a></p>
+<p>根据系统选择版本，这里建议先学习一下廖雪峰老师的Git教程 <a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">链接</a>，讲得非常好。</p>
+<img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/git.png" style="zoom:80%;">
+
+<p>下载完成后就一路Next即可，之后在开始菜单栏就会看到Git Bash，我们将会在这里操作。</p>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><ol>
+<li>建立一个文件夹，用来存放自己的博客文件，在该目录下右键运行Git Bash Here</li>
+</ol>
+<p>可以先测试是否安装成功,在终端执行以下命令</p>
+<pre class=" language-bash"><code class="language-bash">node -v
+<span class="token function">npm</span> -v</code></pre>
+<p>如果正常出现<strong>版本号</strong>就代表成功安装，可以继续以下的步骤，否则就要重新安装。</p>
+<ol start="2">
+<li>使用淘宝镜像可以提高下载速度</li>
+</ol>
+<p>终端输入</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm --registry<span class="token operator">=</span>https://registry.npm.taobao.org</code></pre>
+<p>会出现以下界面：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/npm.png" alt=""></p>
+<ol start="3">
+<li>安装Hexo</li>
+</ol>
+<p>终端输入</p>
+<pre class=" language-bash"><code class="language-bash">cnpm <span class="token function">install</span> -g hexo-cli</code></pre>
+<p>验证是否成功</p>
+<pre class=" language-bash"><code class="language-bash">hexo -v</code></pre>
+<p>出现下述文字就说明成功</p>
+<pre class=" language-bash"><code class="language-bash">hexo: 3.8.0
+hexo-cli: 1.1.0
+os: Windows_NT 10.0.17134 win32 x64
+http_parser: 2.8.0
+node: 10.15.3
+v8: 6.8.275.32-node.51
+uv: 1.23.2
+zlib: 1.2.11
+ares: 1.15.0
+modules: 64
+nghttp2: 1.34.0
+napi: 3
+openssl: 1.1.0j
+icu: 62.1
+unicode: 11.0
+cldr: 33.1
+tz: 2018e</code></pre>
+<p>如果出现失败，一般是环境变量出现错误，编辑一下环境变量。</p>
+<ol start="4">
+<li>初始化Hexo</li>
+</ol>
+<pre class=" language-bash"><code class="language-bash">hexo init</code></pre>
+<p>需要等待一段时间，他会在文件夹里部署一些文件</p>
+<p>这样本地的网站配置就部署好了，输入</p>
+<pre class=" language-bash"><code class="language-bash">hexo g </code></pre>
+<p>将会生成静态网页</p>
+<p>然后输入</p>
+<pre class=" language-bash"><code class="language-bash">hexo s</code></pre>
+<p>将会打开本地服务器，在浏览器输入  <a href="localhost:4000/">localhost:4000/</a> ,就可以看到我们的博客了。</p>
+<h3 id="出现的错误"><a href="#出现的错误" class="headerlink" title="出现的错误"></a>出现的错误</h3><p>环境变量问题，Mac下部署一般不会出现错误，但是在Windows下环境变量会出现命令不可识别的问题，需要在Path添加变量，如果实在不行，可以把Nodejs下的文件复制到你新建的文件夹下，但是要在<strong>hexo.init</strong>命令之后。</p>
+<p>下一篇文章介绍一下<a href="https://huangzhiwu98.top/2019/12/31/lian-jie-github-yu-ben-di/" target="_blank" rel="noopener">Hexo如何与Github相结合</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/xianyu.gif" alt=""></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>配置</tag>
+        <tag>问题</tag>
+      </tags>
+  </entry>
 </search>

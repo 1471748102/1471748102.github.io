@@ -5,10 +5,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="网易云音乐获取方法, Hzw~">
-    <meta name="description" content="在构建主题的音乐播放时出现了两个问题，在获取音乐封面和歌曲链接时，不知道如何下手
+    <meta name="description" content="引言在构建主题的音乐播放时出现了两个问题，因为主题的音乐播放是在saorce/musics.json文件下存储的，但是如果想播放音乐，就要有相关的资源。但是我在获取音乐封面和歌曲链接时，却不知道如何下手。
 
 
-在musics.json文件里，有name ,artist,url,cover四个属性，分别是歌曲名字，作者，歌曲链接，歌曲封面，因为我不打算将他放在本地">
+在musics.json文件里">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -345,12 +345,16 @@
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%93%BE%E6%8E%A5/">
+                                <span class="chip bg-color">网易云音乐链接</span>
+                            </a>
+                        
                             <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
                                 <span class="chip bg-color">主题搭建</span>
                             </a>
                         
-                            <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%93%BE%E6%8E%A5/">
-                                <span class="chip bg-color">网易云音乐链接</span>
+                            <a href="/tags/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE/">
+                                <span class="chip bg-color">音乐播放</span>
                             </a>
                         
                     </div>
@@ -383,7 +387,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    313
+                    450
                 </div>
                 
 
@@ -396,33 +400,42 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>在构建主题的音乐播放时出现了两个问题，在获取音乐封面和歌曲链接时，不知道如何下手</p>
-<img src="/2019/12/31/wang-yi-yun-yin-le-huo-qu-fang-fa/%E8%84%86%E5%BC%B1.jpg" class="">
+                <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>在构建主题的音乐播放时出现了两个问题，因为主题的音乐播放是在saorce/musics.json文件下存储的，但是如果想播放音乐，就要有相关的资源。但是我在获取音乐封面和歌曲链接时，却不知道如何下手。</p>
+<img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.2/img/cuiruo.jpg" style="zoom:67%;">
 
-<p>在musics.json文件里，有name ,artist,url,cover四个属性，分别是歌曲名字，作者，歌曲链接，歌曲封面，因为我不打算将他放在本地，所以直接从 <a href="https://music.163.com/#" target="_blank" rel="noopener">网易云音乐</a> 里面获取，开整！</p>
-<h2 id="封面搜索"><a href="#封面搜索" class="headerlink" title="封面搜索"></a>封面搜索</h2><h3 id="搜索想要导入的歌曲"><a href="#搜索想要导入的歌曲" class="headerlink" title="搜索想要导入的歌曲"></a>搜索想要导入的歌曲</h3><p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/songmoon.jpg" alt=""></p>
-<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><p>点击F12，然后在键盘上<strong>ctrl+f</strong>同时摁住，打开搜索功能，在搜索框输入<strong>img</strong></p>
+<p>在musics.json文件里，有<strong>name</strong> ,<strong>artist</strong>,<strong>url</strong>,<strong>cover</strong>四个属性，分别是歌曲名字，作者，歌曲链接，歌曲封面，因为我不打算将他放在本地，所以直接从 <a href="https://music.163.com/#" target="_blank" rel="noopener">网易云音乐</a> 里面获取，开整！</p>
+<p>PS:本方法是要手动配置的，估计学了Python之后就会智能很多，等我学了Python之后再来更新这篇文章。</p>
+<h3 id="一、封面搜索"><a href="#一、封面搜索" class="headerlink" title="一、封面搜索"></a>一、封面搜索</h3><ol>
+<li><strong>在网易云搜索想要导入的歌曲</strong></li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/songmoon.jpg" alt=""></p>
+<ol start="2">
+<li><strong>查询</strong></li>
+</ol>
+<p>点击F12，然后在键盘上<strong>ctrl+f</strong>同时摁住，打开搜索功能，在搜索框输入<strong>img</strong></p>
 <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/img.jpg" style="zoom:80%;">
 
 <p>此时出现的搜索内容就是封面内容,以jpg结尾</p>
 <blockquote>
-<p><a href="https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg" target="_blank" rel="noopener">https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg</a></p>
+<p><a href="https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg二" target="_blank" rel="noopener">https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg二</a></p>
 </blockquote>
-<h2 id="歌曲搜索"><a href="#歌曲搜索" class="headerlink" title="歌曲搜索"></a>歌曲搜索</h2><p>将网址栏的内容中最后的数字复制下来</p>
+<h3 id="二、歌曲搜索"><a href="#二、歌曲搜索" class="headerlink" title="二、歌曲搜索"></a>二、歌曲搜索</h3><p>将网址栏的内容中最后的<strong>数字</strong>复制下来</p>
 <p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/163link.jpg" alt=""></p>
 <blockquote>
-<p>1645064</p>
+<p>例如：1645064</p>
 <p><a href="http://music.163.com/song/media/outer/url?id=temp.mp3" target="_blank" rel="noopener">http://music.163.com/song/media/outer/url?id=temp.mp3</a></p>
 <p>temp就是你上面复制的数字</p>
+<p>歌曲链接就是：<a href="http://music.163.com/song/media/outer/url?id=1645064.mp3" target="_blank" rel="noopener">http://music.163.com/song/media/outer/url?id=1645064.mp3</a></p>
 </blockquote>
-<h2 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h2><p>最后将你得到的信息都导入musics.json即可</p>
+<h3 id="三、导入"><a href="#三、导入" class="headerlink" title="三、导入"></a>三、导入</h3><p>最后将你得到的信息都导入musics.json即可</p>
 <pre class=" language-yaml"><code class="language-yaml"><span class="token punctuation">{</span>
     <span class="token key atrule">"name"</span><span class="token punctuation">:</span> <span class="token string">"To The Moon"</span><span class="token punctuation">,</span>
     <span class="token key atrule">"artist"</span><span class="token punctuation">:</span> <span class="token string">"Kan R. Gao"</span><span class="token punctuation">,</span>
     <span class="token key atrule">"url"</span><span class="token punctuation">:</span> <span class="token string">"https://music.163.com/song/media/outer/url?id=1645064.mp3"</span><span class="token punctuation">,</span>
     <span class="token key atrule">"cover"</span><span class="token punctuation">:</span> <span class="token string">"https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg"</span>
 <span class="token punctuation">}</span></code></pre>
-<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/not.jpg" alt=""></p>
+<h3 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h3><p>方法有点出乎意料之外，但是解决了问题<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span>,虽然不够智能，之后再改进.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/not.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -504,12 +517,16 @@
                     
                         <div class="article-tag">
                             
+                                <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%93%BE%E6%8E%A5/">
+                                    <span class="chip bg-color">网易云音乐链接</span>
+                                </a>
+                            
                                 <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
                                     <span class="chip bg-color">主题搭建</span>
                                 </a>
                             
-                                <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%93%BE%E6%8E%A5/">
-                                    <span class="chip bg-color">网易云音乐链接</span>
+                                <a href="/tags/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE/">
+                                    <span class="chip bg-color">音乐播放</span>
                                 </a>
                             
                         </div>
@@ -692,10 +709,10 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在构建主题的音乐播放时出现了两个问题，在获取音乐封面和歌曲链接时，不知道如何下手
+                            引言在构建主题的音乐播放时出现了两个问题，因为主题的音乐播放是在saorce/musics.json文件下存储的，但是如果想播放音乐，就要有相关的资源。但是我在获取音乐封面和歌曲链接时，却不知道如何下手。
 
 
-在musics.json文件里，有name ,artist,url,cover四个属性，分别是歌曲名字，作者，歌曲链接，歌曲封面，因为我不打算将他放在本地
+在musics.json文件里
                         
                     </div>
                     <div class="publish-info">
@@ -718,12 +735,16 @@
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%93%BE%E6%8E%A5/">
+                        <span class="chip bg-color">网易云音乐链接</span>
+                    </a>
+                    
                     <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
                         <span class="chip bg-color">主题搭建</span>
                     </a>
                     
-                    <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%93%BE%E6%8E%A5/">
-                        <span class="chip bg-color">网易云音乐链接</span>
+                    <a href="/tags/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE/">
+                        <span class="chip bg-color">音乐播放</span>
                     </a>
                     
                 </div>
@@ -737,23 +758,19 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/12/31/ben-di-tu-pian-bu-xian-shi/">
+                <a href="/2019/12/31/hello-world/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.2/feature/3.jpg" class="responsive-img" alt="插入本地图片不显示">
                         
-                        <span class="card-title">插入本地图片不显示</span>
+                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1.1/feature/11.jpg" class="responsive-img" alt="Hello World！">
+                        
+                        <span class="card-title">Hello World！</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            当我开始写博客的时候
-
-hexo new “主题”
-
-当插入本地图片的时候发现图片竟然不显示，插入链接的时候就是正常的，所以我去查询了这个问题。
-插件的安装与配置首先我们需要安装一个图片路径转换的插件，这个插件名字是hexo-asset-i
+                            记录学习生活
                         
                     </div>
                     <div class="publish-info">
@@ -764,8 +781,8 @@ hexo new “主题”
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Hexo%E4%B8%BB%E9%A2%98/" class="post-category">
-                                    Hexo主题
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
+                                    配置
                                 </a>
                             
                             
@@ -775,12 +792,8 @@ hexo new “主题”
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/">
-                        <span class="chip bg-color">插件问题</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%9B%BE%E7%89%87/">
-                        <span class="chip bg-color">图片</span>
+                    <a href="/tags/Hello-World/">
+                        <span class="chip bg-color">Hello World</span>
                     </a>
                     
                 </div>
@@ -931,7 +944,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.7k</span>&nbsp;字
+                class="white-color">2.9k</span>&nbsp;字
             
             
             

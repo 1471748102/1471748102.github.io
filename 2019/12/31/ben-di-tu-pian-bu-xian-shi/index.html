@@ -5,10 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="插入本地图片不显示, Hzw~">
-    <meta name="description" content="当我开始写博客的时候
-
-hexo new “主题”
-
+    <meta name="description" content="引言当我开始写博客的时候
+hexo new &#34;主题&#34;
 当插入本地图片的时候发现图片竟然不显示，插入链接的时候就是正常的，所以我去查询了这个问题。
 插件的安装与配置首先我们需要安装一个图片路径转换的插件，这个插件名字是hexo-asset-i">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -347,8 +345,8 @@ hexo new “主题”
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/">
-                                <span class="chip bg-color">插件问题</span>
+                            <a href="/tags/%E9%97%AE%E9%A2%98/">
+                                <span class="chip bg-color">问题</span>
                             </a>
                         
                             <a href="/tags/%E5%9B%BE%E7%89%87/">
@@ -363,8 +361,8 @@ hexo new “主题”
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Hexo%E4%B8%BB%E9%A2%98/" class="post-category">
-                                Hexo主题
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                博客
                             </a>
                         
                     </div>
@@ -385,7 +383,7 @@ hexo new “主题”
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    612
+                    672
                 </div>
                 
 
@@ -398,15 +396,11 @@ hexo new “主题”
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>当我开始写博客的时候</p>
-<blockquote>
-<p>hexo new “主题”</p>
-</blockquote>
+                <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>当我开始写博客的时候</p>
+<pre class=" language-bash"><code class="language-bash">hexo new <span class="token string">"主题"</span></code></pre>
 <p>当插入本地图片的时候发现图片竟然不显示，插入链接的时候就是正常的，所以我去查询了这个问题。</p>
 <h3 id="插件的安装与配置"><a href="#插件的安装与配置" class="headerlink" title="插件的安装与配置"></a>插件的安装与配置</h3><p>首先我们需要安装一个图片路径转换的插件，这个插件名字是<strong>hexo-asset-image</strong></p>
-<blockquote>
-<p>npm install <a href="https://github.com/CodeFalling/hexo-asset-image">https://github.com/CodeFalling/hexo-asset-image</a> –save</p>
-</blockquote>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> https://github.com/CodeFalling/hexo-asset-image --save</code></pre>
 <p>安装成功后需要修改/node_modules/hexo-asset-image/index.js文件，将内容更换</p>
 <pre><code>---
 'use strict';
@@ -472,19 +466,19 @@ hexo.extend.filter.register('after_post_render', function(data){
 });
 
 ---</code></pre><h3 id="更改-config-yml文件"><a href="#更改-config-yml文件" class="headerlink" title="更改_config.yml文件"></a>更改_config.yml文件</h3><p>找到更改false为true，如下</p>
-<pre><code>post_asset_folder: true</code></pre><p>这样就会在_posts文件夹下创建一个同名的文件夹，将你需要的图片放在这个文件夹下，</p>
+<pre class=" language-yml"><code class="language-yml">post_asset_folder: true</code></pre>
+<p>这样就会在_posts文件夹下创建一个同名的文件夹，将你需要的图片放在这个文件夹下，</p>
 <h3 id="图片引用"><a href="#图片引用" class="headerlink" title="图片引用"></a>图片引用</h3><p>然后在你的.md文件里引用图片时候，用</p>
-<pre><code>{% asset_img example.jpg This is 
-an example image %}</code></pre><p>example.jpg是你的图片名称。</p>
+<pre class=" language-js"><code class="language-js"><span class="token punctuation">{</span><span class="token operator">%</span> asset_img example<span class="token punctuation">.</span>jpg This is 
+an example image <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<p>example.jpg是你的图片名称。</p>
 <p>This is an example image是你的图片描述。</p>
 <h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>解决后当你使用hexo d时，会出现</p>
 <blockquote>
 <p>$ hexo d<br>ERROR Deployer not found: git</p>
 </blockquote>
 <p>输入以下命令</p>
-<blockquote>
-<p>npm install <code>--</code>save hexo-deployer-git</p>
-</blockquote>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> <span class="token variable"><span class="token variable">`</span>--<span class="token variable">`</span></span>save hexo-deployer-git</code></pre>
 <p>就可以解决了！</p>
 <p>参考以下链接：</p>
 <ul>
@@ -493,6 +487,7 @@ an example image %}</code></pre><p>example.jpg是你的图片名称。</p>
 <li><a href="https://blog.csdn.net/xjm850552586/article/details/84101345" target="_blank" rel="noopener">https://blog.csdn.net/xjm850552586/article/details/84101345</a></li>
 <li><a href="https://blog.csdn.net/weixin_36401046/article/details/52940313" target="_blank" rel="noopener">https://blog.csdn.net/weixin_36401046/article/details/52940313</a></li>
 </ul>
+<p>解决完这个问题之后，我发现个人博客不用插入本地图片，使用图床，将图片部署到远端，使用的时候引入链接就行，我枯了，人不学不知道啊！</p>
 <p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/crycat.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -575,8 +570,8 @@ an example image %}</code></pre><p>example.jpg是你的图片名称。</p>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/">
-                                    <span class="chip bg-color">插件问题</span>
+                                <a href="/tags/%E9%97%AE%E9%A2%98/">
+                                    <span class="chip bg-color">问题</span>
                                 </a>
                             
                                 <a href="/tags/%E5%9B%BE%E7%89%87/">
@@ -750,22 +745,19 @@ an example image %}</code></pre><p>example.jpg是你的图片名称。</p>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/12/31/wang-yi-yun-yin-le-huo-qu-fang-fa/">
+                <a href="/2019/12/31/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1.1/feature/15.jpg" class="responsive-img" alt="网易云音乐获取方法">
+                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1.1/feature/11.jpg" class="responsive-img" alt="Hello World！">
                         
-                        <span class="card-title">网易云音乐获取方法</span>
+                        <span class="card-title">Hello World！</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在构建主题的音乐播放时出现了两个问题，在获取音乐封面和歌曲链接时，不知道如何下手
-
-
-在musics.json文件里，有name ,artist,url,cover四个属性，分别是歌曲名字，作者，歌曲链接，歌曲封面，因为我不打算将他放在本地
+                            记录学习生活
                         
                     </div>
                     <div class="publish-info">
@@ -776,8 +768,8 @@ an example image %}</code></pre><p>example.jpg是你的图片名称。</p>
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9F%B3%E4%B9%90/" class="post-category">
-                                    音乐
+                            <a href="/categories/%E9%85%8D%E7%BD%AE/" class="post-category">
+                                    配置
                                 </a>
                             
                             
@@ -787,12 +779,8 @@ an example image %}</code></pre><p>example.jpg是你的图片名称。</p>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
-                        <span class="chip bg-color">主题搭建</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%93%BE%E6%8E%A5/">
-                        <span class="chip bg-color">网易云音乐链接</span>
+                    <a href="/tags/Hello-World/">
+                        <span class="chip bg-color">Hello World</span>
                     </a>
                     
                 </div>
@@ -818,8 +806,8 @@ an example image %}</code></pre><p>example.jpg是你的图片名称。</p>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            刚开始的默认界面挺不错，但有的同学希望更美观一些，hexo有许多的主题可以应用，看起来更加赏心悦目，接下来我就先介绍一下怎么更换主题，最后推荐几款我比较喜欢的主题。
-主题搭建比如我想用indigo这个主题，可以在Git Bsah输入以下代码
+                            引言刚开始的默认界面其实还不错，但有的同学希望更美观一些，hexo有许多的主题，为了看起来更加赏心悦目，功能也更丰富，接下来我就先介绍一下怎么更换主题，然后推荐几款我比较喜欢的主题。
+主题搭建比如我想用indigo这个主题，可以在Git B
                         
                     </div>
                     <div class="publish-info">
@@ -830,8 +818,8 @@ an example image %}</code></pre><p>example.jpg是你的图片名称。</p>
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Hexo%E4%B8%BB%E9%A2%98/" class="post-category">
-                                    Hexo主题
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                    博客
                                 </a>
                             
                             
@@ -841,8 +829,8 @@ an example image %}</code></pre><p>example.jpg是你的图片名称。</p>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
-                        <span class="chip bg-color">主题搭建</span>
+                    <a href="/tags/%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%94%B9/">
+                        <span class="chip bg-color">主题更改</span>
                     </a>
                     
                     <a href="/tags/%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/">
@@ -997,7 +985,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.7k</span>&nbsp;字
+                class="white-color">2.9k</span>&nbsp;字
             
             
             

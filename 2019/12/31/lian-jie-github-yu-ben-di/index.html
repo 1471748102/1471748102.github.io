@@ -5,11 +5,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="连接Github与本地, Hzw~">
-    <meta name="description" content="上一篇文章讲了怎么在本地部署Hexo，但仅仅在本地看是不够的，我们需要将他部署到远端，Github就是一个很好的托管网站，但是网速有点慢，也可以选择Coding，Gitee等网站，步骤都是一样的。
+    <meta name="description" content="引言上一篇文章讲了怎么在本地部署Hexo，但仅仅部署在本地不够酷，我们需要将他部署到远端，Github是一个很好的托管网站，但是网速有点慢，也可以选择Coding，Gitee等网站，步骤都是一样的。
 下面就开始吧
 
 
-配置Github仓库创建">
+配置Github仓库
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -362,8 +363,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%A7%91%E6%99%AE/" class="post-category">
-                                科普
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                博客
                             </a>
                         
                     </div>
@@ -384,7 +385,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    556
+                    559
                 </div>
                 
 
@@ -397,27 +398,31 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>上一篇文章讲了怎么在本地部署Hexo，但仅仅在本地看是不够的，我们需要将他部署到远端，Github就是一个很好的托管网站，但是网速有点慢，也可以选择Coding，Gitee等网站，步骤都是一样的。</p>
+                <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>上一篇文章讲了怎么在本地部署Hexo，但仅仅部署在本地不够酷，我们需要将他部署到远端，Github是一个很好的托管网站，但是网速有点慢，也可以选择Coding，Gitee等网站，步骤都是一样的。</p>
 <p>下面就开始吧</p>
-<img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/jienihui.jpg" alt="憨憨敬礼" style="zoom:67%;">
+<img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/jienihui.jpg" alt="憨憨敬礼" style="zoom: 50%;">
 
-<h3 id="配置Github仓库"><a href="#配置Github仓库" class="headerlink" title="配置Github仓库"></a>配置Github仓库</h3><p><strong>创建仓库</strong></p>
+<h3 id="配置Github仓库"><a href="#配置Github仓库" class="headerlink" title="配置Github仓库"></a>配置Github仓库</h3><ol>
+<li><strong>创建仓库</strong></li>
+</ol>
 <p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/cangku.png" alt=""></p>
 <p>新建仓库名必须和自己的用户名保持一致，结尾以github.io结尾，如下</p>
 <p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.6/img/cangkuming.jpg" alt=""></p>
-<p>因为我的已经注册过了，所以报错！</p>
-<h3 id="添加Git工具"><a href="#添加Git工具" class="headerlink" title="添加Git工具"></a>添加Git工具</h3><p>在Git Bash终端输入</p>
-<blockquote>
-<p>npm install hexo-deployer-git –save</p>
-</blockquote>
-<h3 id="添加公钥"><a href="#添加公钥" class="headerlink" title="添加公钥"></a>添加公钥</h3><p>这个过程的目的是在你的电脑和Github之间建立联系，保证安全性，，只有你可以操作。</p>
+<p>因为我的已经注册过了，所以才报错！</p>
+<ol start="2">
+<li><strong>添加Git工具</strong></li>
+</ol>
+<p>在Git Bash终端输入</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save</code></pre>
+<ol start="3">
+<li><strong>添加公钥</strong></li>
+</ol>
+<p>这个过程的目的是在你的电脑和Github之间建立联系，保证安全性，，只有你可以操作。</p>
 <p>首先查看<strong>C:Users\用户名</strong>下是否有.ssh文件</p>
 <p>若是没有，输入</p>
-<blockquote>
-<p>ssh-keygen -t rsa -C “你的邮箱地址”</p>
-</blockquote>
+<pre class=" language-bash"><code class="language-bash">ssh-keygen -t rsa -C <span class="token string">"你的邮箱地址"</span></code></pre>
 <p>之后 一直回车即可，大约三个就行</p>
-<p>然后会出现.ssh文件，打开这个文件，找到id_rsa.pub，复制里面的内容（用Notepad++打开）</p>
+<p>然后会出现.ssh文件，打开这个文件，找到id_rsa.pub，复制里面的内容（用<a href="https://notepad-plus.en.softonic.com/" target="_blank" rel="noopener">Notepad++</a>打开）</p>
 <p>打开github网页，在右上方头像那里会展开一系列选项，选择settings，点击<strong>SSH and GPG keys</strong>，将你刚在复制的内容黏贴，名字随便取。</p>
 <h3 id="部署-config-yml"><a href="#部署-config-yml" class="headerlink" title="部署_config.yml"></a>部署_config.yml</h3><p>先打开你的仓库，将你仓库的网络地址复制下来</p>
 <p>打开_config.ynl文件，划到最下方，部署以下内容</p>
@@ -708,8 +713,8 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            刚开始的默认界面挺不错，但有的同学希望更美观一些，hexo有许多的主题可以应用，看起来更加赏心悦目，接下来我就先介绍一下怎么更换主题，最后推荐几款我比较喜欢的主题。
-主题搭建比如我想用indigo这个主题，可以在Git Bsah输入以下代码
+                            引言刚开始的默认界面其实还不错，但有的同学希望更美观一些，hexo有许多的主题，为了看起来更加赏心悦目，功能也更丰富，接下来我就先介绍一下怎么更换主题，然后推荐几款我比较喜欢的主题。
+主题搭建比如我想用indigo这个主题，可以在Git B
                         
                     </div>
                     <div class="publish-info">
@@ -720,8 +725,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Hexo%E4%B8%BB%E9%A2%98/" class="post-category">
-                                    Hexo主题
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                    博客
                                 </a>
                             
                             
@@ -731,8 +736,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/">
-                        <span class="chip bg-color">主题搭建</span>
+                    <a href="/tags/%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%94%B9/">
+                        <span class="chip bg-color">主题更改</span>
                     </a>
                     
                     <a href="/tags/%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/">
@@ -780,8 +785,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%A7%91%E6%99%AE/" class="post-category">
-                                    科普
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                    博客
                                 </a>
                             
                             
@@ -947,7 +952,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.7k</span>&nbsp;字
+                class="white-color">2.9k</span>&nbsp;字
             
             
             
