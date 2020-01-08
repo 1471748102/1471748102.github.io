@@ -385,7 +385,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    801
+                    994
                 </div>
                 
 
@@ -483,7 +483,7 @@
     <span class="token key atrule">url</span><span class="token punctuation">:</span> /friends
     <span class="token key atrule">icon</span><span class="token punctuation">:</span> fas fa<span class="token punctuation">-</span>address<span class="token punctuation">-</span>book</code></pre>
 <ol start="7">
-<li>文章头设置</li>
+<li><strong>文章头设置</strong></li>
 </ol>
 <p>首先为了新建文章方便，建议将<code>/scaffolds/post.md</code>修改为如下代码：</p>
 <pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">{</span> title <span class="token punctuation">}</span><span class="token punctuation">}</span>
@@ -500,6 +500,49 @@
 <span class="token key atrule">keywords</span><span class="token punctuation">:</span> 
 <span class="token key atrule">tags</span><span class="token punctuation">:</span>
 categories<span class="token punctuation">:</span></code></pre>
+<ol start="8">
+<li><strong>添加404界面</strong></li>
+</ol>
+<p>先在source文件夹下，创建一个404目录，命令如下：</p>
+<p><code>hexo new page "4040"</code></p>
+<p>打开文件夹下的<code>index.html</code></p>
+<p>写入内容如下：</p>
+<pre><code>---
+title: 404
+date: 2020-01-08 19:52:55
+type: "404"
+layout: "404"
+description: "你来到了没有知识的荒原 :("
+
+---</code></pre><p>然后在<code>/themes/matery/layout/</code>目录下新建一个<code>404.ejs</code>文件，内容如下：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>style type<span class="token operator">=</span><span class="token string">"text/css"</span><span class="token operator">></span>
+    <span class="token comment" spellcheck="true">/* don't remove. */</span>
+    <span class="token punctuation">.</span>about<span class="token operator">-</span>cover <span class="token punctuation">{</span>
+        height<span class="token punctuation">:</span> 75vh<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"bg-cover pd-header about-cover"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"row"</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col s10 offset-s1 m8 offset-m2 l8 offset-l2"</span><span class="token operator">></span>
+                <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"brand"</span><span class="token operator">></span>
+                    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"title center-align"</span><span class="token operator">></span>
+                        <span class="token number">404</span>
+                    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+                    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"description center-align"</span><span class="token operator">></span>
+                        <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> page<span class="token punctuation">.</span>description <span class="token operator">%</span><span class="token operator">></span>
+                    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+    <span class="token comment" spellcheck="true">// 每天切换 banner 图.  Switch banner image every day.</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.bg-cover'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">'background-image'</span><span class="token punctuation">,</span> <span class="token string">'url(/medias/banner/'</span> <span class="token operator">+</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDay</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'.jpg)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
 <p>还有些修改忘记了，暂时就这么多吧 .</p>
 <p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/img2/20200102193327.gif" alt=""></p>
 <script>
@@ -1005,7 +1048,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">7.5k</span>&nbsp;字
+                class="white-color">7.7k</span>&nbsp;字
             
             
             
