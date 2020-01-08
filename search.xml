@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>git操作</title>
+    <url>/2020/01/08/git-cao-zuo/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在使用git的时候出现了一些遗忘，这里暂时记录一些随笔，加深影响.</p>
+<img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.5/img2/20200102193341.jpg" style="zoom:50%;">
+
+<h2 id="创建项目工程"><a href="#创建项目工程" class="headerlink" title="创建项目工程"></a>创建项目工程</h2><ol>
+<li>远程仓库： 在<code>github</code>中新建<code>New repository</code> 输入仓库名</li>
+<li>在自己电脑上创建一个相同名称的文件夹</li>
+</ol>
+<h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><p>使用<code>git init</code>初始化仓库</p>
+<h2 id="连接远程仓库"><a href="#连接远程仓库" class="headerlink" title="连接远程仓库"></a>连接远程仓库</h2><p>连接远程仓库，复制远程仓库的地址信息</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> remote add origin 地址链接</code></pre>
+<h2 id="从远程仓库pull文件"><a href="#从远程仓库pull文件" class="headerlink" title="从远程仓库pull文件"></a>从远程仓库pull文件</h2><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> pull origin master</code></pre>
+<h2 id="将本地文件push到远程仓库"><a href="#将本地文件push到远程仓库" class="headerlink" title="将本地文件push到远程仓库"></a>将本地文件push到远程仓库</h2><p><code>git status</code>         查看工作目录的状态</p>
+<p><code>git add .</code>            将文件添加到暂存区</p>
+<p><code>git commit -m "message"</code>  提交更改，添加备注信息</p>
+<p><code>git push origin master</code>     将本地仓库信息push到远程</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ol>
+<li><strong>git pull origin master 出现如下提示：</strong></li>
+</ol>
+<pre class=" language-bash"><code class="language-bash">fatal: refusing to merge unrelated histories</code></pre>
+<p><strong>解决：</strong>如下操作即可解决</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> pull origin master --allow-unrelated-histories</code></pre>
+<ol start="2">
+<li><p>.<strong>每次git push origin master 时都需要输入用户名和密码：</strong></p>
+<p>　因为配置的时候使用的是https协议，所以每次都需要输入</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> remote -v  查看远程连接
+
+<span class="token function">git</span> remote <span class="token function">rm</span> origin  删除远程连接
+
+<span class="token function">git</span> remote add origin git@github.com:yourName/repositoryname.git</code></pre>
+</li>
+</ol>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p><font color="red">学而不思则罔，思而不学则殆.</font></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Chrome插件推荐</title>
     <url>/2020/01/04/you-hou-onetab/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>可能我用Chrome浏览器的主要原因是它丰富的插件，感觉用起来特别的人性化，看起来更舒服.主要其它浏览器用的不多<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f61f.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f61f.png?v8">😟</span></p>
