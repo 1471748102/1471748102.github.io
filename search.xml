@@ -1,7 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Git操作二</title>
+    <title>Git操作(三)</title>
+    <url>/2020/01/11/git-cao-zuo-san/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在使用Git的时候，并没有很注意过Git分支管理的使用，今天来对分支管理进行一些总结.</p>
+<p>非常感谢廖雪峰老师的讲解.</p>
+<img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.5/xiaoren/20200103213056.jpg" style="zoom:50%;">
+
+<h2 id="创建与合并分支"><a href="#创建与合并分支" class="headerlink" title="创建与合并分支"></a>创建与合并分支</h2><p>HEAD指向<code>master</code>,其实<code>maste</code>r才是指向提交的.</p>
+<p>当我们创建了一个分支时候，例如<code>dev</code>,知道<code>dev</code>指向和<code>maste</code>r相同的提交</p>
+<p>HEAD的指向就是当前所在的分支</p>
+<p>两个分支是独立的，可以合并，合并起来很容易，只需要改变HEAD指向即可</p>
+<p><strong>示例：</strong></p>
+<ol>
+<li>创建并转到新的<code>dev</code>分支</li>
+</ol>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> switch -c dev
+
+
+<span class="token function">git</span> branch dev
+<span class="token function">git</span> switch dev</code></pre>
+<p>也可以使用</p>
+<p><del><code>git checkout -b dev</code></del></p>
+<p>但是并不推荐，容易和<code>git checkout --file</code>弄混</p>
+<ol start="2">
+<li>单纯的转换分支</li>
+</ol>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> switch master</code></pre>
+<ol start="3">
+<li>查看当前分支</li>
+</ol>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> branch</code></pre>
+<ol start="4">
+<li>把另一个分支的内容合并到这个分支上</li>
+</ol>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> merge dev</code></pre>
+<ol start="5">
+<li>删除某个分支</li>
+</ol>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> branch -d <span class="token operator">&lt;</span>name<span class="token operator">></span></code></pre>
+<p>这个操作没有发生冲突.</p>
+<h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p>当我们两个分支都发生了改动，合并的时候发现有冲突怎么办？</p>
+<p><code>dev</code>分支下加了一句话，提交正常</p>
+<p><code>master</code>分支下加了一句话，提交正常</p>
+<p>把<code>dev</code>合并到<code>master</code>，失败！</p>
+<p>此时会出现失败原因，冲突，此时需要手动修改内容.</p>
+<h2 id="BUG分支"><a href="#BUG分支" class="headerlink" title="BUG分支"></a>BUG分支</h2><p>当你的工作做到一半，临时发现<code>master</code>分支上有BUG，你又不想提交手头工作怎么办？</p>
+<ul>
+<li><p>使用<code>git stash</code>暂时保存下</p>
+</li>
+<li><p>查看的时候使用<code>git stash list</code>查看</p>
+</li>
+<li><p>恢复时有两种方法</p>
+</li>
+</ul>
+<ol>
+<li>使用<code>git stash apply</code>，恢复后不删除，如果你要删除，使用<code>git stash drop</code></li>
+<li>使用<code>git stash pop</code>,恢复后就删除</li>
+</ol>
+<h2 id="Feature分支"><a href="#Feature分支" class="headerlink" title="Feature分支"></a>Feature分支</h2><p>当你想要开发一个新功能，你需要新开辟一个分支，开发好后在融合进去</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> branch  feature
+<span class="token function">git</span> checkout feature
+<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>//开发过程</code></pre>
+<p>当你准备合并时，老板忽然说，不要了，你只能就地销毁</p>
+<p><code>git branch -d feature</code>  删除</p>
+<p><strong>显示：没有融合，删除不掉</strong></p>
+<ul>
+<li>要用大写的<code>D</code>进行删除</li>
+</ul>
+<p><code>git branch -D feature</code> </p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>Git的操作有非常多，但常用的就那么几个，多加练习即可.</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git操作(二)</title>
     <url>/2020/01/11/git-cao-zuo-er/</url>
     <content><![CDATA[<img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.5/logo.png" style="zoom:50%;">
 
@@ -1556,8 +1652,8 @@ tz: 2018e</code></pre>
         <category>博客</category>
       </categories>
       <tags>
-        <tag>配置</tag>
         <tag>问题</tag>
+        <tag>配置</tag>
       </tags>
   </entry>
 </search>
