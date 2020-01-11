@@ -372,7 +372,7 @@ ps<span class="token punctuation">.</span>setInt<span class="token punctuation">
       </tags>
   </entry>
   <entry>
-    <title>git操作</title>
+    <title>Git操作(一)</title>
     <url>/2020/01/08/git-cao-zuo/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在使用git的时候出现了一些遗忘，这里暂时记录一些随笔，加深影响.</p>
 <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.5/img2/20200102193341.jpg" style="zoom:50%;">
@@ -381,7 +381,10 @@ ps<span class="token punctuation">.</span>setInt<span class="token punctuation">
 <li>远程仓库： 在<code>github</code>中新建<code>New repository</code> 输入仓库名</li>
 <li>在自己电脑上创建一个相同名称的文件夹</li>
 </ol>
-<h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><p>使用<code>git init</code>初始化仓库</p>
+<h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><p><code>mkdir learngit</code>  创建目录</p>
+<p><code>cd learngit</code> 转到此目录下</p>
+<p>使用<code>git init</code>初始化仓库</p>
+<p><code>ls -ah</code> 会发现一个隐藏的目录<code>.git</code></p>
 <h2 id="连接远程仓库"><a href="#连接远程仓库" class="headerlink" title="连接远程仓库"></a>连接远程仓库</h2><p>连接远程仓库，复制远程仓库的地址信息</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> remote add origin 地址链接</code></pre>
 <h2 id="从远程仓库pull文件"><a href="#从远程仓库pull文件" class="headerlink" title="从远程仓库pull文件"></a>从远程仓库pull文件</h2><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> pull origin master</code></pre>
@@ -752,9 +755,9 @@ ps<span class="token punctuation">.</span>setInt<span class="token punctuation">
         <category>前端</category>
       </categories>
       <tags>
-        <tag>主题</tag>
         <tag>图片</tag>
         <tag>优化</tag>
+        <tag>主题</tag>
       </tags>
   </entry>
   <entry>
@@ -930,8 +933,8 @@ description: "你来到了没有知识的荒原 :("
         <category>博客</category>
       </categories>
       <tags>
-        <tag>diy</tag>
         <tag>主题</tag>
+        <tag>diy</tag>
       </tags>
   </entry>
   <entry>
