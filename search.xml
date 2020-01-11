@@ -577,6 +577,16 @@ ps<span class="token punctuation">.</span>setInt<span class="token punctuation">
 <span class="token function">git</span> remote add origin git@github.com:yourName/repositoryname.git</code></pre>
 </li>
 </ol>
+<h2 id="问题二"><a href="#问题二" class="headerlink" title="问题二"></a>问题二</h2><p>本地创建了一个project<br>并在GitHub上创建了一个仓库，想要将本地的仓库链接到远程仓库<br>我用的是如下方法：</p>
+<p><code>git init</code>    初始化本地仓库<br><code>git remote add origin XXX</code>     添加远程仓库地址</p>
+<p>如果你在这之后就执行</p>
+<p><code>git add -A</code><br><code>git commit -m "XXX"</code></p>
+<p><code>git push origin master</code>,那么就会出现问题(被拒绝)</p>
+<p>所以在<code>remote add</code>后不要着急<code>git add</code>，一定要<code>git pull origin master</code></p>
+<p>出现这个的原因<br>是因为你在码云创建的仓库有README文件，而本地没有，造成本地和远程的不同步，<br>那么有两种方案可以解决：</p>
+<p><strong>one ：</strong><br>本地没有ReadMe文件，那么就在本地生成一个</p>
+<p><code>git pull --rebase origin master</code>     本地生成ReadMe文件<br><code>git push origin master</code></p>
+<p><strong>two：</strong><br>那我就强制上传覆盖远程文件，<br><code>git push -f origin master</code></p>
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p><font color="red">学而不思则罔，思而不学则殆.</font></p>
 <script>
         document.querySelectorAll('.github-emoji')
