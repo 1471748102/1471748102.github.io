@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类: 前端, Hzw~">
-    <meta name="description" content="分类: 前端 | Hzw~">
+    <meta name="keywords" content="Hzw~">
+    <meta name="description" content="Hzw~">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>分类: 前端 | Hzw~</title>
+    <title>Hzw~</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7/libs/awesome/css/all.css">
@@ -216,6 +216,7 @@
 
 </header>
 
+    
     <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
@@ -256,120 +257,163 @@
     </div>
 </div>
 
+
 <main class="content">
 
     
+    <div id="indexCard" class="index-card">
+        <div class="container ">
+            <div class="card">
+                <div class="card-content">
+                    
+                        <div class="dream">
+    
+    <div class="title center-align">
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;春秋
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
+            除掉睡眠，人的一辈子只有一万多天，<br>人与人的不同在于:<br>你是真的活了一万多天.<br>还是仅仅生活了一天，却重复了一万多次.
+        </div>
+    </div>
+</div>
+                    
 
-<div id="category-cloud" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
-            </div>
-            <div class="tag-chips">
-                
-                
-                
-                <a href="/categories/%E9%9A%8F%E7%AC%94/" title="随笔: 5">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9EBEA;">随笔
-                        <span class="tag-length">5</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Java/" title="Java: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F5EEF8;">Java
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E9%85%8D%E7%BD%AE/" title="配置: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D5F5E3;">配置
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E5%8D%9A%E5%AE%A2/" title="博客: 5">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #E8F8F5;">博客
-                        <span class="tag-length">5</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E4%BC%98%E5%8C%96/" title="优化: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #FEF9E7;">优化
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E9%9F%B3%E4%B9%90/" title="音乐: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F8F9F9;">音乐
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E5%89%8D%E7%AB%AF/" title="前端: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            style="background-color: #82E0AA;">前端
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-            </div>
+                    
+                        
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7/libs/aplayer/APlayer.min.css">
+<div class="music-player">
+    
+    <div class="title center-align">
+        <i class="fas fa-music"></i>&nbsp;&nbsp;听听音乐
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
         </div>
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'false' === 'true',
+        autoplay: 'false' === 'true',
+        theme: '#42b983',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.7'),
+        listFolded: 'false' === 'true',
+        listMaxHeight: '',
+        audio: eval([{"name":"To The Moon","artist":"Kan R. Gao","url":"https://music.163.com/song/media/outer/url?id=1645064.mp3","cover":"https://p1.music.126.net/0AYWra9rCzgeprGp6OUyUw==/868614185993997.jpg"},{"name":"越来越不懂","artist":"蔡健雅","url":"https://music.163.com/song/media/outer/url?id=208958.mp3","cover":"http://p2.music.126.net/urAYesmIFsMak292DbudlQ==/125344325567370.jpg"},{"name":"静止","artist":"杨乃文","url":"https://music.163.com/song/media/outer/url?id=316088.mp3","cover":"http://p1.music.126.net/QRoaLMzr9eP4MVR6fKqfug==/109951163188713560.jpg"},{"name":"永远同在","artist":"宗次郎","url":"https://music.163.com/song/media/outer/url?id=480353.mp3","cover":"https://p1.music.126.net/ygxAeYxxXPONww041tylMw==/5996736418028563.jpg"},{"name":"十点半的地铁","artist":"李健","url":"https://music.163.com/song/media/outer/url?id=466333788.mp3","cover":"http://p1.music.126.net/64oU_90n8lR7pEJ_dExIPw==/109951163903238311.jpg"},{"name":"Battles and Wastelands","artist":"Neo Restros","url":"https://music.163.com/song/media/outer/url?id=21301195.mp3","cover":"http://p1.music.126.net/5aTUx6jeROmJNYvOUq5XVw==/109951163454509125.jpg"},{"name":"春夏秋冬","artist":"张国荣","url":"https://music.163.com/song/media/outer/url?id=186453.mp3","cover":"http://p1.music.126.net/2YIpNoCzXfYgz4zIw3s0Vg==/73667279073787.jpg"}])
+    });
+});
+</script>
+                    
+
+                    
+
+                    
+                    <div id="recommend-sections" class="recommend">
+                        
+
+
+
+
+
+<div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;推荐文章</div>
+
+<div class="row">
+
+    
+    
+    <div class="col s12" >
+        <div class="post-card" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/yinghua.jpg')">
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="category">博客</a>
+                        
+                    
+                </div>
+                <a href="/2020/01/03/ge-xing-hua-xiu-gai/">
+                    <h3 class="post-title">个性化修改</h3>
+                </a>
+                <p class="post-description">引言当使用个人博客的时候 ，发现有很多的地方不合心意，所以对这些地方进行修改，下面简单记录一下更改时出现疑惑的几点.
+
+
+主题代码块
+
+在使用主题的代码块时，发现代码行号</p>
+                <a href="/2020/01/03/ge-xing-hua-xiu-gai/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
     
 
+</div>
+
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+    
+
+    <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
-        <div class="row tags-posts">
+        <div class="row article-row">
             
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2020/01/03/yu-jia-zai-yu-lan-jia-zai/">
-                        <div class="card-image tag-image">
+                    <a href="/2019/12/30/ben-di-ge-ren-bo-ke-da-jian/">
+                        <div class="card-image">
                             
                             
-                            <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.6/wallpaper/70.jpg" class="responsive-img" alt="预加载与懒加载">
+                            <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1.1/feature/13.jpg" class="responsive-img" alt="本地个人博客搭建">
                             
-                            <span class="card-title">预加载与懒加载</span>
+                            <span class="card-title">本地个人博客搭建</span>
                         </div>
                     </a>
+
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                两种加载的意义
+                                本文简单介绍Hexo博客搭建流程主要是来记录自己的搭建时候出现的问题，以后再搭建的时候回顾，也希望可以对想搭建Hexo博客的同学有一些帮助。
+
+大体介绍一下我所了解的博客，分为静态博客和动态博客
+目录结构
+
+安装Node.js
+安装Git
+
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-30
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
+                                <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                    博客
                                 </a>
                                 
                                 
@@ -380,16 +424,12 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E4%B8%BB%E9%A2%98/">
-                            <span class="chip bg-color">主题</span>
+                        <a href="/tags/%E9%97%AE%E9%A2%98/">
+                            <span class="chip bg-color">问题</span>
                         </a>
                         
-                        <a href="/tags/%E5%9B%BE%E7%89%87/">
-                            <span class="chip bg-color">图片</span>
-                        </a>
-                        
-                        <a href="/tags/%E4%BC%98%E5%8C%96/">
-                            <span class="chip bg-color">优化</span>
+                        <a href="/tags/%E9%85%8D%E7%BD%AE/">
+                            <span class="chip bg-color">配置</span>
                         </a>
                         
                     </div>
@@ -399,7 +439,32 @@
             
         </div>
     </article>
+
 </main>
+
+
+<div class="container paging">
+    <div class="row">
+        <div class="col s6 m4 l4">
+            
+            <a href="/"
+               class="left btn-floating btn-large waves-effect waves-light bg-color">
+                <i class="fas fa-angle-left"></i>
+            </a>
+            
+        </div>
+        <div class="page-info col m4 l4 hide-on-small-only">
+            <div class="center-align b-text-gray">2 / 2</div>
+        </div>
+        <div class="col s6 m4 l4">
+            
+            <a class="right btn-floating btn-large disabled">
+                <i class="fas fa-angle-right"></i>
+            </a>
+            
+        </div>
+    </div>
+</div>
 
 
 

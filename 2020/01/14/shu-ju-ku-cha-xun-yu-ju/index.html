@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Github查询技巧, Hzw~">
-    <meta name="description" content="介绍一些Github技巧">
+    <meta name="keywords" content="数据库查询语句, Hzw~">
+    <meta name="description" content="一些数据库查询语句汇总">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Github查询技巧 | Hzw~</title>
+    <title>数据库查询语句 | Hzw~</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7/libs/awesome/css/all.css">
@@ -220,12 +220,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.6/wallpaper/67.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/46.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Github查询技巧</h1>
+                    <h1 class="description center-align post-title">数据库查询语句</h1>
                 </div>
             </div>
         </div>
@@ -342,8 +342,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/github/">
-                                <span class="chip bg-color">github</span>
+                            <a href="/tags/sql/">
+                                <span class="chip bg-color">sql</span>
                             </a>
                         
                     </div>
@@ -367,7 +367,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-12
+                    2020-01-14
                 </div>
                 
 
@@ -376,7 +376,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    262
+                    876
                 </div>
                 
 
@@ -389,53 +389,132 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在上网浏览的时候偶尔看到github使用的小技巧，在这里简单记录下来</p>
-<img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.5/xiaokonglong/20200102193220.jpg" style="zoom: 200%;">
-
-<p><strong>在github搜索的时候</strong></p>
-<ul>
-<li>搜索名字中带有”爬虫”的</li>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在重看数据库的时候，想起来之前数据库查询一个实验，在此把数据库的查询语句汇总一下.</p>
+<h2 id="首先建立三个表"><a href="#首先建立三个表" class="headerlink" title="首先建立三个表"></a>首先建立三个表</h2><p>学生表：Student(Sno,Sname,Ssex,Sage,Sdept)</p>
+<p>课程表：Course(Cno,Cname,Cpno,Ccredit)，其中Cpno为外码</p>
+<p>学生选课表：SC(Sno,Cno,Grade)，其中Sno为外码，Cno为外码</p>
+<pre class=" language-sql"><code class="language-sql">创建stu数据库
+<span class="token keyword">create</span> <span class="token keyword">database</span> stu
+创建三个表
+<span class="token keyword">create</span> <span class="token keyword">table</span> Student
+<span class="token punctuation">(</span>
+Sno char<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">,</span>
+Sname  char<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token keyword">unique</span><span class="token punctuation">,</span>
+Ssex char<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+Sage <span class="token keyword">smallint</span><span class="token punctuation">,</span>
+Sdept char<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> Course
+<span class="token punctuation">(</span>
+Cno char<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">,</span>
+Cname char<span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+Cpno char<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+Ccredit <span class="token keyword">smallint</span><span class="token punctuation">,</span>
+<span class="token keyword">foreign</span> <span class="token keyword">key</span><span class="token punctuation">(</span>Cpno<span class="token punctuation">)</span><span class="token keyword">references</span> Course<span class="token punctuation">(</span>Cno<span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> Sc
+<span class="token punctuation">(</span>
+Sno char<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+Cno char<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+Grade <span class="token keyword">smallint</span><span class="token punctuation">,</span>
+<span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">(</span>Sno<span class="token punctuation">,</span>Cno<span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token keyword">FOREIGN</span> <span class="token keyword">key</span><span class="token punctuation">(</span>Sno<span class="token punctuation">)</span><span class="token keyword">REFERENCES</span> Student<span class="token punctuation">(</span>Sno<span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token keyword">FOREIGN</span> <span class="token keyword">key</span><span class="token punctuation">(</span>Cno<span class="token punctuation">)</span><span class="token keyword">REFERENCES</span> Course<span class="token punctuation">(</span>Cno<span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>插入数据后进行操作</p>
+<h2 id="多表查询和单表查询"><a href="#多表查询和单表查询" class="headerlink" title="多表查询和单表查询"></a>多表查询和单表查询</h2><h3 id="单表查询"><a href="#单表查询" class="headerlink" title="单表查询"></a>单表查询</h3><ul>
+<li>查询计算机系学生的信息</li>
 </ul>
-<p><code>in:name 爬虫</code></p>
+<p><code>select Sno,Sname,Ssex,Ssex,Sage,Sdept from Studentx where Sdept='CZ'</code></p>
 <ul>
-<li>搜索readme中带有”爬虫”的</li>
+<li>查询全体学生的人数</li>
 </ul>
-<p><code>in:readme 爬虫</code></p>
+<p><code>select COUNT(*) as avg from Studentx</code></p>
 <ul>
-<li>搜索描述中带有”爬虫”的</li>
+<li>查询全体男生人数和女生人数</li>
 </ul>
-<p><code>in:description 爬虫</code></p>
+<p><code>select COUNT(*) as 男 from Studentx where Ssex='男'</code></p>
+<p><code>select COUNT(*) as 女 from Studentx where Ssex='女'</code></p>
 <ul>
-<li>搜索stars&gt;1000的</li>
+<li>查询每个系中的男生人数并按人数的降序排列</li>
 </ul>
-<p><code>stars:&gt;1000</code></p>
+<p><code>select Sdept,COUNT(Ssex) from Studentx group by Sdept,Ssex having Ssex='男' order by COUNT(Ssex) desc</code></p>
 <ul>
-<li>搜索forks&gt;1000的</li>
+<li>查询名字中带“阳”的学生信息</li>
 </ul>
-<p><code>forks:&gt;1000</code> </p>
+<p><code>select * from Studentx where Sname LIKE '%阳%'</code></p>
 <ul>
-<li>搜索最近更新于2019年9月1日之后的</li>
+<li>求被选修的各门课程的平均成绩和选修该课程的人数</li>
 </ul>
-<p><code>pushed:&gt;2019-09-01</code></p>
+<p><code>select Cno,COUNT(Sno),AVG(Grade) from scx group by Cno</code></p>
 <ul>
-<li>搜索Python的项目</li>
+<li>查找选修课程超过2门且成绩都在80分以上的学生的学号</li>
 </ul>
-<p><code>language:Python</code></p>
-<p><strong>管理</strong> </p>
-<p>github有个<code>Project</code>选项，可以在此协同管理项目,在企业中协同管理十分方便.</p>
-<p><strong>几个不错的项目</strong></p>
-<p>8个开源的Spring Boot 前后端分离项目</p>
-<ol>
-<li>美人鱼</li>
-<li>微人事</li>
-<li>bootshiro</li>
-<li>open-capacity-platform</li>
-<li>V部落</li>
-<li>悟空CRM</li>
-<li>paascloud-master</li>
-<li><a href="https://github.com/macrozheng/mall" target="_blank" rel="noopener">macrozheng/mall</a></li>
-</ol>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>暂时就这么多，之后有别的知识再补充.</p>
+<p><code>select Sno from Scx group by Sno having COUNT(Cno)&gt;2 and MIN(Grade)&gt;80</code></p>
+<h3 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h3><ul>
+<li>查询未选课的学生情况包含学生学号、姓名和所在系</li>
+</ul>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> Sno<span class="token punctuation">,</span>Sname<span class="token punctuation">,</span>Sdept
+<span class="token keyword">from</span> Studentx
+<span class="token keyword">where</span> Studentx<span class="token punctuation">.</span>Sno <span class="token operator">NOT</span> <span class="token operator">IN</span><span class="token punctuation">(</span>
+<span class="token keyword">select</span> Sno
+<span class="token keyword">from</span> Scx
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<ul>
+<li>查询已选课学生的选课情况包含学生学号、姓名、所选课程、成绩</li>
+</ul>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> Studentx<span class="token punctuation">.</span>Sno<span class="token punctuation">,</span>Sname<span class="token punctuation">,</span>Cname<span class="token punctuation">,</span>Grade
+<span class="token keyword">from</span> Studentx<span class="token punctuation">,</span>Scx<span class="token punctuation">,</span>Coursex
+<span class="token keyword">where</span> Studentx<span class="token punctuation">.</span>Sno<span class="token operator">=</span>Scx<span class="token punctuation">.</span>Sno <span class="token operator">AND</span> Scx<span class="token punctuation">.</span>Cno<span class="token operator">=</span>Coursex<span class="token punctuation">.</span>Cno</code></pre>
+<ul>
+<li>查询所有学生的选课情况包含学生学号、姓名、课程号、课程名、成绩；（包含选课和未选课所有学生）</li>
+</ul>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> Studentx<span class="token punctuation">.</span>Sno<span class="token punctuation">,</span>Sname<span class="token punctuation">,</span>Coursex<span class="token punctuation">.</span>Cname<span class="token punctuation">,</span>Grade<span class="token punctuation">,</span>Ccredit 
+<span class="token keyword">from</span> Studentx
+<span class="token keyword">left</span> <span class="token keyword">join</span> Scx 
+<span class="token keyword">on</span> Studentx<span class="token punctuation">.</span>Sno<span class="token operator">=</span>Scx<span class="token punctuation">.</span>Sno 
+<span class="token keyword">left</span> <span class="token keyword">join</span> Coursex 
+<span class="token keyword">on</span> Scx<span class="token punctuation">.</span>Cno<span class="token operator">=</span>Coursex<span class="token punctuation">.</span>Cno<span class="token punctuation">;</span></code></pre>
+<ul>
+<li>查询没有学生选的课程信息包含课程号、课程名</li>
+</ul>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> Cno<span class="token punctuation">,</span>Cname<span class="token punctuation">,</span>Cpno<span class="token punctuation">,</span>Ccredit 
+<span class="token keyword">from</span> Coursex 
+<span class="token keyword">where</span> Coursex<span class="token punctuation">.</span>Cno <span class="token operator">NOT</span> <span class="token operator">IN</span><span class="token punctuation">(</span> 
+<span class="token keyword">select</span> Cno 
+<span class="token keyword">from</span> Scx 
+<span class="token punctuation">)</span></code></pre>
+<ul>
+<li>查询已被选择课程的课程信息包含课程号、课程名、学生学号、姓名、成绩</li>
+</ul>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> Cname<span class="token punctuation">,</span>Sname<span class="token punctuation">,</span>Studentx<span class="token punctuation">.</span>Sno<span class="token punctuation">,</span>Grade<span class="token punctuation">,</span>Coursex<span class="token punctuation">.</span>Cno
+<span class="token keyword">from</span> Studentx<span class="token punctuation">,</span>Scx<span class="token punctuation">,</span>Coursex
+whereStudentx<span class="token punctuation">.</span>Sno<span class="token operator">=</span>Scx<span class="token punctuation">.</span>Sno    <span class="token operator">AND</span>    Scx<span class="token punctuation">.</span>Cno<span class="token operator">=</span>Coursex<span class="token punctuation">.</span>Cno </code></pre>
+<ul>
+<li>查询所有课程的选课情况包含课程号、课程名、学生学号、姓名、成绩；（包含没有学生选课的课程）</li>
+</ul>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> Coursex<span class="token punctuation">.</span>Cname<span class="token punctuation">,</span>Coursex<span class="token punctuation">.</span>Cno<span class="token punctuation">,</span>Studentx<span class="token punctuation">.</span>Sname<span class="token punctuation">,</span>Studentx<span class="token punctuation">.</span>Sno<span class="token punctuation">,</span>Grade
+<span class="token keyword">from</span> Coursex
+<span class="token keyword">left</span> <span class="token keyword">join</span> Scx 
+<span class="token keyword">on</span> Coursex<span class="token punctuation">.</span>Cno<span class="token operator">=</span>Scx<span class="token punctuation">.</span>Cno 
+<span class="token keyword">left</span> <span class="token keyword">join</span> Studentx 
+<span class="token keyword">on</span> Scx<span class="token punctuation">.</span>Sno<span class="token operator">=</span>Studentx<span class="token punctuation">.</span>Sno<span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>查询每个学生选课的总学分，并按总学分的降序排列</li>
+</ul>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> Sno<span class="token punctuation">,</span><span class="token function">Sum</span><span class="token punctuation">(</span>Ccredit<span class="token punctuation">)</span>
+<span class="token keyword">from</span> Coursex<span class="token punctuation">,</span>Scx
+<span class="token keyword">where</span> Scx<span class="token punctuation">.</span>Cno<span class="token operator">=</span>Coursex<span class="token punctuation">.</span>Cno
+<span class="token keyword">group</span> <span class="token keyword">by</span> Sno
+<span class="token keyword">order</span> <span class="token keyword">by</span> <span class="token function">sum</span><span class="token punctuation">(</span>Ccredit<span class="token punctuation">)</span> <span class="token keyword">desc</span></code></pre>
+<ul>
+<li>查询选修了数据库课程且成绩在60分以下的学生的学号、姓名、课程名及成绩</li>
+</ul>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> Scx<span class="token punctuation">.</span>Sno<span class="token punctuation">,</span>Sname<span class="token punctuation">,</span>Grade
+<span class="token keyword">from</span> Scx<span class="token punctuation">,</span>Studentx<span class="token punctuation">,</span>Coursex
+<span class="token keyword">where</span> Scx<span class="token punctuation">.</span>Cno<span class="token operator">=</span>Studentx<span class="token punctuation">.</span>Sno <span class="token operator">and</span> Scx<span class="token punctuation">.</span>Cno<span class="token operator">=</span>Coursex<span class="token punctuation">.</span>Cno <span class="token operator">and</span> Cname<span class="token operator">=</span><span class="token string">'数据库'</span> <span class="token operator">and</span> grade<span class="token operator">&lt;</span><span class="token number">60</span></code></pre>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>好多语句已经想不起来了，还是要多使用才能记住.</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -479,7 +558,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://huangzhiwu98.top/2020/01/12/github-cha-xun-ji-qiao/">https://huangzhiwu98.top/2020/01/12/github-cha-xun-ji-qiao/</a>
+                    <a href="https://huangzhiwu98.top/2020/01/14/shu-ju-ku-cha-xun-yu-ju/">https://huangzhiwu98.top/2020/01/14/shu-ju-ku-cha-xun-yu-ju/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -517,8 +596,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/github/">
-                                    <span class="chip bg-color">github</span>
+                                <a href="/tags/sql/">
+                                    <span class="chip bg-color">sql</span>
                                 </a>
                             
                         </div>
@@ -684,9 +763,60 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/01/14/shu-ju-ku-cha-xun-yu-ju/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/46.jpg" class="responsive-img" alt="数据库查询语句">
+                        
+                        <span class="card-title">数据库查询语句</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            一些数据库查询语句汇总
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
+                                    随笔
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/sql/">
+                        <span class="chip bg-color">sql</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/01/13/shu-ju-ku-lian-jie-you-hua/">
                     <div class="card-image">
@@ -704,9 +834,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -728,55 +858,6 @@
                     
                     <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
                         <span class="chip bg-color">数据库</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/01/12/dao-kai-fa-mo-shi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/34.jpg" class="responsive-img" alt="DAO开发模式">
-                        
-                        <span class="card-title">DAO开发模式</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Jsp+Struts2+JavaBean+DAO开发模式
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-12
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/DAO/">
-                        <span class="chip bg-color">DAO</span>
                     </a>
                     
                 </div>
