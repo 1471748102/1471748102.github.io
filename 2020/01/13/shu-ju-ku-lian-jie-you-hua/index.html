@@ -393,8 +393,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="全文"><a href="#全文" class="headerlink" title="全文"></a>全文</h2><p>在做二手车交易系统的时候，发现直接将数据库信息写在代码里不安全，所以将数据库连接的驱动，链接，账号，密码抽取出来放入资源文件，使用类加载器加载配置文件，大大提升安全性，也便于修改.</p>
-<p>同时，使用单例模式控制连接池，避免重复多次的打开数据库连接而造成的性能的下降和系统资源的浪费.</p>
+                <h2 id="全文"><a href="#全文" class="headerlink" title="全文"></a>全文</h2><p>在做二手车交易系统的时候，发现直接将数据库信息写在代码里不安全，所以将数据库连接的驱动，链接，账号，密码抽取出来放入资源文件，使用<strong>类加载器加载配置文件</strong>，大大提升安全性，也便于修改.</p>
+<p>同时，使用<strong>单例模式</strong>控制连接池，避免重复多次的打开数据库连接而造成的性能的下降和系统资源的浪费.</p>
 <p><strong>db. properties</strong></p>
 <pre class=" language-properties"><code class="language-properties"><span class="token attr-name">db.driver</span><span class="token punctuation">=</span><span class="token attr-value">com.mysql.jdbc.Driver</span>
 <span class="token attr-name">db.url</span><span class="token punctuation">=</span><span class="token attr-value">jdbc:mysql://localhost</span>
@@ -866,7 +866,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             tocSelector: '#toc-content',
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
+            collapseDepth: Number('10'),
             headingSelector: 'h2, h3, h4'
         });
 

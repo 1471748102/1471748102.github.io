@@ -7,10 +7,7 @@
     <meta name="keywords" content="个性化修改, Hzw~">
     <meta name="description" content="引言当使用个人博客的时候 ，发现有很多的地方不合心意，所以对这些地方进行修改，下面简单记录一下更改时出现疑惑的几点.
 
-
-主题代码块
-
-在使用主题的代码块时，发现代码行号很冲突，不美观，所以对此处进行修改，增加代码高亮效果。使用 hexo-">
+主题代码块在使用主题的代码块时，发现代码行号很冲突，不美观，所以对此处进行修改，增加代码高亮效果。使用 hexo-pri">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -385,7 +382,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    994
+                    993
                 </div>
                 
 
@@ -400,28 +397,19 @@
             <div id="articleContent">
                 <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>当使用个人博客的时候 ，发现有很多的地方不合心意，所以对这些地方进行修改，下面简单记录一下更改时出现疑惑的几点.</p>
 <p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/img2/20200102193241.jpg" alt=""></p>
-<ol>
-<li><strong>主题代码块</strong></li>
-</ol>
-<p>在使用主题的代码块时，发现代码行号很冲突，不美观，所以对此处进行修改，增加代码高亮效果。使用 <a href="https://yafine-blog.cn/go.html?url=aHR0cHM6Ly9naXRodWIuY29tL2VsZTgyOC9oZXhvLXByaXNtLXBsdWdpbg==" target="_blank" rel="noopener">hexo-prism-plugin</a> 插件来做，具体操作如下：</p>
+<h3 id="主题代码块"><a href="#主题代码块" class="headerlink" title="主题代码块"></a><strong>主题代码块</strong></h3><p>在使用主题的代码块时，发现代码行号很冲突，不美观，所以对此处进行修改，增加代码高亮效果。使用 <a href="https://yafine-blog.cn/go.html?url=aHR0cHM6Ly9naXRodWIuY29tL2VsZTgyOC9oZXhvLXByaXNtLXBsdWdpbg==" target="_blank" rel="noopener">hexo-prism-plugin</a> 插件来做，具体操作如下：</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> i -S hexo-prism-plugin</code></pre>
 <p>然后，修改 Hexo 根目录下 <code>_config.yml</code> 文件中 <code>highlight.enable</code> 的值为 <code>false</code>，并新增 <code>prism</code> 插件相关的配置，主要配置如下</p>
 <pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">prism_plugin</span><span class="token punctuation">:</span> 
     <span class="token key atrule">mode</span><span class="token punctuation">:</span> <span class="token string">'preprocess'</span> <span class="token comment" spellcheck="true"># realtime/preprocess </span>
     <span class="token key atrule">theme</span><span class="token punctuation">:</span> <span class="token string">'tomorrow'</span> 
     <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment" spellcheck="true"># default false custom_css:</span></code></pre>
-<ol start="2">
-<li><strong>导航栏透明效果及渐变色</strong></li>
-</ol>
-<p>打开<code>themes/matery/source/css/matery.css</code>文件，大约在250行，有一个<code>.bg-color</code>属性，修改属性即可</p>
+<h3 id="导航栏透明效果及渐变色"><a href="#导航栏透明效果及渐变色" class="headerlink" title="导航栏透明效果及渐变色"></a>导航栏透明效果及渐变色</h3><p>打开<code>themes/matery/source/css/matery.css</code>文件，大约在250行，有一个<code>.bg-color</code>属性，修改属性即可</p>
 <pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.bg-color</span> </span><span class="token punctuation">{</span> 
     <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to right, <span class="token hexcode">#4cbf30</span> <span class="token number">0%</span>, <span class="token hexcode">#0f9d58</span> <span class="token number">100%</span><span class="token punctuation">)</span><span class="token punctuation">;</span> //修改成自己喜欢的颜色值 
     <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">0.8</span><span class="token punctuation">;</span> //透明效果 值范围 <span class="token number">0</span>~<span class="token number">1</span>，看情况自己修改
 <span class="token punctuation">}</span></code></pre>
-<ol start="3">
-<li><strong>修改主体颜色</strong></li>
-</ol>
-<p>在主题文件的 <code>/source/css/matery.css</code> 文件中，搜索 <code>.bg-color</code> 来修改背景颜色：</p>
+<h3 id="修改主体颜色"><a href="#修改主体颜色" class="headerlink" title="修改主体颜色"></a>修改主体颜色</h3><p>在主题文件的 <code>/source/css/matery.css</code> 文件中，搜索 <code>.bg-color</code> 来修改背景颜色：</p>
 <pre class=" language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* 整体背景颜色，包括导航、移动端的导航、页尾、标签页等的背景颜色. */</span> 
 <span class="token selector"><span class="token class">.bg-color</span> </span><span class="token punctuation">{</span> <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to right, <span class="token hexcode">#4cbf30</span> <span class="token number">0%</span>, <span class="token hexcode">#0f9d58</span> <span class="token number">100%</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span> 
 <span class="token comment" spellcheck="true">/*如果想去掉banner图的颜色渐变效果，请将以下的css属性注释掉或者删除掉即可*/</span> 
@@ -431,10 +419,7 @@
 <span class="token atrule"><span class="token rule">@keyframes</span> rainbow</span> <span class="token punctuation">{</span> 
 <span class="token comment" spellcheck="true">/* 动态切换背景颜色. */</span> 
 <span class="token punctuation">}</span></code></pre>
-<ol start="4">
-<li><strong>文章字数统计插件</strong></li>
-</ol>
-<p>如果你想要在文章中显示文章字数、阅读时长信息，可以安装 <a href="https://yafine-blog.cn/go.html?url=aHR0cHM6Ly9naXRodWIuY29tL3dpbGxpbi9oZXhvLXdvcmRjb3VudA==" target="_blank" rel="noopener">hexo-wordcount</a>插件。</p>
+<h3 id="文章字数统计插件"><a href="#文章字数统计插件" class="headerlink" title="文章字数统计插件"></a>文章字数统计插件</h3><p>如果你想要在文章中显示文章字数、阅读时长信息，可以安装 <a href="https://yafine-blog.cn/go.html?url=aHR0cHM6Ly9naXRodWIuY29tL3dpbGxpbi9oZXhvLXdvcmRjb3VudA==" target="_blank" rel="noopener">hexo-wordcount</a>插件。</p>
 <p>安装命令如下：</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> i --save hexo-wordcount</code></pre>
 <p>然后只需在本主题下的 <code>_config.yml</code> 文件中，激活以下配置项即可：</p>
@@ -443,10 +428,7 @@
     <span class="token key atrule">postWordCount</span><span class="token punctuation">:</span> <span class="token boolean important">true </span>
     <span class="token key atrule">min2read</span><span class="token punctuation">:</span> <span class="token boolean important">true </span>
     <span class="token key atrule">totalCount</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
-<ol start="5">
-<li><strong>鼠标点击特效</strong></li>
-</ol>
-<p>首先在<code>themes/matery/source/js</code>目录下新建<code>fireworks.js</code>文件，打开这个网址<a href="https://yafine-blog.cn/go.html?url=aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL1lhZmluZS9jZG5AMi41L3NvdXJjZS9qcy9maXJld29ya3MuanM=" target="_blank" rel="noopener">传送门</a>，将内容复制粘贴到<code>fireworks.js</code>即可。</p>
+<h3 id="鼠标点击特效"><a href="#鼠标点击特效" class="headerlink" title="鼠标点击特效"></a>鼠标点击特效</h3><p>首先在<code>themes/matery/source/js</code>目录下新建<code>fireworks.js</code>文件，打开这个网址<a href="https://yafine-blog.cn/go.html?url=aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL1lhZmluZS9jZG5AMi41L3NvdXJjZS9qcy9maXJld29ya3MuanM=" target="_blank" rel="noopener">传送门</a>，将内容复制粘贴到<code>fireworks.js</code>即可。</p>
 <p>然后再<code>themes/matery/layout/layout.ejs</code>文件内添加下面的内容：</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>canvas <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fireworks"</span> style<span class="token operator">=</span><span class="token string">"position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"</span> <span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>canvas<span class="token operator">></span> 
 
@@ -454,10 +436,7 @@
 
 <span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> src<span class="token operator">=</span><span class="token string">"/js/fireworks.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
 <p>然后<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>即可，就可以看到效果了.</p>
-<ol start="6">
-<li><strong>配置基本菜单导航的名称、路径url和图标icon</strong></li>
-</ol>
-<ul>
+<h3 id="配置基本菜单导航的名称、路径url和图标icon"><a href="#配置基本菜单导航的名称、路径url和图标icon" class="headerlink" title="配置基本菜单导航的名称、路径url和图标icon"></a>配置基本菜单导航的名称、路径url和图标icon</h3><ul>
 <li><p>菜单导航名称可以是中文也可以是英文(如：<code>Index</code>或<code>主页</code>)</p>
 </li>
 <li><p>图标icon 可以在<a href="https://yafine-blog.cn/go.html?url=aHR0cHM6Ly9mb250YXdlc29tZS5jb20vaWNvbnM=" target="_blank" rel="noopener">Font Awesome</a> 中查找</p>
@@ -482,10 +461,7 @@
   <span class="token key atrule">Friends</span><span class="token punctuation">:</span>
     <span class="token key atrule">url</span><span class="token punctuation">:</span> /friends
     <span class="token key atrule">icon</span><span class="token punctuation">:</span> fas fa<span class="token punctuation">-</span>address<span class="token punctuation">-</span>book</code></pre>
-<ol start="7">
-<li><strong>文章头设置</strong></li>
-</ol>
-<p>首先为了新建文章方便，建议将<code>/scaffolds/post.md</code>修改为如下代码：</p>
+<h3 id="文章头设置"><a href="#文章头设置" class="headerlink" title="文章头设置"></a>文章头设置</h3><p>首先为了新建文章方便，建议将<code>/scaffolds/post.md</code>修改为如下代码：</p>
 <pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">{</span> title <span class="token punctuation">}</span><span class="token punctuation">}</span>
 <span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">{</span> date <span class="token punctuation">}</span><span class="token punctuation">}</span>
 <span class="token key atrule">author</span><span class="token punctuation">:</span> TabEscHzw
@@ -500,10 +476,7 @@
 <span class="token key atrule">keywords</span><span class="token punctuation">:</span> 
 <span class="token key atrule">tags</span><span class="token punctuation">:</span>
 categories<span class="token punctuation">:</span></code></pre>
-<ol start="8">
-<li><strong>添加404界面</strong></li>
-</ol>
-<p>先在source文件夹下，创建一个404目录，命令如下：</p>
+<h3 id="添加404界面"><a href="#添加404界面" class="headerlink" title="添加404界面"></a>添加404界面</h3><p>先在source文件夹下，创建一个404目录，命令如下：</p>
 <p><code>hexo new page "4040"</code></p>
 <p>打开文件夹下的<code>index.html</code></p>
 <p>写入内容如下：</p>
@@ -962,7 +935,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             tocSelector: '#toc-content',
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
+            collapseDepth: Number('10'),
             headingSelector: 'h2, h3, h4'
         });
 
