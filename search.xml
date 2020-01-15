@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>github上HTML显示和yml修改</title>
+      <link href="/2020/01/15/github-shang-html-xian-shi-he-yml-xiu-gai/"/>
+      <url>/2020/01/15/github-shang-html-xian-shi-he-yml-xiu-gai/</url>
+      
+        <content type="html"><![CDATA[<h2 id="全文"><a href="#全文" class="headerlink" title="全文"></a>全文</h2><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><p>今天下午写了一个HTML文件介绍自己的信息，但是将他部署到Github的时候却发现在使用的时候，只能看到源代码，却不能直接看到HTML渲染后的界面，这就很悲伤了.</p><p>上百度一查，百度上全是说在HTML文件的地址前面加上一个前缀</p><p>例如：htmlpreview.github.io/?文件地址</p><p><code>htmlpreview.github.io/?1471748102/LeetCode-OJ/master/about.html</code></p><p>但我用了之后发现，访问不到？？？</p><p>What？</p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.5/xiaoren/20200103213013.jpg" style="zoom:200%;"><p>失败！非常失败！！！</p><p>查了查发现，这个是私人设置的，不是官方设计的，不知道为啥失效了.</p><p>然后我去搜了搜，发现一个网站可以使用</p><p>如下：</p><p><code>https://raw.githack.com/</code></p><p><a href="https://raw.githack.com/1471748102/LeetCode-OJ/master/about.html" target="_blank" rel="noopener">我的简历界面</a></p><h3 id="yml文件"><a href="#yml文件" class="headerlink" title="yml文件"></a>yml文件</h3><p>在ynl里面修改sociallink的时候，发现不知道在哪里改了，发现在layout文件下下，找相对应的文件即可，有点傻了，这都没看出来.</p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.5/xiaoren/20200103213122.jpg" style="zoom:50%;"><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 配置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> github </tag>
+            
+            <tag> 配置 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据库查询语句</title>
       <link href="/2020/01/14/shu-ju-ku-cha-xun-yu-ju/"/>
       <url>/2020/01/14/shu-ju-ku-cha-xun-yu-ju/</url>
@@ -473,9 +500,9 @@
       
         <tags>
             
-            <tag> 问题 </tag>
-            
             <tag> 配置 </tag>
+            
+            <tag> 问题 </tag>
             
         </tags>
       
