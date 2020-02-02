@@ -4,11 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="设计模式, Hzw~">
-    <meta name="description" content="
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return">
+    <meta name="keywords" content="设计模式简介, Hzw~">
+    <meta name="description" content="设计模式的基本介绍">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>设计模式 | Hzw~</title>
+    <title>设计模式简介 | Hzw~</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7/libs/awesome/css/all.css">
@@ -223,12 +220,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/45.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">设计模式</h1>
+                    <h1 class="description center-align post-title">设计模式简介</h1>
                 </div>
             </div>
         </div>
@@ -343,12 +340,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                                <span class="chip bg-color">设计模式</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-category">
+                                设计模式
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -357,7 +367,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-21
+                    2020-01-17
                 </div>
                 
 
@@ -366,7 +376,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    512
                 </div>
                 
 
@@ -379,7 +389,34 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>大学的时候学过软件设计模式这门课，在Github上学习开源项目的时候，发现有使用到了设计模式的相关知识，所以在这里对几个常使用的设计模式进行归纳总结，分几篇博客来写吧.</p>
+<h2 id="设计模式分类"><a href="#设计模式分类" class="headerlink" title="设计模式分类"></a>设计模式分类</h2><p>设计模式共有23种，分为三大类：<code>创建型模式</code>，<code>结构性模式</code>，<code>行为型模式</code>.</p>
+<ul>
+<li><p>创建型（creational）：主要用于处理对象的创建，实例化对象.</p>
+</li>
+<li><p>结构型（structural）：处理类或对象间的组合.</p>
+</li>
+<li><p>行为型（behavioral）：描述类或对象怎样进行交互和职责分配.</p>
+</li>
+</ul>
+<h2 id="设计模式原则"><a href="#设计模式原则" class="headerlink" title="设计模式原则"></a>设计模式原则</h2><h3 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h3><p>设计模式要使软件更加的健壮，对开发来说，要尽量做到高内聚，低耦合.</p>
+<h3 id="六大原则"><a href="#六大原则" class="headerlink" title="六大原则"></a>六大原则</h3><ol>
+<li><p><strong>开闭原则</strong>：对扩展开放，对修改关闭.</p>
+<p>就是说我们在对程序进行扩展的时候，不能去修改原本的代码，通过接口和抽象类进行操作，实现一个热插拔的效果.</p>
+</li>
+<li><p><strong>里氏代换原则</strong>：任何基类可以出现的地方，子类一定可以出现.</p>
+<p>解释一下，定义的意思是说，当派生类代替了子类，整体的功能不受影响.。此时，基类可以复用，里氏代换原则是对开闭原则的补充，在抽象的基础上进一步定义.</p>
+</li>
+<li><p><strong>依赖倒转原则</strong>：针对接口编程，依赖于抽象而不依赖于具体.</p>
+</li>
+<li><p><strong>接口隔离原则</strong>：降低耦合度，接口单独设计，互相隔离.</p>
+</li>
+<li><p><strong>迪米特法则，又称最少知道原则</strong>：各个模块应该相互独立，尽少与其他实体发生相互作用.</p>
+</li>
+<li><p><strong>合成复用原则</strong>：尽量使用聚合的方式，而不是使用继承.</p>
+</li>
+</ol>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -422,7 +459,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://huangzhiwu98.top/2020/01/21/she-ji-mo-shi-1/">https://huangzhiwu98.top/2020/01/21/she-ji-mo-shi-1/</a>
+                    <a href="https://huangzhiwu98.top/2020/01/17/she-ji-mo-shi-jian-jie/">https://huangzhiwu98.top/2020/01/17/she-ji-mo-shi-jian-jie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -459,7 +496,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                                    <span class="chip bg-color">设计模式</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -627,69 +668,25 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/01/23/she-ji-mo-shi-2/">
+                <a href="/2020/01/21/she-ji-mo-shi-zhi-jian-dan-gong-han-mo-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/45.jpg" class="responsive-img" alt="设计模式">
+                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/21.jpg" class="responsive-img" alt="设计模式之工厂模式">
                         
-                        <span class="card-title">设计模式</span>
+                        <span class="card-title">设计模式之工厂模式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            包括简单工厂模式，工厂方法模式，抽象工厂模式
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-23
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-21
                         </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            TabEscHzw
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/01/17/she-ji-mo-shi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/45.jpg" class="responsive-img" alt="设计模式">
-                        
-                        <span class="card-title">设计模式</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            前言………
-
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { 
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-17
-                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -705,8 +702,65 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
-                        <span class="chip bg-color">单例模式</span>
+                    <a href="/tags/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+                        <span class="chip bg-color">简单工厂模式</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/">
+                        <span class="chip bg-color">工厂方法模式</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+                        <span class="chip bg-color">抽象工厂模式</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/01/16/xue-xi-lu-xian/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1.1/feature/2.jpg" class="responsive-img" alt="学习路线">
+                        
+                        <span class="card-title">学习路线</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            程序员学习之路
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" class="post-category">
+                                    学习路线
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/">
+                        <span class="chip bg-color">学习路线</span>
                     </a>
                     
                 </div>
@@ -857,7 +911,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">14k</span>&nbsp;字
+                class="white-color">17k</span>&nbsp;字
             
             
             

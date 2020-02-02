@@ -4,11 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="设计模式, Hzw~">
-    <meta name="description" content="
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return">
+    <meta name="keywords" content="设计模式之工厂模式, Hzw~">
+    <meta name="description" content="包括简单工厂模式，工厂方法模式，抽象工厂模式">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>设计模式 | Hzw~</title>
+    <title>设计模式之工厂模式 | Hzw~</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7/libs/awesome/css/all.css">
@@ -223,12 +220,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/45.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">设计模式</h1>
+                    <h1 class="description center-align post-title">设计模式之工厂模式</h1>
                 </div>
             </div>
         </div>
@@ -343,12 +340,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+                                <span class="chip bg-color">简单工厂模式</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/">
+                                <span class="chip bg-color">工厂方法模式</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+                                <span class="chip bg-color">抽象工厂模式</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-category">
+                                设计模式
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -357,7 +375,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-23
+                    2020-01-21
                 </div>
                 
 
@@ -366,7 +384,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    1.6k
                 </div>
                 
 
@@ -379,7 +397,166 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h2 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h2><p>简单工厂模式是最简单的一个设计模式.</p>
+<p><strong>定义</strong>：在创建一个对象时不向客户暴露内部细节，并提供一个创建对象的通用接口。</p>
+<p>简单工厂模式又叫做静态工厂模式，包含三个角色：</p>
+<ul>
+<li>工厂角色（Creator）</li>
+</ul>
+<p>这是简单工厂模式的核心，它用来负责创建所有实例的内部逻辑。工厂类可以被外界直接调用，创建所需的产品对象。</p>
+<ul>
+<li>抽象角色（Product）</li>
+</ul>
+<p>这是简单工厂模式所创建的所有对象的父类，它负责描述所有实例所共有的公共接口。该类可以是接口，也可以是抽象类。</p>
+<ul>
+<li>具体产品角色（Concrete Product）</li>
+</ul>
+<p>简单工厂模式所创建的具体的实例对象</p>
+<p>这是使用简单模式的UML图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.9/wenzhang/shejimoshi/20200202220542.jpg" alt=""></p>
+<p>当我们使用简单工厂模式设计一个计算器时</p>
+<p>其中Operator是一个抽象类，其中包含属性numberA及numberB，以及一个getResult( )方法用于返回计算结果。它的角色就是抽象角色（Product）。</p>
+<p>下面的AddOperator、SubOperator、MulOperator、DivOperator是Operator的子类，分别代表加减乘除四种运算，他们的角色是具体产品角色（Concrete Peoduct）。</p>
+<p>OperatorFactory是工厂类，其中的createOperator( )方法用于创建计算器对象。</p>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+* 计算器抽象类
+*/</span>
+<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Operator</span><span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">double</span> numberA<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">double</span> numberB<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">//获取结果的抽象方法</span>
+    <span class="token keyword">protected</span> <span class="token keyword">abstract</span> <span class="token keyword">double</span> <span class="token function">getResult</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// getter和setter方法省略</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
+*  加法计算类
+*/</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AddOperator</span> <span class="token keyword">extends</span> <span class="token class-name">Operator</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//实现父类的抽象方法</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">double</span> <span class="token function">getResult</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">getNumberA</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">getNumberB</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
+*  减法计算类
+*/</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SubOperator</span> <span class="token keyword">extends</span> <span class="token class-name">Operator</span><span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">double</span> <span class="token function">getResult</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">getNumberA</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">getNumberB</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
+*  乘法计算类
+*/</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MulOperator</span> <span class="token keyword">extends</span> <span class="token class-name">Operator</span><span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">double</span> <span class="token function">getResult</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">getNumberA</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token function">getNumberB</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
+*  除法计算类
+*/</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MulOperator</span> <span class="token keyword">extends</span> <span class="token class-name">Operator</span><span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">double</span> <span class="token function">getResult</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception<span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">getNmberB</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0.0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Exception</span><span class="token punctuation">(</span><span class="token string">"除数不能为0"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token function">getNumberA</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token function">getNumberB</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * 简单工厂类
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">OperatorFactory</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> Operator <span class="token function">createOperator</span><span class="token punctuation">(</span>String operation<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        Operator operator <span class="token operator">=</span> null<span class="token punctuation">;</span>
+        <span class="token keyword">switch</span> <span class="token punctuation">(</span>operation<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">case</span> <span class="token string">"+"</span><span class="token operator">:</span>
+                operator <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AddOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token string">"-"</span><span class="token operator">:</span>
+                operator <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SubOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token string">"*"</span><span class="token operator">:</span>
+                operator <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MulOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token string">"/"</span><span class="token operator">:</span>
+                operator <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DivOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> operator<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * 测试简单工厂类
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">OperatorTest</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Operator operator <span class="token operator">=</span> OperatorFactory<span class="token punctuation">.</span><span class="token function">createOperator</span><span class="token punctuation">(</span><span class="token string">"+"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        operator<span class="token punctuation">.</span><span class="token function">setNumberA</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        operator<span class="token punctuation">.</span><span class="token function">setNumberB</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>operator<span class="token punctuation">.</span><span class="token function">getResult</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>这样用户在使用的时候，不必去关心它的生成，只需要使用即可。但是当我们想添加一个新的计算方法时，我们就要打开源代码进行修改，违背了开闭原则.</p>
+<p><strong>总结：</strong></p>
+<ul>
+<li>在简单工厂模式中，工厂类是整个模式的关键，它包含了必要的逻辑判断，能够根据外界给定的条件去判断应该创建哪个具体类的实例，用户使用时可以直接根据工厂类去创建所需的实例，而无需关心这些对象是如何组织并创建的，从这一点来说，这有利于整个软件体系结构的优化。</li>
+<li>但是，简单工厂模式的缺点也正体现在工厂类上，<strong>由于工厂类集中了所有实例的创建逻辑</strong>，当我们增加一个新的具体类时，需要同时修改工厂类（多加几个if判断），这违反了”开闭原则“。</li>
+</ul>
+<h2 id="工厂方法模式"><a href="#工厂方法模式" class="headerlink" title="工厂方法模式"></a>工厂方法模式</h2><p><strong>定义</strong>：定义了一个创建对象的接口，但由子类决定要实例化哪个类。工厂方法把实例化操作推迟到子类。</p>
+<p>工厂方法模式又称<strong>多态性工厂模式</strong>，是对普通工厂方法模式的改进，在工厂方法模式中，核心的工厂类不再负责所有产品的创建，而是将具体创建的工作交给子类去做。该核心类成为一个抽象工厂角色，仅负责给出具体工厂子类必须实现的接口，而不接触哪一个产品类应当被实例化这种细节。</p>
+<p>我们对OperatorFactory类更改如下：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">OperatorFactory</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> Operator <span class="token function">createAddOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">AddOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> Operator <span class="token function">createSubOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">SubOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> Operator <span class="token function">createMulOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">MulOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> Operator <span class="token function">createDivOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">DivOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p><strong>总结</strong>：</p>
+<p>与简单工厂模式相比，工厂方法模式避免了因为传入字符串错误而导致无法正常创建对象的问题，并且由于多态的存在，客户端代码可以做到与特定应用无关，适用于任何实体类。缺点是每次增加一个产品时，都需要增加一个具体产品类和对象实现工厂，使得系统中类的个数成倍增加，在一定程度上增加了系统的复杂度，同时也增加了系统具体类的依赖。这并不是什么好事。</p>
+<h2 id="抽象工厂模式"><a href="#抽象工厂模式" class="headerlink" title="抽象工厂模式"></a>抽象工厂模式</h2><p><strong>定义</strong>：提供一个接口，用于创建相关的对象家族 。在抽象工厂模式中，接口是负责创建一个相关对象的工厂，不需要显式指定它们的类。每个生成的工厂都能按照工厂模式提供对象。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.9/wenzhang/shejimoshi/uml.jpg" alt=""></p>
+<p>具体代码太繁琐就不往这里贴了</p>
+<p><strong>总结：</strong></p>
+<p>抽象工厂模式具备的一个特点就是它支持的工厂具备生产多种产品族的能力，而工厂方法模式只能创造出来一类产品，这是两者之间的最大区别。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>因此将简单工厂模式看为是工厂方法模式的一种特例，两者归为一类。</p>
+<p><strong>工厂方法模式</strong></p>
+<p>（1）一个抽象产品类，可以派生出多个具体产品类。</p>
+<p>（2）一个抽象工厂类，可以派生出多个具体工厂类。</p>
+<p>每个具体工厂类只能创建一个具体产品类的实例。</p>
+<p><strong>抽象工厂模式</strong></p>
+<p>（1）多个抽象产品类，每个抽象产品类可以派生出多个具体产品类。</p>
+<p>（2）一个抽象工厂类，每个可以派生出多个具体工厂类。</p>
+<p>（3）每个具体工厂类可以创建多个具体产品类的实例。</p>
+<p><strong>区别</strong></p>
+<p>（1）工厂方法模式只有一个抽象产品类，而抽象工厂模式有多个。</p>
+<p>（2）工厂方法模式的具体工厂类只能创建一个具体产品类的实例，而抽象工厂模式可以创建多个。</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -422,7 +599,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://huangzhiwu98.top/2020/01/23/she-ji-mo-shi-2/">https://huangzhiwu98.top/2020/01/23/she-ji-mo-shi-2/</a>
+                    <a href="https://huangzhiwu98.top/2020/01/21/she-ji-mo-shi-zhi-jian-dan-gong-han-mo-shi/">https://huangzhiwu98.top/2020/01/21/she-ji-mo-shi-zhi-jian-dan-gong-han-mo-shi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -459,7 +636,19 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+                                    <span class="chip bg-color">简单工厂模式</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/">
+                                    <span class="chip bg-color">工厂方法模式</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+                                    <span class="chip bg-color">抽象工厂模式</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -627,35 +816,44 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/01/24/she-ji-mo-shi-3/">
+                <a href="/2020/01/23/she-ji-mo-shi-zhi-dan-li-mo-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/45.jpg" class="responsive-img" alt="设计模式">
+                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1.1/feature/10.jpg" class="responsive-img" alt="设计模式之单例模式">
                         
-                        <span class="card-title">设计模式</span>
+                        <span class="card-title">设计模式之单例模式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            该类负责创建自己的对象，同时确保只有单个对象被创建
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-24
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-23
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            TabEscHzw
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-category">
+                                    设计模式
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
+                        <span class="chip bg-color">单例模式</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -667,35 +865,44 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/01/21/she-ji-mo-shi-1/">
+                <a href="/2020/01/17/she-ji-mo-shi-jian-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/45.jpg" class="responsive-img" alt="设计模式">
+                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/13.jpg" class="responsive-img" alt="设计模式简介">
                         
-                        <span class="card-title">设计模式</span>
+                        <span class="card-title">设计模式简介</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            设计模式的基本介绍
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-17
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            TabEscHzw
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-category">
+                                    设计模式
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                        <span class="chip bg-color">设计模式</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -844,7 +1051,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">14k</span>&nbsp;字
+                class="white-color">17k</span>&nbsp;字
             
             
             
