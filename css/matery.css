@@ -626,6 +626,24 @@ header .go-back i {
     font-size: 1.1rem;
 }
 
+.marknote {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.marknote .title,
+.music-player .title,
+.video-player .title {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.marknote .text {
+    opacity: .6;
+    font-size: 1.1rem;
+}
+
 .music-player,
 .video-player {
     margin-top: 10px;
