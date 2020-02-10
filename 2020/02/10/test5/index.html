@@ -4,8 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JAVA设计模式之适配器模式, Hzw~">
-    <meta name="description" content="23种设计模式之一，属于结构性模式">
+    <meta name="keywords" content="test5, Hzw~">
+    <meta name="description" content="
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>JAVA设计模式之适配器模式 | Hzw~</title>
+    <title>test5 | Hzw~</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7/libs/awesome/css/all.css">
@@ -220,12 +223,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/boat.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.6/wallpaper/51.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JAVA设计模式之适配器模式</h1>
+                    <h1 class="description center-align post-title">test5</h1>
                 </div>
             </div>
         </div>
@@ -340,29 +343,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-                                <span class="chip bg-color">设计模式</span>
-                            </a>
-                        
-                            <a href="/tags/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">
-                                <span class="chip bg-color">适配器模式</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-category">
-                                设计模式
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -371,7 +357,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-03
+                    2020-02-10
                 </div>
                 
 
@@ -380,7 +366,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    52
                 </div>
                 
 
@@ -393,158 +379,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在学习JAVA编程的时候，忽然想起23种设计模式，影响不是很深刻了，复习一下.</p>
-<p>总体来说设计模式分为三大类：</p>
-<p><strong>创建型模式</strong>，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。</p>
-<p><strong>结构型模式</strong>，共七种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。</p>
-<p><strong>行为型模式</strong>，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。</p>
-<p>好多，但大多用不着，重点还是那几个</p>
-<p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/img2/20200102193213.jpg" alt=""></p>
-<h2 id="模式动机"><a href="#模式动机" class="headerlink" title="模式动机"></a>模式动机</h2><ul>
-<li>在软件开发中采用类似于电源适配器的设计和编码技巧被称为适配器模式。</li>
-<li>通常情况下，客户端可以通过目标类的接口访问它所提供的服务。有时，现有的类可以满足客户类的功能需要，但是它所提供的接口不一定是客户类所期望的，这可能是因为现有类中方法名与目标类中定义的方法名不一致等原因所导致的。</li>
-<li>在这种情况下，现有的接口需要转化为客户类期望的接口，这样保证了对现有类的重用。如果不进行这样的转化，客户类就不能利用现有类所提供的功能，适配器模式可以完成这样的转化。</li>
-<li>在适配器模式中可以定义一个包装类，包装不兼容接口的对象，这个包装类指的就是适配器(<code>Adapter</code>)，它所包装的对象就是适配者(<code>Adaptee</code>)，即被适配的类。</li>
-<li>适配器提供客户类需要的接口，适配器的实现就是把客户类的请求转化为对适配者的相应接口的调用。也就是说：当客户类调用适配器的方法时，在适配器类的内部将调用适配者类的方法，而这个过程对客户类是透明的，客户类并不直接访问适配者类。因此，适配器可以使由于接口不兼容而不能交互的类可以一起工作。这就是适配器模式的模式动机。</li>
-</ul>
-<h2 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h2><blockquote>
-<p><strong>适配器模式</strong>(<code>Adapter Pattern</code>) ：将一个接口转换成客户希望的另一个接口，使接口不兼容的那些类可以一起工作，其别名为包装器(<code>Wrapper</code>)。适配器模式既可以作为类结构型模式，也可以作为对象结构型模式。适配器模式是一种<strong>结构型模式</strong>。</p>
-</blockquote>
-<h2 id="模式结构"><a href="#模式结构" class="headerlink" title="模式结构"></a>模式结构</h2><ol>
-<li><strong>参与角色</strong></li>
-</ol>
-<p>适配器模式包含如下角色：</p>
-<ul>
-<li><code>Target</code>：目标抽象类</li>
-<li><code>Adapter</code>：适配器类</li>
-<li><code>Adaptee</code>：适配者类</li>
-<li><code>Client</code>：客户类</li>
-</ul>
-<ol start="2">
-<li><strong>UML类图</strong></li>
-</ol>
-<p><img src="http://static.blinkfox.com/java-design-adapter.jpg" alt="适配器模式UML"></p>
-<p><strong>适配器模式UML</strong></p>
-<h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><p>首先，是目标角色接口和具体目标实现类：</p>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
- * Target 目标角色类.
- *
- * @author blinkfox on 2018-12-11.
- */</span>
-<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Target</span> <span class="token punctuation">{</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 目标角色自己的方法.
-     */</span>
-    <span class="token keyword">void</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">/**
- * 具体的目标角色实现类.
- *
- * @author blinkfox on 2018-12-11.
- */</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ConcreteTarget</span> <span class="token keyword">implements</span> <span class="token class-name">Target</span> <span class="token punctuation">{</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 目标角色自己的方法.
-     */</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"hello, I'm concrete target method."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-<span class="token punctuation">}</span></code></pre>
-<p>其次，是适配者类：</p>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
- * 适配者类.
- *
- * @author blinkfox on 2018-12-11.
- */</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Adaptee</span> <span class="token punctuation">{</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 这是原有的业务逻辑方法.
-     */</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello, I'm Adaptee method."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-<span class="token punctuation">}</span></code></pre>
-<p>然后，是适配器角色类：</p>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
- * 适配器类.
- *
- * @author blinkfox on 2018-12-11.
- */</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Adapter</span> <span class="token keyword">extends</span> <span class="token class-name">Adaptee</span> <span class="token keyword">implements</span> <span class="token class-name">Target</span> <span class="token punctuation">{</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 适配了目标角色自己的方法.
-     */</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"适配器适配了目标角色方法."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-<span class="token punctuation">}</span></code></pre>
-<p>最后，是客户端场景类：</p>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
- * 客户端场景类.
- *
- * @author blinkfox on 2018-12-11.
- */</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Client</span> <span class="token punctuation">{</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * main方法.
-     *
-     * @param args 数组参数
-     */</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// 原有业务逻辑.</span>
-        Target target <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ConcreteTarget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        target<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token comment" spellcheck="true">// 增加了适配器角色后的业务逻辑.</span>
-        Target adaptTarget <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Adapter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        adaptTarget<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-<span class="token punctuation">}</span></code></pre>
-<h2 id="模式分析"><a href="#模式分析" class="headerlink" title="模式分析"></a>模式分析</h2><ol>
-<li><strong>适用环境</strong></li>
-</ol>
-<p>在以下情况下可以使用适配器模式：</p>
-<ul>
-<li>系统需要使用现有的类，而这些类的接口不符合系统的需要。</li>
-<li>想要建立一个可以重复使用的类，用于与一些彼此之间没有太大关联的一些类，包括一些可能在将来引进的类一起工作。</li>
-</ul>
-<h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul>
-<li>将目标类和适配者类解耦，通过引入一个适配器类来重用现有的适配者类，而无须修改原有代码。</li>
-<li>增加了类的透明性和复用性，将具体的实现封装在适配者类中，对于客户端类来说是透明的，而且提高了适配者的复用性。</li>
-<li>灵活性和扩展性都非常好，通过使用配置文件，可以很方便地更换适配器，也可以在不修改原有代码的基础上增加新的适配器类，完全符合“开闭原则”。</li>
-</ul>
-<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>如果一定要置换掉适配者类的一个或多个方法，就只好先做一个适配者类的子类，将适配者类的方法置换掉，然后再把适配者类的子类当做真正的适配者进行适配，实现过程较为复杂。</p>
-<h2 id="模式应用"><a href="#模式应用" class="headerlink" title="模式应用"></a>模式应用</h2><p>Sun公司在1996年公开了Java语言的数据库连接工具JDBC，JDBC使得Java语言程序能够与数据库连接，并使用SQL语言来查询和操作数据。JDBC给出一个客户端通用的抽象接口，每一个具体数据库引擎（如SQL Server、Oracle、MySQL等）的JDBC驱动软件都是一个介于JDBC接口和数据库引擎接口之间的适配器软件。抽象的JDBC接口和各个数据库引擎API之间都需要相应的适配器软件，这就是为各个不同数据库引擎准备的驱动程序。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
-<li><p>结构型模式描述如何将类或者对象结合在一起形成更大的结构。</p>
-</li>
-<li><p>适配器模式用于将一个接口转换成客户希望的另一个接口，适配器模式使接口不兼容的那些类可以一起工作，其别名为包装器。适配器模式既可以作为类结构型模式，也可以作为对象结构型模式。</p>
-</li>
-<li><p>适配器模式包含四个角色：目标抽象类定义客户要用的特定领域的接口；适配器类可以调用另一个接口，作为一个转换器，对适配者和抽象目标类进行适配，它是适配器模式的核心；适配者类是被适配的角色，它定义了一个已经存在的接口，这个接口需要适配；在客户类中针对目标抽象类进行编程，调用在目标抽象类中定义的业务方法。</p>
-</li>
-<li><p>在类适配器模式中，适配器类实现了目标抽象类接口并继承了适配者类，并在目标抽象类的实现方法中调用所继承的适配者类的方法；在对象适配器模式中，适配器类继承了目标抽象类并定义了一个适配者类的对象实例，在所继承的目标抽象类方法中调用适配者类的相应业务方法。</p>
-</li>
-<li><p>适配器模式的主要优点是将目标类和适配者类解耦，增加了类的透明性和复用性，同时系统的灵活性和扩展性都非常好，更换适配器或者增加新的适配器都非常方便，符合“开闭原则”；类适配器模式的缺点是适配器类在很多编程语言中不能同时适配多个适配者类，对象适配器模式的缺点是很难置换适配者类的方法。</p>
-</li>
-<li><p>适配器模式适用情况包括：系统需要使用现有的类，而这些类的接口不符合系统的需要；想要建立一个可以重复使用的类，用于与一些彼此之间没有太大关联的一些类一起工作。</p>
-<p>累了，到此为止.</p>
-</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/img2/20200102193233.jpg" alt=""></p>
-<script>
+                <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -587,7 +422,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://huangzhiwu98.top/2020/01/03/java-she-ji-mo-shi-zhi-gua-pei-qi-mo-shi/">https://huangzhiwu98.top/2020/01/03/java-she-ji-mo-shi-zhi-gua-pei-qi-mo-shi/</a>
+                    <a href="https://huangzhiwu98.top/2020/02/10/test5/">https://huangzhiwu98.top/2020/02/10/test5/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -624,15 +459,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-                                    <span class="chip bg-color">设计模式</span>
-                                </a>
-                            
-                                <a href="/tags/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">
-                                    <span class="chip bg-color">适配器模式</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -796,53 +623,42 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/01/04/you-hou-onetab/">
+                <a href="/2020/02/10/test5/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.6/wallpaper/54.jpg" class="responsive-img" alt="Chrome插件推荐">
+                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.6/wallpaper/51.jpg" class="responsive-img" alt="test5">
                         
-                        <span class="card-title">Chrome插件推荐</span>
+                        <span class="card-title">test5</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            推荐两款我使用较不错的chrome浏览器插件---onetab和油猴
+                            
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-10
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E4%BC%98%E5%8C%96/" class="post-category">
-                                    优化
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            TabEscHzw
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%8F%92%E4%BB%B6/">
-                        <span class="chip bg-color">插件</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/">
-                        <span class="chip bg-color">浏览器</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -853,52 +669,35 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/01/03/yu-jia-zai-yu-lan-jia-zai/">
+                <a href="/2020/02/09/test4/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.6/wallpaper/70.jpg" class="responsive-img" alt="预加载与懒加载">
+                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/50.jpg" class="responsive-img" alt="test4">
                         
-                        <span class="card-title">预加载与懒加载</span>
+                        <span class="card-title">test4</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            两种加载的意义
+                            
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-09
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            TabEscHzw
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E4%B8%BB%E9%A2%98/">
-                        <span class="chip bg-color">主题</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%9B%BE%E7%89%87/">
-                        <span class="chip bg-color">图片</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%BC%98%E5%8C%96/">
-                        <span class="chip bg-color">优化</span>
-                    </a>
-                    
                 </div>
                 
             </div>
