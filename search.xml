@@ -137,6 +137,9 @@
             document.body.appendChild(img);
           });
       </script>]]></content>
+      <tags>
+        <tag>测试</tag>
+      </tags>
   </entry>
   <entry>
     <title>SSM框架中数据以JSON的形式传递到前端</title>
@@ -3197,8 +3200,8 @@ tz: 2018e</code></pre>
         <category>博客</category>
       </categories>
       <tags>
-        <tag>配置</tag>
         <tag>问题</tag>
+        <tag>配置</tag>
       </tags>
   </entry>
   <entry>
