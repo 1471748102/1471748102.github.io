@@ -4,10 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="个性化修改, Hzw~">
-    <meta name="description" content="引言当使用个人博客的时候 ，发现有很多的地方不合心意，所以对这些地方进行修改，下面简单记录一下更改时出现疑惑的几点.
-
-主题代码块在使用主题的代码块时，发现代码行号很冲突，不美观，所以对此处进行修改，增加代码高亮效果。使用 hexo-pri">
+    <meta name="keywords" content="test-x, Hzw~">
+    <meta name="description" content="
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>个性化修改 | Hzw~</title>
+    <title>test-x | Hzw~</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7/libs/awesome/css/all.css">
@@ -222,12 +223,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1.1/feature/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/34.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">个性化修改</h1>
+                    <h1 class="description center-align post-title">test-x</h1>
                 </div>
             </div>
         </div>
@@ -342,29 +343,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/diy/">
-                                <span class="chip bg-color">diy</span>
-                            </a>
-                        
-                            <a href="/tags/%E4%B8%BB%E9%A2%98/">
-                                <span class="chip bg-color">主题</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                博客
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -373,7 +357,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-03
+                    2020-02-14
                 </div>
                 
 
@@ -382,7 +366,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    993
+                    52
                 </div>
                 
 
@@ -395,130 +379,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>当使用个人博客的时候 ，发现有很多的地方不合心意，所以对这些地方进行修改，下面简单记录一下更改时出现疑惑的几点.</p>
-<p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/img2/20200102193241.jpg" alt=""></p>
-<h3 id="主题代码块"><a href="#主题代码块" class="headerlink" title="主题代码块"></a><strong>主题代码块</strong></h3><p>在使用主题的代码块时，发现代码行号很冲突，不美观，所以对此处进行修改，增加代码高亮效果。使用 <a href="https://yafine-blog.cn/go.html?url=aHR0cHM6Ly9naXRodWIuY29tL2VsZTgyOC9oZXhvLXByaXNtLXBsdWdpbg==" target="_blank" rel="noopener">hexo-prism-plugin</a> 插件来做，具体操作如下：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> i -S hexo-prism-plugin</code></pre>
-<p>然后，修改 Hexo 根目录下 <code>_config.yml</code> 文件中 <code>highlight.enable</code> 的值为 <code>false</code>，并新增 <code>prism</code> 插件相关的配置，主要配置如下</p>
-<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">prism_plugin</span><span class="token punctuation">:</span> 
-    <span class="token key atrule">mode</span><span class="token punctuation">:</span> <span class="token string">'preprocess'</span> <span class="token comment" spellcheck="true"># realtime/preprocess </span>
-    <span class="token key atrule">theme</span><span class="token punctuation">:</span> <span class="token string">'tomorrow'</span> 
-    <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment" spellcheck="true"># default false custom_css:</span></code></pre>
-<h3 id="导航栏透明效果及渐变色"><a href="#导航栏透明效果及渐变色" class="headerlink" title="导航栏透明效果及渐变色"></a>导航栏透明效果及渐变色</h3><p>打开<code>themes/matery/source/css/matery.css</code>文件，大约在250行，有一个<code>.bg-color</code>属性，修改属性即可</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.bg-color</span> </span><span class="token punctuation">{</span> 
-    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to right, <span class="token hexcode">#4cbf30</span> <span class="token number">0%</span>, <span class="token hexcode">#0f9d58</span> <span class="token number">100%</span><span class="token punctuation">)</span><span class="token punctuation">;</span> //修改成自己喜欢的颜色值 
-    <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">0.8</span><span class="token punctuation">;</span> //透明效果 值范围 <span class="token number">0</span>~<span class="token number">1</span>，看情况自己修改
-<span class="token punctuation">}</span></code></pre>
-<h3 id="修改主体颜色"><a href="#修改主体颜色" class="headerlink" title="修改主体颜色"></a>修改主体颜色</h3><p>在主题文件的 <code>/source/css/matery.css</code> 文件中，搜索 <code>.bg-color</code> 来修改背景颜色：</p>
-<pre class=" language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* 整体背景颜色，包括导航、移动端的导航、页尾、标签页等的背景颜色. */</span> 
-<span class="token selector"><span class="token class">.bg-color</span> </span><span class="token punctuation">{</span> <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to right, <span class="token hexcode">#4cbf30</span> <span class="token number">0%</span>, <span class="token hexcode">#0f9d58</span> <span class="token number">100%</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span> 
-<span class="token comment" spellcheck="true">/*如果想去掉banner图的颜色渐变效果，请将以下的css属性注释掉或者删除掉即可*/</span> 
-<span class="token atrule"><span class="token rule">@-webkit-keyframes</span> rainbow</span> <span class="token punctuation">{</span> 
-<span class="token comment" spellcheck="true">/* 动态切换背景颜色. */</span> 
-<span class="token punctuation">}</span> 
-<span class="token atrule"><span class="token rule">@keyframes</span> rainbow</span> <span class="token punctuation">{</span> 
-<span class="token comment" spellcheck="true">/* 动态切换背景颜色. */</span> 
-<span class="token punctuation">}</span></code></pre>
-<h3 id="文章字数统计插件"><a href="#文章字数统计插件" class="headerlink" title="文章字数统计插件"></a>文章字数统计插件</h3><p>如果你想要在文章中显示文章字数、阅读时长信息，可以安装 <a href="https://yafine-blog.cn/go.html?url=aHR0cHM6Ly9naXRodWIuY29tL3dpbGxpbi9oZXhvLXdvcmRjb3VudA==" target="_blank" rel="noopener">hexo-wordcount</a>插件。</p>
-<p>安装命令如下：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> i --save hexo-wordcount</code></pre>
-<p>然后只需在本主题下的 <code>_config.yml</code> 文件中，激活以下配置项即可：</p>
-<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">wordCount</span><span class="token punctuation">:</span> 
-    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment" spellcheck="true"># 将这个值设置为 true 即可. </span>
-    <span class="token key atrule">postWordCount</span><span class="token punctuation">:</span> <span class="token boolean important">true </span>
-    <span class="token key atrule">min2read</span><span class="token punctuation">:</span> <span class="token boolean important">true </span>
-    <span class="token key atrule">totalCount</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
-<h3 id="鼠标点击特效"><a href="#鼠标点击特效" class="headerlink" title="鼠标点击特效"></a>鼠标点击特效</h3><p>首先在<code>themes/matery/source/js</code>目录下新建<code>fireworks.js</code>文件，打开这个网址<a href="https://yafine-blog.cn/go.html?url=aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL1lhZmluZS9jZG5AMi41L3NvdXJjZS9qcy9maXJld29ya3MuanM=" target="_blank" rel="noopener">传送门</a>，将内容复制粘贴到<code>fireworks.js</code>即可。</p>
-<p>然后再<code>themes/matery/layout/layout.ejs</code>文件内添加下面的内容：</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>canvas <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fireworks"</span> style<span class="token operator">=</span><span class="token string">"position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"</span> <span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>canvas<span class="token operator">></span> 
-
-<span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> src<span class="token operator">=</span><span class="token string">"//cdn.bootcss.com/animejs/2.2.0/anime.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span> 
-
-<span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> src<span class="token operator">=</span><span class="token string">"/js/fireworks.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
-<p>然后<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>即可，就可以看到效果了.</p>
-<h3 id="配置基本菜单导航的名称、路径url和图标icon"><a href="#配置基本菜单导航的名称、路径url和图标icon" class="headerlink" title="配置基本菜单导航的名称、路径url和图标icon"></a>配置基本菜单导航的名称、路径url和图标icon</h3><ul>
-<li><p>菜单导航名称可以是中文也可以是英文(如：<code>Index</code>或<code>主页</code>)</p>
-</li>
-<li><p>图标icon 可以在<a href="https://yafine-blog.cn/go.html?url=aHR0cHM6Ly9mb250YXdlc29tZS5jb20vaWNvbnM=" target="_blank" rel="noopener">Font Awesome</a> 中查找</p>
-</li>
-</ul>
-<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">menu</span><span class="token punctuation">:</span>
-  <span class="token key atrule">Index</span><span class="token punctuation">:</span>
-    <span class="token key atrule">url</span><span class="token punctuation">:</span> /
-    <span class="token key atrule">icon</span><span class="token punctuation">:</span> fas fa<span class="token punctuation">-</span>home
-  <span class="token key atrule">Tags</span><span class="token punctuation">:</span>
-    <span class="token key atrule">url</span><span class="token punctuation">:</span> /tags
-    <span class="token key atrule">icon</span><span class="token punctuation">:</span> fas fa<span class="token punctuation">-</span>tags
-  <span class="token key atrule">Categories</span><span class="token punctuation">:</span>
-    <span class="token key atrule">url</span><span class="token punctuation">:</span> /categories
-    <span class="token key atrule">icon</span><span class="token punctuation">:</span> fas fa<span class="token punctuation">-</span>bookmark
-  <span class="token key atrule">Archives</span><span class="token punctuation">:</span>
-    <span class="token key atrule">url</span><span class="token punctuation">:</span> /archives
-    <span class="token key atrule">icon</span><span class="token punctuation">:</span> fas fa<span class="token punctuation">-</span>archive
-  <span class="token key atrule">About</span><span class="token punctuation">:</span>
-    <span class="token key atrule">url</span><span class="token punctuation">:</span> /about
-    <span class="token key atrule">icon</span><span class="token punctuation">:</span> fas fa<span class="token punctuation">-</span>user<span class="token punctuation">-</span>circle
-  <span class="token key atrule">Friends</span><span class="token punctuation">:</span>
-    <span class="token key atrule">url</span><span class="token punctuation">:</span> /friends
-    <span class="token key atrule">icon</span><span class="token punctuation">:</span> fas fa<span class="token punctuation">-</span>address<span class="token punctuation">-</span>book</code></pre>
-<h3 id="文章头设置"><a href="#文章头设置" class="headerlink" title="文章头设置"></a>文章头设置</h3><p>首先为了新建文章方便，建议将<code>/scaffolds/post.md</code>修改为如下代码：</p>
-<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">{</span> title <span class="token punctuation">}</span><span class="token punctuation">}</span>
-<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">{</span> date <span class="token punctuation">}</span><span class="token punctuation">}</span>
-<span class="token key atrule">author</span><span class="token punctuation">:</span> TabEscHzw
-<span class="token key atrule">top</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
-<span class="token key atrule">cover</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
-<span class="token key atrule">coverImg</span><span class="token punctuation">:</span> 
-<span class="token key atrule">img</span><span class="token punctuation">:</span> 
-<span class="token key atrule">password</span><span class="token punctuation">:</span>
-<span class="token key atrule">toc</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-<span class="token key atrule">mathjax</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
-<span class="token key atrule">summary</span><span class="token punctuation">:</span>
-<span class="token key atrule">keywords</span><span class="token punctuation">:</span> 
-<span class="token key atrule">tags</span><span class="token punctuation">:</span>
-categories<span class="token punctuation">:</span></code></pre>
-<h3 id="添加404界面"><a href="#添加404界面" class="headerlink" title="添加404界面"></a>添加404界面</h3><p>先在source文件夹下，创建一个404目录，命令如下：</p>
-<p><code>hexo new page "4040"</code></p>
-<p>打开文件夹下的<code>index.html</code></p>
-<p>写入内容如下：</p>
-<pre><code>---
-title: 404
-date: 2020-01-08 19:52:55
-type: "404"
-layout: "404"
-description: "你来到了没有知识的荒原 :("
-
----</code></pre><p>然后在<code>/themes/matery/layout/</code>目录下新建一个<code>404.ejs</code>文件，内容如下：</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>style type<span class="token operator">=</span><span class="token string">"text/css"</span><span class="token operator">></span>
-    <span class="token comment" spellcheck="true">/* don't remove. */</span>
-    <span class="token punctuation">.</span>about<span class="token operator">-</span>cover <span class="token punctuation">{</span>
-        height<span class="token punctuation">:</span> 75vh<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span>
-
-<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"bg-cover pd-header about-cover"</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"row"</span><span class="token operator">></span>
-            <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col s10 offset-s1 m8 offset-m2 l8 offset-l2"</span><span class="token operator">></span>
-                <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"brand"</span><span class="token operator">></span>
-                    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"title center-align"</span><span class="token operator">></span>
-                        <span class="token number">404</span>
-                    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-                    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"description center-align"</span><span class="token operator">></span>
-                        <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> page<span class="token punctuation">.</span>description <span class="token operator">%</span><span class="token operator">></span>
-                    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-                <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-
-<span class="token operator">&lt;</span>script<span class="token operator">></span>
-    <span class="token comment" spellcheck="true">// 每天切换 banner 图.  Switch banner image every day.</span>
-    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.bg-cover'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">'background-image'</span><span class="token punctuation">,</span> <span class="token string">'url(/medias/banner/'</span> <span class="token operator">+</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDay</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'.jpg)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
-<p>还有些修改忘记了，暂时就这么多吧 .</p>
-<p><img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/img2/20200102193327.gif" alt=""></p>
-<script>
+                <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -561,7 +422,7 @@ description: "你来到了没有知识的荒原 :("
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://huangzhiwu98.top/2020/01/03/ge-xing-hua-xiu-gai/">https://huangzhiwu98.top/2020/01/03/ge-xing-hua-xiu-gai/</a>
+                    <a href="https://huangzhiwu98.top/2020/02/14/test-x/">https://huangzhiwu98.top/2020/02/14/test-x/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -598,15 +459,7 @@ description: "你来到了没有知识的荒原 :("
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/diy/">
-                                    <span class="chip bg-color">diy</span>
-                                </a>
-                            
-                                <a href="/tags/%E4%B8%BB%E9%A2%98/">
-                                    <span class="chip bg-color">主题</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -770,57 +623,42 @@ description: "你来到了没有知识的荒原 :("
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/01/03/yu-jia-zai-yu-lan-jia-zai/">
+                <a href="/2020/02/14/test-x/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.6/wallpaper/70.jpg" class="responsive-img" alt="预加载与懒加载">
+                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/34.jpg" class="responsive-img" alt="test-x">
                         
-                        <span class="card-title">预加载与懒加载</span>
+                        <span class="card-title">test-x</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            两种加载的意义
+                            
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-14
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            TabEscHzw
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E4%B8%BB%E9%A2%98/">
-                        <span class="chip bg-color">主题</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%9B%BE%E7%89%87/">
-                        <span class="chip bg-color">图片</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%BC%98%E5%8C%96/">
-                        <span class="chip bg-color">优化</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -831,48 +669,35 @@ description: "你来到了没有知识的荒原 :("
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/01/03/you-hua-bo-ke-fang-wen-su-du/">
+                <a href="/2020/02/13/kext/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/banner/4.jpg" class="responsive-img" alt="优化博客访问速度">
                         
-                        <span class="card-title">优化博客访问速度</span>
+                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.6/wallpaper/66.jpg" class="responsive-img" alt="kext">
+                        
+                        <span class="card-title">kext</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            引言当我部署好个人博客之后，为了更加便于使用，就去阿里云购买了个域名，但是，部署域名之后，发现访问速度变得很缓慢，为了解决这个问题，上网查了很多方法，从以下几个地方来讲述，但我的方法并不是最好的那个，只是感觉比较便捷，记录下来。
-图片优化因
+                            
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-13
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E4%BC%98%E5%8C%96/" class="post-category">
-                                    优化
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            TabEscHzw
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Github/">
-                        <span class="chip bg-color">Github</span>
-                    </a>
-                    
-                    <a href="/tags/CDN/">
-                        <span class="chip bg-color">CDN</span>
-                    </a>
-                    
                 </div>
                 
             </div>
