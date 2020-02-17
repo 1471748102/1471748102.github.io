@@ -4,11 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="测试, Hzw~">
-    <meta name="description" content="
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return">
+    <meta name="keywords" content="Git中.gitignore的配置, Hzw~">
+    <meta name="description" content="Git的一些语法，提交过程中减少不必要文件">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>测试 | Hzw~</title>
+    <title>Git中.gitignore的配置 | Hzw~</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7/libs/awesome/css/all.css">
@@ -223,12 +220,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.6/wallpaper/54.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/27.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">测试</h1>
+                    <h1 class="description center-align post-title">Git中.gitignore的配置</h1>
                 </div>
             </div>
         </div>
@@ -343,12 +340,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/gitignore/">
+                                <span class="chip bg-color">.gitignore</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/git/" class="post-category">
+                                git
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -366,7 +376,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    457
                 </div>
                 
 
@@ -379,7 +389,52 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>在日常的开发中，当我们需要将一个项目提交到Git时，并不是所有的文件都需要提交，比如一些自动生成的文件，这时候就可以使用<code>.gitignore</code>来忽略一些不需要提交的文件，本文着重介绍一下<code>.gitignore</code>的配置语法。</p>
+<h2 id="语法规范"><a href="#语法规范" class="headerlink" title="语法规范"></a>语法规范</h2><ul>
+<li>空行或是以<code>#</code>开头的行即注释行将被忽略。</li>
+<li>可以在前面添加正斜杠<code>/</code>来避免递归,下面的例子中可以很明白的看出来与下一条的区别。</li>
+<li>可以在后面添加正斜杠<code>/</code>来忽略文件夹，例如<code>build/</code>即忽略build文件夹。</li>
+<li>可以使用<code>!</code>来否定忽略，即比如在前面用了<code>*.apk</code>，然后使用<code>!a.apk</code>，则这个a.apk不会被忽略。</li>
+<li><code>*</code>用来匹配零个或多个字符，如<code>*.[oa]</code>忽略所有以”.o”或”.a”结尾，<code>*~</code>忽略所有以<code>~</code>结尾的文件（这种文件通常被许多编辑器标记为临时文件）；<code>[]</code>用来匹配括号内的任一字符，如<code>[abc]</code>，也可以在括号内加连接符，如<code>[0-9]</code>匹配0至9的数；<code>?</code>用来匹配单个字符。</li>
+</ul>
+<p>但是这些太过于抽象，太偏向定义了，下面举例一些Java项目的gitignore模板</p>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># built application files</span>
+*.apk
+*.ap_
+
+<span class="token comment" spellcheck="true"># files for the dex VM</span>
+*.dex
+
+<span class="token comment" spellcheck="true"># Java class files</span>
+*.class
+
+<span class="token comment" spellcheck="true"># generated files</span>
+/bin/
+/gen/
+
+<span class="token comment" spellcheck="true"># Local configuration file (sdk path, etc)</span>
+local.properties
+
+<span class="token comment" spellcheck="true"># Eclipse project files</span>
+.classpath
+.project
+.settings/
+
+<span class="token comment" spellcheck="true"># Proguard folder generated by Eclipse</span>
+proguard/
+
+<span class="token comment" spellcheck="true"># Intellij project files</span>
+*.iml
+*.ipr
+*.iws
+.idea/
+
+<span class="token comment" spellcheck="true"># Maven</span>
+/log/
+target/
+/target/</code></pre>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>还有一些其他的环境配置。具体请访问<a href="https://github.com/github/gitignore" target="_blank" rel="noopener">.gitignore</a>网址，这里就不一一列举了.</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -422,7 +477,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://huangzhiwu98.top/2020/02/05/ce-shi/">https://huangzhiwu98.top/2020/02/05/ce-shi/</a>
+                    <a href="https://huangzhiwu98.top/2020/02/05/gitignore/">https://huangzhiwu98.top/2020/02/05/gitignore/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -459,7 +514,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/gitignore/">
+                                    <span class="chip bg-color">.gitignore</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -853,7 +912,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">20.6k</span>&nbsp;字
+                class="white-color">25.1k</span>&nbsp;字
             
             
             
