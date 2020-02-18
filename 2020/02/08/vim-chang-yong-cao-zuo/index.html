@@ -4,11 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="test3, Hzw~">
-    <meta name="description" content="
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return">
+    <meta name="keywords" content="Vim常用操作, Hzw~">
+    <meta name="description" content="学习使用一些Vim常用操作">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>test3 | Hzw~</title>
+    <title>Vim常用操作 | Hzw~</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7/libs/awesome/css/all.css">
@@ -223,12 +220,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/49.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1.1/feature/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">test3</h1>
+                    <h1 class="description center-align post-title">Vim常用操作</h1>
                 </div>
             </div>
         </div>
@@ -345,14 +342,23 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%B5%8B%E8%AF%95/">
-                                <span class="chip bg-color">测试</span>
+                            <a href="/tags/Vim/">
+                                <span class="chip bg-color">Vim</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                学习
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -370,7 +376,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    2k
                 </div>
                 
 
@@ -383,7 +389,301 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h3 id="关于Vim"><a href="#关于Vim" class="headerlink" title="关于Vim"></a>关于Vim</h3><p>来自<a href="https://baike.baidu.com/item/VIM/60410?fr=aladdin" target="_blank" rel="noopener">百度百科</a></p>
+<p>Vim是一个类似于<a href="https://baike.baidu.com/item/Vi/8987313" target="_blank" rel="noopener">Vi</a>的著名的功能强大、高度可定制的<a href="https://baike.baidu.com/item/" target="_blank" rel="noopener">文本编辑器</a>，在Vi的基础上改进和增加了很多特性。VIM是<a href="https://baike.baidu.com/item/" target="_blank" rel="noopener">自由软件</a>。Vim普遍被推崇为类<a href="https://baike.baidu.com/item/Vi" target="_blank" rel="noopener">Vi编辑器</a>中最好的一个，事实上真正的劲敌来自Emacs的不同变体。1999 年<a href="https://baike.baidu.com/item/Emacs" target="_blank" rel="noopener">Emacs</a>被选为Linuxworld文本编辑分类的优胜者，Vim屈居第二。但在2000年2月Vim赢得了Slashdot Beanie的最佳<a href="https://baike.baidu.com/item/" target="_blank" rel="noopener">开放源代码</a>文本编辑器大奖，又将Emacs推至二线， 总的来看， Vim和Emacs在文本编辑方面都是非常优秀的。</p>
+<p><strong>特点：</strong></p>
+<ul>
+<li>持久的多级撤消树</li>
+<li>扩展插件系统</li>
+<li>支持数百种编程语言和文件格式</li>
+<li>强大的搜索和替换</li>
+<li>多工具集成</li>
+</ul>
+<h3 id="工作模式"><a href="#工作模式" class="headerlink" title="工作模式"></a>工作模式</h3><p><strong>命令模式</strong></p>
+<p>用户刚刚启动 vi/vim，便进入了命令模式。</p>
+<p>此状态下敲击键盘动作会被Vim识别为命令，而非输入字符。比如我们此时按下i，并不会输入一个字符，i被当作了一个命令。</p>
+<p><strong>输入模式</strong></p>
+<p>在命令模式下按下i就进入了输入模式。</p>
+<p>在输入模式中，可以使用以下按键：</p>
+<table>
+<thead>
+<tr>
+<th><strong>快捷键</strong></th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>字符按键以及Shift组合</td>
+<td>输入字符</td>
+</tr>
+<tr>
+<td>ENTER</td>
+<td>回车键，换行</td>
+</tr>
+<tr>
+<td>BACK SPACE</td>
+<td>退格键，删除光标前一个字符</td>
+</tr>
+<tr>
+<td>DEL</td>
+<td>删除键，删除光标后一个字符</td>
+</tr>
+<tr>
+<td>方向键</td>
+<td>在文本中移动光标</td>
+</tr>
+<tr>
+<td>HOME/END</td>
+<td>移动光标到行首/行尾</td>
+</tr>
+<tr>
+<td>Page Up/Page Down</td>
+<td>上/下翻页</td>
+</tr>
+<tr>
+<td>Insert</td>
+<td>切换光标为输入/替换模式，光标将变成竖线/下划线</td>
+</tr>
+<tr>
+<td>ESC</td>
+<td>退出输入模式，切换到命令模式</td>
+</tr>
+</tbody></table>
+<p><strong>底线命令模式</strong></p>
+<p>在命令模式下按下:（英文冒号）就进入了底线命令模式。</p>
+<p>底线命令模式可以输入单个或多个字符的命令，可用的命令非常多。</p>
+<p>在底线命令模式中，基本的命令有（已经省略了冒号）：</p>
+<ul>
+<li>q 退出程序</li>
+<li>w 保存文件</li>
+</ul>
+<p>按ESC键可随时退出底线命令模式。</p>
+<h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><p><strong>移动光标</strong></p>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>h 或 向左箭头键(←)</td>
+<td>光标向左移动一个字符</td>
+</tr>
+<tr>
+<td>j 或 向下箭头键(↓)</td>
+<td>光标向下移动一个字符</td>
+</tr>
+<tr>
+<td>k 或 向上箭头键(↑)</td>
+<td>光标向上移动一个字符</td>
+</tr>
+<tr>
+<td>l 或 向右箭头键(→)</td>
+<td>光标向右移动一个字符</td>
+</tr>
+</tbody></table>
+<p>如果想要进行多次移动的话，例如向下移动 30 行，可以使用 “30j” 或 “30↓” 的组合按键， 亦即加上想要进行的次数(数字)后，按下动作即可！</p>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[Ctrl] + [f]</td>
+<td>屏幕『向下』移动一页，相当于 [Page Down]按键 (常用)</td>
+</tr>
+<tr>
+<td>[Ctrl] + [b]</td>
+<td>屏幕『向上』移动一页，相当于 [Page Up] 按键 (常用)</td>
+</tr>
+<tr>
+<td>[Ctrl] + [d]</td>
+<td>屏幕『向下』移动半页</td>
+</tr>
+<tr>
+<td>[Ctrl] + [u]</td>
+<td>屏幕『向上』移动半页</td>
+</tr>
+<tr>
+<td>+</td>
+<td>光标移动到非空格符的下一行</td>
+</tr>
+<tr>
+<td>-</td>
+<td>光标移动到非空格符的上一行</td>
+</tr>
+<tr>
+<td>n<space></space></td>
+<td>那个 n 表示『数字』，例如 20 。按下数字后再按空格键，光标会向右移动这一行的 n 个字符。例如 20<space> 则光标会向后面移动 20 个字符距离。</space></td>
+</tr>
+<tr>
+<td>0 或功能键[Home]</td>
+<td>这是数字『 0 』：移动到这一行的最前面字符处 (常用)</td>
+</tr>
+<tr>
+<td>$ 或功能键[End]</td>
+<td>移动到这一行的最后面字符处(常用)</td>
+</tr>
+<tr>
+<td>H</td>
+<td>光标移动到这个屏幕的最上方那一行的第一个字符</td>
+</tr>
+<tr>
+<td>M</td>
+<td>光标移动到这个屏幕的中央那一行的第一个字符</td>
+</tr>
+<tr>
+<td>L</td>
+<td>光标移动到这个屏幕的最下方那一行的第一个字符</td>
+</tr>
+<tr>
+<td>G</td>
+<td>移动到这个档案的最后一行(常用)</td>
+</tr>
+<tr>
+<td>nG</td>
+<td>n 为数字。移动到这个档案的第 n 行。例如 20G 则会移动到这个档案的第 20 行(可配合 :set nu)</td>
+</tr>
+<tr>
+<td>gg</td>
+<td>移动到这个档案的第一行，相当于 1G 啊！ (常用)</td>
+</tr>
+<tr>
+<td>n<enter></enter></td>
+<td>n 为数字。光标向下移动 n 行(常用)</td>
+</tr>
+</tbody></table>
+<p><strong>搜索替换</strong></p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>响应</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>/word</td>
+<td>向光标之下寻找一个名称为 word 的字符串。例如要在档案内搜寻 vbird 这个字符串，就输入 /vbird 即可！</td>
+</tr>
+<tr>
+<td>?word</td>
+<td>向光标之上寻找一个字符串名称为 word 的字符串。</td>
+</tr>
+<tr>
+<td>n</td>
+<td>这个 n 是英文按键。代表重复前一个搜寻的动作。举例来说， 如果刚刚我们执行 /vbird 去向下搜寻 vbird 这个字符串，则按下 n 后，会向下继续搜寻下一个名称为 vbird 的字符串。如果是执行 ?vbird 的话，那么按下 n 则会向上继续搜寻名称为 vbird 的字符串！</td>
+</tr>
+<tr>
+<td>N</td>
+<td>这个 N 是英文按键。与 n 刚好相反，为『反向』进行前一个搜寻动作。 例如 /vbird 后，按下 N 则表示『向上』搜寻 vbird 。</td>
+</tr>
+<tr>
+<td>:n1,n2s/word1/word2/g</td>
+<td>n1 与 n2 为数字。在第 n1 与 n2 行之间寻找 word1 这个字符串，并将该字符串取代为 word2 ！举例来说，在 100 到 200 行之间搜寻 vbird 并取代为 VBIRD 则：<br>『:100,200s/vbird/VBIRD/g』。(常用)</td>
+</tr>
+<tr>
+<td><strong>:1,$s/word1/word2/g</strong> 或 <strong>:%s/word1/word2/g</strong></td>
+<td>从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！(常用)</td>
+</tr>
+<tr>
+<td><strong>:1,$s/word1/word2/gc</strong> 或 <strong>:%s/word1/word2/gc</strong></td>
+<td>从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！且在取代前显示提示字符给用户确认 (confirm) 是否需要取代！(常用)</td>
+</tr>
+</tbody></table>
+<p><strong>删除、复制与贴上</strong></p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>x, X</td>
+<td>在一行字当中，x 为向后删除一个字符 (相当于 [del] 按键)， X 为向前删除一个字符(相当于 [backspace] 亦即是退格键) (常用)</td>
+</tr>
+<tr>
+<td>nx</td>
+<td>n 为数字，连续向后删除 n 个字符。举例来说，我要连续删除 10 个字符， 『10x』。</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>删除游标所在的那一整行(常用)</td>
+</tr>
+<tr>
+<td>ndd</td>
+<td>n 为数字。删除光标所在的向下 n 行，例如 20dd 则是删除 20 行 (常用)</td>
+</tr>
+<tr>
+<td>d1G</td>
+<td>删除光标所在到第一行的所有数据</td>
+</tr>
+<tr>
+<td>dG</td>
+<td>删除光标所在到最后一行的所有数据</td>
+</tr>
+<tr>
+<td>d$</td>
+<td>删除游标所在处，到该行的最后一个字符</td>
+</tr>
+<tr>
+<td>d0</td>
+<td>那个是数字的 0 ，删除游标所在处，到该行的最前面一个字符</td>
+</tr>
+<tr>
+<td>yy</td>
+<td>复制游标所在的那一行(常用)</td>
+</tr>
+<tr>
+<td>nyy</td>
+<td>n 为数字。复制光标所在的向下 n 行，例如 20yy 则是复制 20 行(常用)</td>
+</tr>
+<tr>
+<td>y1G</td>
+<td>复制游标所在行到第一行的所有数据</td>
+</tr>
+<tr>
+<td>yG</td>
+<td>复制游标所在行到最后一行的所有数据</td>
+</tr>
+<tr>
+<td>y0</td>
+<td>复制光标所在的那个字符到该行行首的所有数据</td>
+</tr>
+<tr>
+<td>y$</td>
+<td>复制光标所在的那个字符到该行行尾的所有数据</td>
+</tr>
+<tr>
+<td>p, P</td>
+<td>p 为将已复制的数据在光标下一行贴上，P 则为贴在游标上一行！ 举例来说，我目前光标在第 20 行，且已经复制了 10 行数据。则按下 p 后， 那 10 行数据会贴在原本的 20 行之后，亦即由 21 行开始贴。但如果是按下 P 呢？ 那么原本的第 20 行会被推到变成 30 行。 (常用)</td>
+</tr>
+<tr>
+<td>J</td>
+<td>将光标所在行与下一行的数据结合成同一行</td>
+</tr>
+<tr>
+<td>c</td>
+<td>重复删除多个数据，例如向下删除 10 行，[ 10cj ]</td>
+</tr>
+<tr>
+<td>u</td>
+<td>复原前一个动作。(常用)</td>
+</tr>
+<tr>
+<td>[Ctrl]+r</td>
+<td>重做上一个动作。(常用)</td>
+</tr>
+<tr>
+<td>.</td>
+<td>小数点,意思是重复前一个动作的意思。 如果想要重复删除、重复贴上等等动作，按下小数点『.』就好了！</td>
+</tr>
+</tbody></table>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>Vim的操作十分，但我在日常使用中却仅仅用到了一点点，还是不够了解啊，在这里做一个总结，多使用，多查询.</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -426,7 +726,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://huangzhiwu98.top/2020/02/08/test3/">https://huangzhiwu98.top/2020/02/08/test3/</a>
+                    <a href="https://huangzhiwu98.top/2020/02/08/vim-chang-yong-cao-zuo/">https://huangzhiwu98.top/2020/02/08/vim-chang-yong-cao-zuo/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -464,8 +764,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%B5%8B%E8%AF%95/">
-                                    <span class="chip bg-color">测试</span>
+                                <a href="/tags/Vim/">
+                                    <span class="chip bg-color">Vim</span>
                                 </a>
                             
                         </div>
@@ -852,7 +1152,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">25.1k</span>&nbsp;字
+                class="white-color">30.1k</span>&nbsp;字
             
             
             

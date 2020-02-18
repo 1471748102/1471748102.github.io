@@ -47,9 +47,392 @@
       </script>]]></content>
   </entry>
   <entry>
-    <title>测试x</title>
-    <url>/2020/02/15/ce-shi-x/</url>
-    <content><![CDATA[<script>
+    <title>Markdown书写规范</title>
+    <url>/2020/02/15/markdown-shu-xie-gui-fan/</url>
+    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>Markdown是一种「标记语言」，通常为程序员群体所用.除此之外，Markdown也是国际杂志编辑以及许多写作者都广泛使用的标记语言.我们在写一些文档的时候就要方便易懂.</p>
+<p>Markdown的语法十分简单，常用的标记符号不超过十个，用于日常写作记录绰绰有余，不到半小时就能完全掌握。</p>
+<h1 id="Markdown-的优点如下："><a href="#Markdown-的优点如下：" class="headerlink" title="Markdown 的优点如下："></a>Markdown 的优点如下：</h1><ul>
+<li><p>纯文本，所以兼容性极强，可以用所有文本编辑器打开。</p>
+</li>
+<li><p>让你专注于文字而不是排版。</p>
+</li>
+<li><p>格式转换方便，Markdown 的文本你可以轻松转换为 html、电子书等。</p>
+</li>
+<li><p>Markdown 的标记语法有极好的可读性。</p>
+</li>
+</ul>
+<h1 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h1><h2 id="横线"><a href="#横线" class="headerlink" title="横线"></a>横线</h2><p>***、—、___可以显示横线效果</p>
+<hr>
+<hr>
+<hr>
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h2 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h2><h3 id="普通文本"><a href="#普通文本" class="headerlink" title="普通文本"></a>普通文本</h3><p>这是一段普通的文本</p>
+<h3 id="单行文本"><a href="#单行文本" class="headerlink" title="单行文本"></a>单行文本</h3><pre><code>Hello,大家好，我是 Sitoi。</code></pre><p>在一行开头加入 1 个 Tab 或者 4 个空格。</p>
+<h3 id="文本块"><a href="#文本块" class="headerlink" title="文本块"></a>文本块</h3><h4 id="语法-1"><a href="#语法-1" class="headerlink" title="语法 1"></a>语法 1</h4><p>在连续几行的文本开头加入 1 个 Tab 或者 4 个空格。</p>
+<pre><code>欢迎到访
+很高兴见到您</code></pre><h4 id="语法-2"><a href="#语法-2" class="headerlink" title="语法 2"></a>语法 2</h4><p>使用一对各三个的反引号：</p>
+<pre><code>欢迎到访
+很高兴见到您</code></pre><p>该语法也可以实现代码高亮，见<a href="https://sitoi.cn/posts/15814.html#代码高亮" target="_blank" rel="noopener">代码高亮</a></p>
+<h3 id="文字高亮"><a href="#文字高亮" class="headerlink" title="文字高亮"></a>文字高亮</h3><p>文字高亮功能能使行内部分文字高亮，使用一对反引号。</p>
+<p>语法：</p>
+<pre><code>`linux` `网络编程` `socket` `epoll` </code></pre><p>效果：<code>linux</code> <code>网络编程</code> <code>socket</code> <code>epoll</code></p>
+<p>也适合做一篇文章的 tag</p>
+<h4 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h4><p>直接回车不能换行，可以在上一行文本后面补两个空格，这样下一行的文本就换行了。</p>
+<p>或者就是在两行文本直接加一个空行。</p>
+<p>也能实现换行效果，不过这个行间距有点大。</p>
+<h4 id="斜体、粗体、删除线"><a href="#斜体、粗体、删除线" class="headerlink" title="斜体、粗体、删除线"></a>斜体、粗体、删除线</h4><table>
+<thead>
+<tr>
+<th align="left">语法</th>
+<th align="left">效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>*斜体1*</code></td>
+<td align="left"><em>斜体1</em></td>
+</tr>
+<tr>
+<td align="left"><code>_斜体2_</code></td>
+<td align="left"><em>斜体2</em></td>
+</tr>
+<tr>
+<td align="left"><code>**粗体1**</code></td>
+<td align="left"><strong>粗体1</strong></td>
+</tr>
+<tr>
+<td align="left"><code>__粗体2__</code></td>
+<td align="left"><strong>粗体2</strong></td>
+</tr>
+<tr>
+<td align="left"><code>这是一个 ~~删除线~~</code></td>
+<td align="left">这是一个 <del>删除线</del></td>
+</tr>
+<tr>
+<td align="left"><code>***斜粗体1***</code></td>
+<td align="left"><strong><em>斜粗体1\</em></strong></td>
+</tr>
+<tr>
+<td align="left"><code>___斜粗体2___</code></td>
+<td align="left"><strong><em>斜粗体2\</em></strong></td>
+</tr>
+<tr>
+<td align="left"><code>***~~斜粗体删除线1~~***</code></td>
+<td align="left"><strong><em><del>斜粗体删除线1</del>\</em></strong></td>
+</tr>
+<tr>
+<td align="left"><code>~~***斜粗体删除线2***~~</code></td>
+<td align="left"><del><strong><em>斜粗体删除线2\</em></strong></del></td>
+</tr>
+</tbody></table>
+<p>斜体、粗体、删除线可混合使用</p>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>基本格式：</p>
+<pre><code>![alt](URL title)</code></pre><p><code>alt</code> 和 <code>title</code> 即对应 <code>HTML</code> 中的 <code>alt</code> 和 <code>title</code> 属性（都可省略）：</p>
+<ul>
+<li><code>alt</code> 表示图片显示失败时的替换文本</li>
+<li><code>title</code> 表示鼠标悬停在图片时的显示文本（注意这里要加引号）</li>
+</ul>
+<p><code>URL</code> 即图片的 <code>url</code> 地址，如果引用本仓库中的图片，直接使用<strong>相对路径</strong>就可了，如果引用其他 <code>github</code> 仓库中的图片要注意格式，即：<code>仓库地址/raw/分支名/图片路径</code>，如：</p>
+<pre><code>https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif</code></pre><table>
+<thead>
+<tr>
+<th align="left">#</th>
+<th align="left">语法</th>
+<th align="left">效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left"><code>![baidu](http://www.baidu.com/img/bdlogo.gif "百度logo")</code></td>
+<td align="left"><img src="http://www.baidu.com/img/bdlogo.gif" alt="baidu"><strong>baidu</strong></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><code>![][Github]</code></td>
+<td align="left"><img src="https://raw.githubusercontent.com/Sitoi/Sitoi.github.io/master/img/avatar-ny.jpg" alt="img"></td>
+</tr>
+</tbody></table>
+<p>注意 <code>例2</code> 的写法使用了<strong>URL标识符</strong>的形式，在<a href="https://sitoi.cn/posts/15814.html#链接" target="_blank" rel="noopener">链接</a>一节有介绍。</p>
+<blockquote>
+<p>在文末有 <code>Github</code> 的定义：</p>
+</blockquote>
+<pre><code>[Github]:https://raw.githubusercontent.com/Sitoi/Sitoi.github.io/master/img/avatar-ny.jpg</code></pre><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="链接外部URL"><a href="#链接外部URL" class="headerlink" title="链接外部URL"></a>链接外部URL</h3><table>
+<thead>
+<tr>
+<th align="left">#</th>
+<th align="left">语法</th>
+<th align="left">效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left"><code>[我的博客](http://sitoi.cn "悬停显示")</code></td>
+<td align="left"><a href="https://sitoi.cn/go.html?u=aHR0cDovL3NpdG9pLmNu" target="_blank" rel="noopener">我的博客</a></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><code>[我的知乎][zhihu]</code></td>
+<td align="left"><a href="https://sitoi.cn/go.html?u=aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9TaXRvaQ==" target="_blank" rel="noopener">我的知乎</a></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><code>[zhihu](https://www.zhihu.com/people/Sitoi "我的知乎，欢迎关注")</code></td>
+<td align="left"><a href="https://sitoi.cn/go.html?u=aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9TaXRvaQ==" target="_blank" rel="noopener">zhihu</a></td>
+</tr>
+</tbody></table>
+<p>语法2 由两部分组成：</p>
+<ul>
+<li>第一部分使用两个中括号，[ ]里的标识符（本例中 <code>zhihu</code>），可以是数字，字母等的组合，标识符上下对应就行了（<strong>姑且称之为URL标识符</strong>）</li>
+<li>第二部分标记实际 <code>URL</code>。</li>
+</ul>
+<blockquote>
+<p>使用 <code>URL</code> 标识符能达到复用的目的，一般把全文所有的URL标识符统一放在文章末尾，这样看起来比较干净。</p>
+<blockquote>
+<p><code>URL</code>标识符是我起的名字，不知道是否准确。囧。。</p>
+</blockquote>
+</blockquote>
+<h3 id="链接本仓库里的URL"><a href="#链接本仓库里的URL" class="headerlink" title="链接本仓库里的URL"></a>链接本仓库里的URL</h3><table>
+<thead>
+<tr>
+<th align="left">语法</th>
+<th align="left">效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">`[我的简介]</td>
+<td align="left">(/example/profile.md)`</td>
+</tr>
+<tr>
+<td align="left">`[Book]</td>
+<td align="left">(./Book)`</td>
+</tr>
+</tbody></table>
+<h3 id="图片链接"><a href="#图片链接" class="headerlink" title="图片链接"></a>图片链接</h3><p>给图片加链接的本质是混合图片显示语法和普通的链接语法。<br>普通的链接中 <code>[ ]</code> 内部是链接要显示的文本，而图片链接 <code>[ ]</code> 里面则是要显示的图片。<br>直接混合两种语法当然可以，但是十分啰嗦，为此我们可以使用 <code>URL</code> 标识符的形式。</p>
+<table>
+<thead>
+<tr>
+<th align="left">#</th>
+<th align="left">语法</th>
+<th align="left">效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left"><code>[![zhihu-logo]](https://www.zhihu.com/people/Sitoi)</code></td>
+<td align="left"><a href="https://sitoi.cn/go.html?u=aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9TaXRvaQ==" target="_blank" rel="noopener"><img src="https://sitoi.cn/img/zhihu.jpg" alt="zhihu-logo"><strong>zhihu-logo</strong></a></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><code>[![](/img/zhihu.jpg "我的知乎，欢迎关注")][zhihu]</code></td>
+<td align="left"><a href="https://sitoi.cn/go.html?u=aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9TaXRvaQ==" target="_blank" rel="noopener"><img src="https://sitoi.cn/img/zhihu.jpg" alt="我的知乎，欢迎关注"><strong>我的知乎，欢迎关注</strong></a></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left"><code>[![zhihu-logo]][zhihu]</code></td>
+<td align="left"><a href="https://sitoi.cn/go.html?u=aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9TaXRvaQ==" target="_blank" rel="noopener"><img src="https://sitoi.cn/img/zhihu.jpg" alt="zhihu-logo"><strong>zhihu-logo</strong></a></td>
+</tr>
+</tbody></table>
+<p>因为图片本身和链接本身都支持 <code>URL</code> 标识符的形式，所以图片链接也可以很简洁（见例3）。</p>
+<p>注意，此时鼠标悬停时显示的文字是图片的 <code>title</code>，而非链接本身的 <code>title</code> 了。</p>
+<blockquote>
+<p>本文 <code>URL</code> 标识符都放置于文末</p>
+</blockquote>
+<h3 id="锚点"><a href="#锚点" class="headerlink" title="锚点"></a>锚点</h3><p>其实呢，每一个标题都是一个锚点，和HTML的锚点（<code>#</code>）类似，比如我们</p>
+<table>
+<thead>
+<tr>
+<th align="left">语法</th>
+<th align="left">效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>[回到顶部](#gfm)</code></td>
+<td align="left"><a href="https://sitoi.cn/posts/15814.html#gfm" target="_blank" rel="noopener">回到顶部</a></td>
+</tr>
+</tbody></table>
+<p>不过要注意，标题中的英文字母都被转化为<strong>小写字母</strong>了。</p>
+<blockquote>
+<p>以前 <code>GitHub</code> 对中文支持的不好，所以中文标题不能正确识别为锚点，但是现在已经没问题啦！</p>
+</blockquote>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><ul>
+<li><p>昵称：hzw</p>
+</li>
+<li><p>别名：hzw</p>
+</li>
+<li><p>英文名：hzw</p>
+</li>
+</ul>
+<h3 id="多级无序列表"><a href="#多级无序列表" class="headerlink" title="多级无序列表"></a>多级无序列表</h3><ul>
+<li>编程语言<ul>
+<li>脚本语言<ul>
+<li>Python</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><h4 id="一般效果"><a href="#一般效果" class="headerlink" title="一般效果"></a>一般效果</h4><p>就是在数字后面加一个点，再加一个空格。不过看起来起来可能不够明显。<br>面向对象的三个基本特征：</p>
+<ol>
+<li>封装</li>
+<li>继承</li>
+<li>多态</li>
+</ol>
+<h4 id="有序列表自动排序"><a href="#有序列表自动排序" class="headerlink" title="有序列表自动排序"></a>有序列表自动排序</h4><p>也可以在第一行指定<code>1.</code>，而接下来的几行用星号<code>*</code>（或者继续用数字1. ）就可以了，它会自动显示成2、3、4……。<br>面向对象的七大原则：</p>
+<ol>
+<li>开闭原则</li>
+</ol>
+<ul>
+<li>里氏转换原则</li>
+<li>依赖倒转原则</li>
+<li>接口隔离原则</li>
+<li>组合/聚合复用原则</li>
+<li>“迪米特”法则</li>
+<li>单一职责原则</li>
+</ul>
+<h4 id="多级有序列表"><a href="#多级有序列表" class="headerlink" title="多级有序列表"></a>多级有序列表</h4><p>和无序列表一样，有序列表也有多级结构：</p>
+<ol>
+<li>这是一级的有序列表，数字1还是1<ol>
+<li>这是二级的有序列表，阿拉伯数字在显示的时候变成了罗马数字<ol>
+<li>这是三级的有序列表，数字在显示的时候变成了英文字母<ol>
+<li>四级的有序列表显示效果，就不再变化了，依旧是英文字母</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="复选框列表"><a href="#复选框列表" class="headerlink" title="复选框列表"></a>复选框列表</h3><ul>
+<li>需求分析</li>
+<li>系统设计</li>
+<li>详细设计</li>
+<li>编码</li>
+<li>测试</li>
+<li>交付</li>
+</ul>
+<p>您可以使用这个功能来标注某个项目各项任务的完成情况。</p>
+<blockquote>
+<p>Tip:</p>
+<blockquote>
+<p>在 <code>GitHub</code> 的<strong>issue</strong>中使用该语法是可以实时点击复选框来勾选或解除勾选的，而无需修改 <code>issue</code> 原文。</p>
+</blockquote>
+</blockquote>
+<h2 id="块引用"><a href="#块引用" class="headerlink" title="块引用"></a>块引用</h2><h3 id="块引用有多级结构"><a href="#块引用有多级结构" class="headerlink" title="块引用有多级结构"></a>块引用有多级结构</h3><blockquote>
+<p>数据结构</p>
+<blockquote>
+<p>树</p>
+<blockquote>
+<p>二叉树</p>
+<blockquote>
+<p>平衡二叉树</p>
+<blockquote>
+<p>满二叉树</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h2><p>在三个反引号后面加上编程语言的名字，另起一行开始写代码，最后一行再加上三个反引号。</p>
+<p>Java</p>
+<pre class=" language-Java"><code class="language-Java">public static void main(String[]args){} //Java</code></pre>
+<p>C</p>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//C</span></code></pre>
+<p>Bash</p>
+<pre class=" language-Bash"><code class="language-Bash">echo "hello GitHub" #Bash</code></pre>
+<p>Javascript</p>
+<pre class=" language-javascript"><code class="language-javascript">document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"myH1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML<span class="token operator">=</span><span class="token string">"Welcome to my Homepage"</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//javascipt</span></code></pre>
+<p>Cpp</p>
+<pre class=" language-cpp"><code class="language-cpp">string <span class="token operator">&amp;</span><span class="token keyword">operator</span><span class="token operator">+</span><span class="token punctuation">(</span><span class="token keyword">const</span> string<span class="token operator">&amp;</span> A<span class="token punctuation">,</span><span class="token keyword">const</span> string<span class="token operator">&amp;</span> B<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//cpp</span></code></pre>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
+<thead>
+<tr>
+<th align="left">表头1</th>
+<th align="left">表头2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">表格单元</td>
+<td align="left">表格单元</td>
+</tr>
+<tr>
+<td align="left">表格单元</td>
+<td align="left">表格单元</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">表头1</th>
+<th align="left">表头2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">表格单元</td>
+<td align="left">表格单元</td>
+</tr>
+<tr>
+<td align="left">表格单元</td>
+<td align="left">表格单元</td>
+</tr>
+</tbody></table>
+<h3 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h3><p>表格可以指定对齐方式</p>
+<table>
+<thead>
+<tr>
+<th align="left">左对齐</th>
+<th align="left">居中</th>
+<th align="left">右对齐</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">col 3 is</td>
+<td align="left">some wordy text</td>
+<td align="left">$1600</td>
+</tr>
+<tr>
+<td align="left">col 2 is</td>
+<td align="left">centered</td>
+<td align="left">$12</td>
+</tr>
+<tr>
+<td align="left">zebra stripes</td>
+<td align="left">are neat</td>
+<td align="left">$1</td>
+</tr>
+</tbody></table>
+<h3 id="混合其他语法"><a href="#混合其他语法" class="headerlink" title="混合其他语法"></a>混合其他语法</h3><p>表格单元中的内容可以和其他大多数GFM语法配合使用，如：</p>
+<h4 id="使用普通文本的删除线，斜体等效果"><a href="#使用普通文本的删除线，斜体等效果" class="headerlink" title="使用普通文本的删除线，斜体等效果"></a>使用普通文本的删除线，斜体等效果</h4><table>
+<thead>
+<tr>
+<th align="left">名字</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Help</td>
+<td align="left"><del>Display the</del> help window.</td>
+</tr>
+<tr>
+<td align="left">Close</td>
+<td align="left"><em>Closes</em> a window</td>
+</tr>
+</tbody></table>
+<h4 id="表格中嵌入图片（链接）"><a href="#表格中嵌入图片（链接）" class="headerlink" title="表格中嵌入图片（链接）"></a>表格中嵌入图片（链接）</h4><p>其实前面介绍图片显示、图片链接的时候为了清晰就是放在在表格中显示的。</p>
+<table>
+<thead>
+<tr>
+<th align="left">图片</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><img src="http://www.baidu.com/img/bdlogo.gif" alt="baidu"><strong>baidu</strong></td>
+<td align="left">百度</td>
+</tr>
+</tbody></table>
+<h2 id="表情"><a href="#表情" class="headerlink" title="表情"></a>表情</h2><p><code>Github</code> 的 <code>Markdown</code> 语法支持添加 <code>emoji</code> 表情，输入不同的符号码（两个冒号包围的字符）可以显示出不同的表情。</p>
+<p>比如 <code>:blush:</code>，可以显示 😊。</p>
+<p>具体每一个表情的符号码，可以查询 <code>GitHub</code> 的官方网页<a href="https://sitoi.cn/go.html?u=aHR0cDovL3d3dy5lbW9qaS1jaGVhdC1zaGVldC5jb20=" target="_blank" rel="noopener">http://www.emoji-cheat-sheet.com</a>。</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>可以使用Typora和VsCode进行编辑，可以实现实时预览</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -68,6 +451,13 @@
             document.body.appendChild(img);
           });
       </script>]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+        <tag>规范</tag>
+      </tags>
   </entry>
   <entry>
     <title>test-x</title>
@@ -208,9 +598,303 @@
       </script>]]></content>
   </entry>
   <entry>
-    <title>test3</title>
-    <url>/2020/02/08/test3/</url>
-    <content><![CDATA[<script>
+    <title>Vim常用操作</title>
+    <url>/2020/02/08/vim-chang-yong-cao-zuo/</url>
+    <content><![CDATA[<h3 id="关于Vim"><a href="#关于Vim" class="headerlink" title="关于Vim"></a>关于Vim</h3><p>来自<a href="https://baike.baidu.com/item/VIM/60410?fr=aladdin" target="_blank" rel="noopener">百度百科</a></p>
+<p>Vim是一个类似于<a href="https://baike.baidu.com/item/Vi/8987313" target="_blank" rel="noopener">Vi</a>的著名的功能强大、高度可定制的<a href="https://baike.baidu.com/item/" target="_blank" rel="noopener">文本编辑器</a>，在Vi的基础上改进和增加了很多特性。VIM是<a href="https://baike.baidu.com/item/" target="_blank" rel="noopener">自由软件</a>。Vim普遍被推崇为类<a href="https://baike.baidu.com/item/Vi" target="_blank" rel="noopener">Vi编辑器</a>中最好的一个，事实上真正的劲敌来自Emacs的不同变体。1999 年<a href="https://baike.baidu.com/item/Emacs" target="_blank" rel="noopener">Emacs</a>被选为Linuxworld文本编辑分类的优胜者，Vim屈居第二。但在2000年2月Vim赢得了Slashdot Beanie的最佳<a href="https://baike.baidu.com/item/" target="_blank" rel="noopener">开放源代码</a>文本编辑器大奖，又将Emacs推至二线， 总的来看， Vim和Emacs在文本编辑方面都是非常优秀的。</p>
+<p><strong>特点：</strong></p>
+<ul>
+<li>持久的多级撤消树</li>
+<li>扩展插件系统</li>
+<li>支持数百种编程语言和文件格式</li>
+<li>强大的搜索和替换</li>
+<li>多工具集成</li>
+</ul>
+<h3 id="工作模式"><a href="#工作模式" class="headerlink" title="工作模式"></a>工作模式</h3><p><strong>命令模式</strong></p>
+<p>用户刚刚启动 vi/vim，便进入了命令模式。</p>
+<p>此状态下敲击键盘动作会被Vim识别为命令，而非输入字符。比如我们此时按下i，并不会输入一个字符，i被当作了一个命令。</p>
+<p><strong>输入模式</strong></p>
+<p>在命令模式下按下i就进入了输入模式。</p>
+<p>在输入模式中，可以使用以下按键：</p>
+<table>
+<thead>
+<tr>
+<th><strong>快捷键</strong></th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>字符按键以及Shift组合</td>
+<td>输入字符</td>
+</tr>
+<tr>
+<td>ENTER</td>
+<td>回车键，换行</td>
+</tr>
+<tr>
+<td>BACK SPACE</td>
+<td>退格键，删除光标前一个字符</td>
+</tr>
+<tr>
+<td>DEL</td>
+<td>删除键，删除光标后一个字符</td>
+</tr>
+<tr>
+<td>方向键</td>
+<td>在文本中移动光标</td>
+</tr>
+<tr>
+<td>HOME/END</td>
+<td>移动光标到行首/行尾</td>
+</tr>
+<tr>
+<td>Page Up/Page Down</td>
+<td>上/下翻页</td>
+</tr>
+<tr>
+<td>Insert</td>
+<td>切换光标为输入/替换模式，光标将变成竖线/下划线</td>
+</tr>
+<tr>
+<td>ESC</td>
+<td>退出输入模式，切换到命令模式</td>
+</tr>
+</tbody></table>
+<p><strong>底线命令模式</strong></p>
+<p>在命令模式下按下:（英文冒号）就进入了底线命令模式。</p>
+<p>底线命令模式可以输入单个或多个字符的命令，可用的命令非常多。</p>
+<p>在底线命令模式中，基本的命令有（已经省略了冒号）：</p>
+<ul>
+<li>q 退出程序</li>
+<li>w 保存文件</li>
+</ul>
+<p>按ESC键可随时退出底线命令模式。</p>
+<h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><p><strong>移动光标</strong></p>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>h 或 向左箭头键(←)</td>
+<td>光标向左移动一个字符</td>
+</tr>
+<tr>
+<td>j 或 向下箭头键(↓)</td>
+<td>光标向下移动一个字符</td>
+</tr>
+<tr>
+<td>k 或 向上箭头键(↑)</td>
+<td>光标向上移动一个字符</td>
+</tr>
+<tr>
+<td>l 或 向右箭头键(→)</td>
+<td>光标向右移动一个字符</td>
+</tr>
+</tbody></table>
+<p>如果想要进行多次移动的话，例如向下移动 30 行，可以使用 “30j” 或 “30↓” 的组合按键， 亦即加上想要进行的次数(数字)后，按下动作即可！</p>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[Ctrl] + [f]</td>
+<td>屏幕『向下』移动一页，相当于 [Page Down]按键 (常用)</td>
+</tr>
+<tr>
+<td>[Ctrl] + [b]</td>
+<td>屏幕『向上』移动一页，相当于 [Page Up] 按键 (常用)</td>
+</tr>
+<tr>
+<td>[Ctrl] + [d]</td>
+<td>屏幕『向下』移动半页</td>
+</tr>
+<tr>
+<td>[Ctrl] + [u]</td>
+<td>屏幕『向上』移动半页</td>
+</tr>
+<tr>
+<td>+</td>
+<td>光标移动到非空格符的下一行</td>
+</tr>
+<tr>
+<td>-</td>
+<td>光标移动到非空格符的上一行</td>
+</tr>
+<tr>
+<td>n<space></space></td>
+<td>那个 n 表示『数字』，例如 20 。按下数字后再按空格键，光标会向右移动这一行的 n 个字符。例如 20<space> 则光标会向后面移动 20 个字符距离。</space></td>
+</tr>
+<tr>
+<td>0 或功能键[Home]</td>
+<td>这是数字『 0 』：移动到这一行的最前面字符处 (常用)</td>
+</tr>
+<tr>
+<td>$ 或功能键[End]</td>
+<td>移动到这一行的最后面字符处(常用)</td>
+</tr>
+<tr>
+<td>H</td>
+<td>光标移动到这个屏幕的最上方那一行的第一个字符</td>
+</tr>
+<tr>
+<td>M</td>
+<td>光标移动到这个屏幕的中央那一行的第一个字符</td>
+</tr>
+<tr>
+<td>L</td>
+<td>光标移动到这个屏幕的最下方那一行的第一个字符</td>
+</tr>
+<tr>
+<td>G</td>
+<td>移动到这个档案的最后一行(常用)</td>
+</tr>
+<tr>
+<td>nG</td>
+<td>n 为数字。移动到这个档案的第 n 行。例如 20G 则会移动到这个档案的第 20 行(可配合 :set nu)</td>
+</tr>
+<tr>
+<td>gg</td>
+<td>移动到这个档案的第一行，相当于 1G 啊！ (常用)</td>
+</tr>
+<tr>
+<td>n<enter></enter></td>
+<td>n 为数字。光标向下移动 n 行(常用)</td>
+</tr>
+</tbody></table>
+<p><strong>搜索替换</strong></p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>响应</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>/word</td>
+<td>向光标之下寻找一个名称为 word 的字符串。例如要在档案内搜寻 vbird 这个字符串，就输入 /vbird 即可！</td>
+</tr>
+<tr>
+<td>?word</td>
+<td>向光标之上寻找一个字符串名称为 word 的字符串。</td>
+</tr>
+<tr>
+<td>n</td>
+<td>这个 n 是英文按键。代表重复前一个搜寻的动作。举例来说， 如果刚刚我们执行 /vbird 去向下搜寻 vbird 这个字符串，则按下 n 后，会向下继续搜寻下一个名称为 vbird 的字符串。如果是执行 ?vbird 的话，那么按下 n 则会向上继续搜寻名称为 vbird 的字符串！</td>
+</tr>
+<tr>
+<td>N</td>
+<td>这个 N 是英文按键。与 n 刚好相反，为『反向』进行前一个搜寻动作。 例如 /vbird 后，按下 N 则表示『向上』搜寻 vbird 。</td>
+</tr>
+<tr>
+<td>:n1,n2s/word1/word2/g</td>
+<td>n1 与 n2 为数字。在第 n1 与 n2 行之间寻找 word1 这个字符串，并将该字符串取代为 word2 ！举例来说，在 100 到 200 行之间搜寻 vbird 并取代为 VBIRD 则：<br>『:100,200s/vbird/VBIRD/g』。(常用)</td>
+</tr>
+<tr>
+<td><strong>:1,$s/word1/word2/g</strong> 或 <strong>:%s/word1/word2/g</strong></td>
+<td>从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！(常用)</td>
+</tr>
+<tr>
+<td><strong>:1,$s/word1/word2/gc</strong> 或 <strong>:%s/word1/word2/gc</strong></td>
+<td>从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！且在取代前显示提示字符给用户确认 (confirm) 是否需要取代！(常用)</td>
+</tr>
+</tbody></table>
+<p><strong>删除、复制与贴上</strong></p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>x, X</td>
+<td>在一行字当中，x 为向后删除一个字符 (相当于 [del] 按键)， X 为向前删除一个字符(相当于 [backspace] 亦即是退格键) (常用)</td>
+</tr>
+<tr>
+<td>nx</td>
+<td>n 为数字，连续向后删除 n 个字符。举例来说，我要连续删除 10 个字符， 『10x』。</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>删除游标所在的那一整行(常用)</td>
+</tr>
+<tr>
+<td>ndd</td>
+<td>n 为数字。删除光标所在的向下 n 行，例如 20dd 则是删除 20 行 (常用)</td>
+</tr>
+<tr>
+<td>d1G</td>
+<td>删除光标所在到第一行的所有数据</td>
+</tr>
+<tr>
+<td>dG</td>
+<td>删除光标所在到最后一行的所有数据</td>
+</tr>
+<tr>
+<td>d$</td>
+<td>删除游标所在处，到该行的最后一个字符</td>
+</tr>
+<tr>
+<td>d0</td>
+<td>那个是数字的 0 ，删除游标所在处，到该行的最前面一个字符</td>
+</tr>
+<tr>
+<td>yy</td>
+<td>复制游标所在的那一行(常用)</td>
+</tr>
+<tr>
+<td>nyy</td>
+<td>n 为数字。复制光标所在的向下 n 行，例如 20yy 则是复制 20 行(常用)</td>
+</tr>
+<tr>
+<td>y1G</td>
+<td>复制游标所在行到第一行的所有数据</td>
+</tr>
+<tr>
+<td>yG</td>
+<td>复制游标所在行到最后一行的所有数据</td>
+</tr>
+<tr>
+<td>y0</td>
+<td>复制光标所在的那个字符到该行行首的所有数据</td>
+</tr>
+<tr>
+<td>y$</td>
+<td>复制光标所在的那个字符到该行行尾的所有数据</td>
+</tr>
+<tr>
+<td>p, P</td>
+<td>p 为将已复制的数据在光标下一行贴上，P 则为贴在游标上一行！ 举例来说，我目前光标在第 20 行，且已经复制了 10 行数据。则按下 p 后， 那 10 行数据会贴在原本的 20 行之后，亦即由 21 行开始贴。但如果是按下 P 呢？ 那么原本的第 20 行会被推到变成 30 行。 (常用)</td>
+</tr>
+<tr>
+<td>J</td>
+<td>将光标所在行与下一行的数据结合成同一行</td>
+</tr>
+<tr>
+<td>c</td>
+<td>重复删除多个数据，例如向下删除 10 行，[ 10cj ]</td>
+</tr>
+<tr>
+<td>u</td>
+<td>复原前一个动作。(常用)</td>
+</tr>
+<tr>
+<td>[Ctrl]+r</td>
+<td>重做上一个动作。(常用)</td>
+</tr>
+<tr>
+<td>.</td>
+<td>小数点,意思是重复前一个动作的意思。 如果想要重复删除、重复贴上等等动作，按下小数点『.』就好了！</td>
+</tr>
+</tbody></table>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>Vim的操作十分，但我在日常使用中却仅仅用到了一点点，还是不够了解啊，在这里做一个总结，多使用，多查询.</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -229,8 +913,11 @@
             document.body.appendChild(img);
           });
       </script>]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
       <tags>
-        <tag>测试</tag>
+        <tag>Vim</tag>
       </tags>
   </entry>
   <entry>
@@ -257,9 +944,99 @@
       </script>]]></content>
   </entry>
   <entry>
-    <title>Test测试</title>
-    <url>/2020/02/06/test-ce-shi/</url>
-    <content><![CDATA[<script>
+    <title>Maven学习</title>
+    <url>/2020/02/06/maven-xue-xi/</url>
+    <content><![CDATA[<h3 id="Maven学习及环境搭建"><a href="#Maven学习及环境搭建" class="headerlink" title="Maven学习及环境搭建"></a>Maven学习及环境搭建</h3><h3 id="Maven是什么"><a href="#Maven是什么" class="headerlink" title="Maven是什么"></a>Maven是什么</h3><ol>
+<li>Maven是基于项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的项目管理工具软件。</li>
+<li>Maven 除了以程序构建能力为特色之外，还提供高级项目管理工具。由于 Maven 的缺省构建规则有较高的可重用性，所以常常用两三行 Maven 构建脚本就可以构建简单的项目。由于 Maven 的面向项目的方法，许多 Apache Jakarta 项目发文时使用 Maven，而且公司项目采用 Maven 的比例在持续增长。</li>
+<li>Maven这个单词来自于意第绪语（犹太语），意为知识的积累，最初在Jakata Turbine项目中用来简化构建过程。当时有一些项目（有各自Ant build文件），仅有细微的差别，而JAR文件都由CVS来维护。于是希望有一种标准化的方式构建项目，一个清晰的方式定义项目的组成，一个容易的方式发布项目的信息，以及一种简单的方式在多个项目中共享JARs。</li>
+</ol>
+<h3 id="Maven环境搭建"><a href="#Maven环境搭建" class="headerlink" title="Maven环境搭建"></a>Maven环境搭建</h3><p>参考：<a href="https://blog.csdn.net/qq_37904780/article/details/81216179" target="_blank" rel="noopener">Maven环境搭建</a></p>
+<h3 id="Maven目录结构"><a href="#Maven目录结构" class="headerlink" title="Maven目录结构"></a>Maven目录结构</h3><pre><code>src
+
+​        -main
+
+​                -java
+
+​                        -package
+
+​        -test
+
+​                -java
+
+​                        -package</code></pre><p>一般目录会自动创建，如果没有：</p>
+<ol>
+<li>在<code>src</code>目录下分别创建子目录<code>main</code>和<code>test</code></li>
+<li>在<code>main</code>和<code>test</code>目录下各创建一个子目录<code>java</code></li>
+</ol>
+<h3 id="测试一个HelloMaven"><a href="#测试一个HelloMaven" class="headerlink" title="测试一个HelloMaven"></a>测试一个HelloMaven</h3><p>在<code>main</code>目录的<code>java</code>目录下创建如下目录并创建<code>HellowWorld.java</code>Java类文件</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> String <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">"Hello World!"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>在<code>test</code>目录的<code>java</code>目录下创建如下目录并创建<code>testHello.java</code>Java类文件</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> org<span class="token punctuation">.</span>junit<span class="token punctuation">.</span>*<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>junit<span class="token punctuation">.</span>Assert<span class="token punctuation">.</span>*<span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HellOWorldTest</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Assert<span class="token punctuation">.</span><span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token string">"Hello World!"</span><span class="token punctuation">,</span><span class="token keyword">new</span> <span class="token class-name">HelloWorld</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>在<code>src</code>根目录下创建<code>pom.xml</code>编写代码如下</p>
+<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>project</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://maven.apache.org/POM/4.0.0<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span>  
+    <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://maven.apache.org/POM/4.0.0http://maven.apache.org/xsd/maven-4.0.0.xsd<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>  
+
+    <span class="token comment" spellcheck="true">&lt;!-- 模型版本。maven2.0必须是这样写，现在是maven2唯一支持的版本 --></span>  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>modelVersion</span><span class="token punctuation">></span></span>4.0.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>modelVersion</span><span class="token punctuation">></span></span>  
+
+    <span class="token comment" spellcheck="true">&lt;!-- 公司或者组织的唯一标志，并且配置时生成的路径也是由此生成， 如com.winner.trade，maven会将该项目打成的jar包放本地路径：/com/winner/trade --></span>  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.study<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>  
+
+    <span class="token comment" spellcheck="true">&lt;!-- 本项目的唯一ID，一个groupId下面可能多个项目，就是靠artifactId来区分的 --></span>  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>study-model<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>  
+
+    <span class="token comment" spellcheck="true">&lt;!-- 本项目目前所处的版本号 --></span>  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.0.0-SNAPSHOT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>  
+
+    <span class="token comment" spellcheck="true">&lt;!-- 打包的机制，如pom,jar, maven-plugin, ejb, war, ear, rar, par，默认为jar --></span>  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>packaging</span><span class="token punctuation">></span></span>jar<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>packaging</span><span class="token punctuation">></span></span>  
+
+    <span class="token comment" spellcheck="true">&lt;!-- 定义本项目的依赖关系 --></span>  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span>  
+
+        <span class="token comment" spellcheck="true">&lt;!-- 每个dependency都对应这一个jar包 --></span>  
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>  
+            <span class="token comment" spellcheck="true">&lt;!--一般情况下，maven是通过groupId、artifactId、version这三个元素值（俗称坐标）来检索该构件， 然后引入你的工程。如果别人想引用你现在开发的这个项目（前提是已开发完毕并发布到了远程仓库），--></span>   
+            <span class="token comment" spellcheck="true">&lt;!--就需要在他的pom文件中新建一个dependency节点，将本项目的groupId、artifactId、version写入， maven就会把你上传的jar包下载到他的本地 --></span>  
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>junit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>  
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>junit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>  
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>4.10<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">></span></span>  
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>project</span><span class="token punctuation">></span></span></code></pre>
+<ul>
+<li>打开命令提示行，进入到HelloWorld项目的根目录中输入<code>mvn compile</code></li>
+</ul>
+<blockquote>
+<p>对该项目进行编译（如果是第一次运行Maven会在运行之前下载很多第三方的插件和Maven所依赖的jar）.</p>
+</blockquote>
+<ul>
+<li>运行测试例，输入<code>mvn test</code>:</li>
+</ul>
+<blockquote>
+<p>它默认生成了一个<code>target</code>文件夹，打开它，在<code>classes</code>目录下存放着生成的字节码文件;<code>surefire-reports</code>下存放着生成的测试报告；</p>
+</blockquote>
+<ul>
+<li>下面再去命令行键入<code>mvn package</code>：</li>
+</ul>
+<blockquote>
+<p>目录下生成了一个<code>study-model-1.0.0-SNAPSHOT.jar</code>的jar包</p>
+</blockquote>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>之前在学习SSM的时候对Maven有过了解，但是还有点陌生，这里是对纯Maven进行学习，了解了大体的步骤及内容.</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -278,6 +1055,12 @@
             document.body.appendChild(img);
           });
       </script>]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>Maven</tag>
+      </tags>
   </entry>
   <entry>
     <title>Git中.gitignore的配置</title>
@@ -2501,7 +3284,7 @@ whereStudentx<span class="token punctuation">.</span>Sno<span class="token opera
           });
       </script>]]></content>
       <categories>
-        <category>随笔</category>
+        <category>git</category>
       </categories>
       <tags>
         <tag>git</tag>
@@ -2571,7 +3354,7 @@ whereStudentx<span class="token punctuation">.</span>Sno<span class="token opera
           });
       </script>]]></content>
       <categories>
-        <category>随笔</category>
+        <category>git</category>
       </categories>
       <tags>
         <tag>git</tag>
@@ -3017,7 +3800,7 @@ ps<span class="token punctuation">.</span>setInt<span class="token punctuation">
           });
       </script>]]></content>
       <categories>
-        <category>随笔</category>
+        <category>git</category>
       </categories>
       <tags>
         <tag>git</tag>
