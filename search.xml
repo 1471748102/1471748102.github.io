@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>kxkxk</title>
+    <url>/2020/02/18/kxkxk/</url>
+    <content><![CDATA[<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+  </entry>
+  <entry>
     <title>ktxo</title>
     <url>/2020/02/17/ktxo/</url>
     <content><![CDATA[<script>
@@ -4123,7 +4146,7 @@ ps<span class="token punctuation">.</span>setInt<span class="token punctuation">
           });
       </script>]]></content>
       <categories>
-        <category>前端</category>
+        <category>图片</category>
       </categories>
       <tags>
         <tag>主题</tag>
