@@ -4,11 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="test4, Hzw~">
-    <meta name="description" content="
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return">
+    <meta name="keywords" content="Java集合中List,Set，Map, Hzw~">
+    <meta name="description" content="简介List , Set, Map都是接口，前两个继承至Collection接口，Map为独立接口
+区别List 有序,可重复ArrayList优点: 底层数据结构是数组，查询快，增删慢。缺点: 线程不安全，效率高Vector优点: 底层数">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>test4 | Hzw~</title>
+    <title>Java集合中List,Set，Map | Hzw~</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7/libs/awesome/css/all.css">
@@ -223,12 +221,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/50.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">test4</h1>
+                    <h1 class="description center-align post-title">Java集合中List,Set，Map</h1>
                 </div>
             </div>
         </div>
@@ -343,12 +341,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/list-set-map/">
+                                <span class="chip bg-color">list-set-map</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Java/" class="post-category">
+                                Java
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -366,7 +377,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    463
                 </div>
                 
 
@@ -379,7 +390,48 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>List , Set, Map都是接口，前两个继承至Collection接口，Map为独立接口</p>
+<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><h3 id="List-有序-可重复"><a href="#List-有序-可重复" class="headerlink" title="List 有序,可重复"></a>List 有序,可重复</h3><p><strong>ArrayList</strong><br>优点: 底层数据结构是数组，查询快，增删慢。<br>缺点: 线程不安全，效率高<br><strong>Vector</strong><br>优点: 底层数据结构是数组，查询快，增删慢。<br>缺点: 线程安全，效率低<br><strong>LinkedList</strong><br>优点: 底层数据结构是链表，查询慢，增删快。<br>缺点: 线程不安全，效率高</p>
+<h3 id="Set-无序-唯一"><a href="#Set-无序-唯一" class="headerlink" title="Set 无序,唯一"></a>Set 无序,唯一</h3><p><strong>HashSet</strong><br>底层数据结构是哈希表。(无序,唯一)<br>如何来保证元素唯一性?<br>1.依赖两个方法：hashCode()和equals()</p>
+<p><strong>LinkedHashSet</strong><br>底层数据结构是链表和哈希表。(FIFO插入有序,唯一)<br>1.由链表保证元素有序<br>2.由哈希表保证元素唯一</p>
+<p><strong>TreeSet</strong><br>底层数据结构是红黑树。(唯一，有序)</p>
+<h3 id="Map接口"><a href="#Map接口" class="headerlink" title="Map接口"></a>Map接口</h3><p>Map接口有三个比较重要的实现类，分别是HashMap、TreeMap和HashTable。</p>
+<ul>
+<li>TreeMap是有序的，HashMap和HashTable是无序的。</li>
+<li>Hashtable的方法是同步的(线程安全)，HashMap的方法不是同步的(线程不安全)。这是两者最主要的区别。</li>
+<li>Hashtable不允许null值，HashMap允许null值（key和value都允许）</li>
+</ul>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>针对Collection集合我们使用谁？</p>
+<blockquote>
+<p>唯一吗</p>
+<blockquote>
+<p>是：Set</p>
+<blockquote>
+<p>排序吗？</p>
+<blockquote>
+<p>是：TreeSet或LinkedHashSet<br>否：HashSet<br>如果你知道是Set，但是不知道是哪个Set，就用HashSet。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>唯一吗</p>
+<blockquote>
+<p>否：List</p>
+<blockquote>
+<p>安全性？</p>
+<blockquote>
+<p>是：Vector</p>
+<p>否： ArrayList或者LinkedList</p>
+<blockquote>
+<p>查询多：ArrayList<br>增删多：LinkedList<br>如果你知道是List，但是不知道是哪个List，就用ArrayList。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>如果只知道是Collection集合，但是不知道使用谁，就用ArrayList。<br>如果只知道用集合，就用ArrayList。</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -422,7 +474,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://huangzhiwu98.top/2020/02/09/test4/">https://huangzhiwu98.top/2020/02/09/test4/</a>
+                    <a href="https://huangzhiwu98.top/2020/02/09/java-ji-he-zhong-list-set-map/">https://huangzhiwu98.top/2020/02/09/java-ji-he-zhong-list-set-map/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -459,7 +511,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/list-set-map/">
+                                    <span class="chip bg-color">list-set-map</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -627,22 +683,22 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/02/10/test5/">
+                <a href="/2020/02/10/shi-yong-de-zai-xian-wang-zhan/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.6/wallpaper/51.jpg" class="responsive-img" alt="test5">
+                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1.1/feature/9.jpg" class="responsive-img" alt="实用的在线网站">
                         
-                        <span class="card-title">test5</span>
+                        <span class="card-title">实用的在线网站</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            简介一些实用的在线网站
+文档类1. 轻松玩转PDF官网： https://smallpdf.com/cn
+这个网站非常好用，提供了很多的实用功能，如PDF转换Word，PDF转换PPT，PDF编辑，PDF加密，Word转换PDF等等
+2. 
                         
                     </div>
                     <div class="publish-info">
@@ -651,11 +707,23 @@
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            TabEscHzw
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%BD%AC%E8%BD%BD/" class="post-category">
+                                    转载
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">
+                        <span class="chip bg-color">实用工具</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -853,7 +921,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">30.4k</span>&nbsp;字
+                class="white-color">33.8k</span>&nbsp;字
             
             
             

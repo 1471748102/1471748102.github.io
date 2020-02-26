@@ -4,11 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="test-x, Hzw~">
-    <meta name="description" content="
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return">
+    <meta name="keywords" content="GET与POST的区别, Hzw~">
+    <meta name="description" content="简介下午学习的时候，忽然看到了POST和GET这个话题，但是一回忆，好像印象里只有GET传递参数时，会把参数直接暴露在URL上，还有POST提交表单刷新时，会弹出一个框，再次提交请求。所以在这里对这两个方式进行归纳。
+基本区别GET请求在U">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>test-x | Hzw~</title>
+    <title>GET与POST的区别 | Hzw~</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7/libs/awesome/css/all.css">
@@ -223,12 +221,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/34.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.6/wallpaper/65.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">test-x</h1>
+                    <h1 class="description center-align post-title">GET与POST的区别</h1>
                 </div>
             </div>
         </div>
@@ -343,12 +341,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/post%E5%92%8Cget/">
+                                <span class="chip bg-color">post和get</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
+                                随笔
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -366,7 +377,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    712
                 </div>
                 
 
@@ -379,7 +390,30 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>下午学习的时候，忽然看到了POST和GET这个话题，但是一回忆，好像印象里只有GET传递参数时，会把参数直接暴露在URL上，还有POST提交表单刷新时，会弹出一个框，再次提交请求。所以在这里对这两个方式进行归纳。</p>
+<h2 id="基本区别"><a href="#基本区别" class="headerlink" title="基本区别"></a>基本区别</h2><p>GET请求在URL中传送的参数是有长度限制的，而POST没有。</p>
+<p>GET比POST更不安全，因为参数直接暴露在URL上，所以不能用来传递敏感信息。</p>
+<p>GET参数通过URL传递，POST放在Request body中。</p>
+<p>GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。</p>
+<p>GET请求会被浏览器主动cache，而POST不会，除非手动设置。</p>
+<p>GET在浏览器回退时是无害的，而POST会再次提交请求。</p>
+<h2 id="深入"><a href="#深入" class="headerlink" title="深入"></a>深入</h2><p>GET和POST本质上没有区别</p>
+<p>GET和POST是HTTP协议中的两种发送请求的方法。</p>
+<p>HTTP的底层是TCP/IP。所以GET和POST的底层也是TCP/IP，也就是说，GET/POST都是TCP链接。</p>
+<p>这里引用一段话：</p>
+<blockquote>
+<p>TCP就像汽车，我们用TCP来运输数据，它很可靠，从来不会发生丢件少件的现象。</p>
+<p>但是如果路上跑的全是看起来一模一样的汽车，那这个世界看起来是一团混乱，送急件的汽车可能被前面满载货物的汽车拦堵在路上，整个交通系统一定会瘫痪。</p>
+<p>为了避免这种情况发生，交通规则HTTP诞生了。HTTP给汽车运输设定了好几个服务类别，有GET, POST, PUT, DELETE等等，</p>
+<p>HTTP规定，当执行GET请求的时候，要给汽车贴上GET的标签（设置method为GET），而且要求把传送的数据放在车顶上（url中）以方便记录。</p>
+<p>如果是POST请求，就要在车上贴上POST的标签，并把货物放在车厢里。当然，你也可以在GET的时候往车厢内偷偷藏点货物，但是这是很不光彩；也可以在POST的时候在车顶上也放一些数据，让人觉得傻乎乎的。</p>
+<p>HTTP只是个行为准则，而TCP才是GET和POST怎么实现的基本。</p>
+</blockquote>
+<h2 id="其他区别"><a href="#其他区别" class="headerlink" title="其他区别"></a>其他区别</h2><p>GET产生一个TCP数据包；POST产生两个TCP数据包。</p>
+<p>对于GET方式的请求，浏览器会把http header和data一并发送出去。</p>
+<p>而对于POST，浏览器先发送header，浏览器再发送data。</p>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>二者的区别主要体现在参数传递、URL长度、安全性、数据包等方面。</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -422,7 +456,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://huangzhiwu98.top/2020/02/14/test-x/">https://huangzhiwu98.top/2020/02/14/test-x/</a>
+                    <a href="https://huangzhiwu98.top/2020/02/14/post-he-get/">https://huangzhiwu98.top/2020/02/14/post-he-get/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -459,7 +493,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/post%E5%92%8Cget/">
+                                    <span class="chip bg-color">post和get</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -858,7 +896,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">30.4k</span>&nbsp;字
+                class="white-color">33.8k</span>&nbsp;字
             
             
             
