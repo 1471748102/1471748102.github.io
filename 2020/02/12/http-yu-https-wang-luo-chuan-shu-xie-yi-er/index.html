@@ -4,11 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="test6, Hzw~">
-    <meta name="description" content="
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return">
+    <meta name="keywords" content="网络传输协议二, Hzw~">
+    <meta name="description" content="工作流程及其重要性">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>test6 | Hzw~</title>
+    <title>网络传输协议二 | Hzw~</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7/libs/awesome/css/all.css">
@@ -223,12 +220,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.6/wallpaper/52.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.6/wallpaper/51.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">test6</h1>
+                    <h1 class="description center-align post-title">网络传输协议二</h1>
                 </div>
             </div>
         </div>
@@ -343,12 +340,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                                <span class="chip bg-color">网络安全</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
+                                随笔
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -366,7 +376,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    2k
                 </div>
                 
 
@@ -379,7 +389,49 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>承接HTTP与HTTPS网络传输协议一的内容，简述一下其工作流程和安全性，重要性。</p>
+<h2 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h2><p><strong>HTTP</strong> （1）首先客户机与服务器需要建立连接。只要单击某个超级链接，HTTP的工作开始。</p>
+<p>（2）建立连接后，客户机发送一个请求给服务器，请求方式的格式为：统一资源标识符（URL）、协议版本号，后边是MIME信息包括请求修饰符、客户机信息和可能的内容。</p>
+<p>（3）服务器接到请求后，给予相应的响应信息，其格式为一个状态行，包括信息的协议版本号、一个成功或错误的代码，后边是MIME信息包括服务器信息、实体信息和可能的内容。</p>
+<p>（4）客户端接收服务器所返回的信息通过浏览器显示在用户的显示屏上，然后客户机与服务器断开连接。</p>
+<p><strong>HTTPS</strong> （1）Client发起一个HTTPS的请求，Client知道需要连接Server的443（默认）端口。</p>
+<p>（2）Server把事先配置好的公钥证书（public key certificate）返回给客户端。</p>
+<p>（3）Client合法性验证公钥证书。如果验证通过则继续，不通过则显示警告信息。</p>
+<p>（4）Client使用伪随机数生成器生成加密所使用的会话密钥，然后用证书的公钥加密这个会话密钥，发给Server。</p>
+<p>（5）Server使用自己的私钥（private key）解密这个消息，得到会话密钥。至此，Client和Server双方都持有了相同的会话密钥。</p>
+<p>（6）Server使用会话密钥加密“明文内容A”，发送给Client。</p>
+<p>（7）Client使用会话密钥解密响应的密文，得到“明文内容A”。</p>
+<p>（8）Client再次发起HTTPS的请求，使用会话密钥加密请求的“明文内容B”，然后Server使用会话密钥解密密文，得到“明文内容B”。</p>
+<h2 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h2><h3 id="HTTP协议更容易发生流量劫持"><a href="#HTTP协议更容易发生流量劫持" class="headerlink" title="HTTP协议更容易发生流量劫持"></a>HTTP协议更容易发生流量劫持</h3><p>1、<strong>http易致在线应用被劫持（篡改风险）</strong></p>
+<p>网页技术在近些年里有了很大的发展，但其底层协议HTTP始终没有太大的改进，HTTP是一种使用了20 多年古老协议。在HTTP 里，一切都是明文传输的，流量在途中可随心所欲的被控制。而在线使用的WebApp，流量里既有通信数据，又有程序的界面和代码，劫持简直轻而易举。因此，劫持网页流量成了各路黑客们的钟爱，一种可在任意网页发起XSS的入侵方式。</p>
+<p>2、<strong>HTTP 缓存投毒（冒充风险）</strong></p>
+<p>HTTP这种简单的纯文本协议，几乎没有一种签名机制，来验证内容的真实性。即使页面被篡改了，浏览器也完全无法得知，甚至连同注入的脚本也一块缓存起来。但凡具备可执行的资源，都可以通过预加载带毒的版本，将其提前缓存起来。</p>
+<p>3、<strong>公共场合使用http，不登陆也会被劫持</strong></p>
+<p>在自己的设备上，大家都会记住各种账号的登录状态，反正只有自己用，也没什么大不了的。然而，在被劫持的网络里，即使浏览再平常不过的网页，或许一个悄无声息的间谍脚本已暗藏其中，正偷偷访问你那登录着的网页，操控起你的账号了。</p>
+<p>4、<strong>http状态下Cookie 记录或浏览器自动填表单，都会导致账号密码被截获（窃听风险）</strong></p>
+<p>http状态下，cookie记录的都是明文的账号密码，被劫持泄露后，即使数量不多，也能通过社工获取到用户的更多信息，最终导致更严重的泄露。</p>
+<h3 id="网站实现HTTPS访问能有效避免流量劫持"><a href="#网站实现HTTPS访问能有效避免流量劫持" class="headerlink" title="网站实现HTTPS访问能有效避免流量劫持"></a>网站实现HTTPS访问能有效避免流量劫持</h3><p>网站实现Https访问能有效避免流量劫持，但前提是必须用受信任SSL证书。不同于简单的Http代理，HTTPS 服务需要权威CA机构颁发的SSL证书才算有效。自签证书浏览器不认，而且会给予严重的警告提示。而遇到“此网站安全证书存在问题”的警告时，大多用户不明白是什么情况，就点了继续，导致允许了黑客的伪证书，不受信任的HTTPS 流量因此遭到劫持。</p>
+<p>如果重要的账户网站遇到这种情况，无论如何都不该点击继续，否则大门钥匙或许就落入黑客之手。</p>
+<blockquote>
+<p>流量劫持有多种方法，其中一种是DNS劫持。DNS是负责域名解析的服务器，一旦黑客破坏了DNS解析的过程,输入域名后，可能转化为黑客指定的IP地址，用户往往很难看出破绽，但所有的流量都会转向黑客指定的虚假的服务器，黑客不但可以很容易获取各种密码、个人信息等，还可以植入木马病毒，盗窃个人财产。</p>
+</blockquote>
+<h2 id="全站实现Https访问的重要性"><a href="#全站实现Https访问的重要性" class="headerlink" title="全站实现Https访问的重要性"></a>全站实现Https访问的重要性</h2><ul>
+<li><strong>情况一：从http页面跳转访问https页面</strong></li>
+</ul>
+<p>在 PC 端上网如果首先进入的网站是使用不安全的HTTP 协议。那么在该网站的页面里注入XSS，屏蔽跳转到 HTTPS 的页面访问，用HTTP 取而代之，那么用户也就永远无法进入安全站点了。尽管地址栏里没有出现 HTTPS 的字样，但域名看起来也是正确的，大多用户都会认为不是钓鱼网站，因此也就忽视了。</p>
+<p>因此，只要入口页是不安全的，那么之后的页面再安全也无济于事。</p>
+<ul>
+<li><strong>情况二：http页面重定向到https页面</strong></li>
+</ul>
+<p>有一些用户通过输网址访问的，他们输入了http+网址就敲回车进入了。然而，浏览器并不知道这是一个HTTPS 的站点，于是使用默认的 HTTP 去访问。不过这个HTTP 版的页面的确也存在，其唯一功能就是重定向到自己HTTPS 站点上。</p>
+<p>劫持流量的中间人一旦发现有重定向到HTTPS 站点的，于是拦下重定向的命令，自己去获取重定向后的站点内容，然后再回复给用户。于是，用户始终都是在HTTP 站点上访问，自然就可以无限劫持了。</p>
+<p>国外各大知名网站(PayPal,Twitter,Facebook,Gmail,Hotmail等)都通过Always on SSL(全站https)技术措施来保证用户机密信息和交易安全，防止会话攻击和中间人攻击。</p>
+<h2 id="加密算法"><a href="#加密算法" class="headerlink" title="加密算法"></a>加密算法</h2><ol>
+<li>对称加密：即通信双方通过相同的密钥进行信息的加解密。加解密速度快，但是安全性较差，如果其中一方泄露了密钥，那加密过程就会被人破解。</li>
+<li>非对称加密：相比对称加密，它一般有公钥和私钥。公钥负责信息加密，私钥负责信息解密。两把密钥分别由发送双发各自保管，加解密过程需两把密钥共同完成。安全性更高，但同时计算量也比对称加密要大很多。</li>
+<li>对于网络通信过程，在安全的前提下，还是需要保证响应速度。如何每次都进行非对称计算，通信过程势必会受影响。所以，人们希望的安全传输，最终肯定是以对称加密的方式进行。</li>
+</ol>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -422,7 +474,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://huangzhiwu98.top/2020/02/12/test6/">https://huangzhiwu98.top/2020/02/12/test6/</a>
+                    <a href="https://huangzhiwu98.top/2020/02/12/http-yu-https-wang-luo-chuan-shu-xie-yi-er/">https://huangzhiwu98.top/2020/02/12/http-yu-https-wang-luo-chuan-shu-xie-yi-er/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -459,7 +511,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                                    <span class="chip bg-color">网络安全</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -627,22 +683,26 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/02/13/kext/">
+                <a href="/2020/02/13/spring-boot-zhong-mybatis-de-shi-yong-zhi-xml/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.6/wallpaper/66.jpg" class="responsive-img" alt="kext">
+                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/35.jpg" class="responsive-img" alt="Spring Boot中Mybatis的使用-XML">
                         
-                        <span class="card-title">kext</span>
+                        <span class="card-title">Spring Boot中Mybatis的使用-XML</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            Mybatis的两种使用方法：
+1.使用xml的方式
+2.使用注解的方式
+
+在之前写的那个项目里用的都是xml方式，这里先介绍XML方法。
+一：XML方式的整合及增删改查主要步骤：
+添加Mybatis对应的依赖
+在application.p
                         
                     </div>
                     <div class="publish-info">
@@ -651,11 +711,27 @@
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            TabEscHzw
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
+                    </a>
+                    
+                    <a href="/tags/Mybatis/">
+                        <span class="chip bg-color">Mybatis</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -667,22 +743,22 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/11/test5-1/">
+                <a href="/2020/02/11/http-yu-https-wang-luo-chuan-shu-xie-yi-yi/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.6/wallpaper/51.jpg" class="responsive-img" alt="test5">
+                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1.1/feature/23.jpg" class="responsive-img" alt="网络传输协议一">
                         
-                        <span class="card-title">test5</span>
+                        <span class="card-title">网络传输协议一</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            简介我们每天都会打开浏览器搜索信息，
+平时有注意就会发现，地址搜索栏开头一般都是HTTP和HTTPS，这时候好奇的人就会想HTTP和HTTPS会有什么却别呢？
+地址格式HTTP (浏览器情况下显示问号、不安全)
+HTTPS（浏览器展示安全，
                         
                     </div>
                     <div class="publish-info">
@@ -691,11 +767,23 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            TabEscHzw
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
+                                    随笔
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                        <span class="chip bg-color">网络安全</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -844,7 +932,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.8k</span>&nbsp;字
+                class="white-color">38.1k</span>&nbsp;字
             
             
             
