@@ -4,11 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="kop, Hzw~">
-    <meta name="description" content="
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return">
+    <meta name="keywords" content="SpringMVC记录, Hzw~">
+    <meta name="description" content="参考归纳一下，摘取一些常用的内容">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>kop | Hzw~</title>
+    <title>SpringMVC记录 | Hzw~</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7/libs/awesome/css/all.css">
@@ -223,12 +220,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/06.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/46.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">kop</h1>
+                    <h1 class="description center-align post-title">SpringMVC记录</h1>
                 </div>
             </div>
         </div>
@@ -343,12 +340,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/SpringMVC/">
+                                <span class="chip bg-color">SpringMVC</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/SSM%E6%A1%86%E6%9E%B6/" class="post-category">
+                                SSM框架
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -357,7 +367,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-20
+                    2020-02-19
                 </div>
                 
 
@@ -366,7 +376,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    556
                 </div>
                 
 
@@ -379,7 +389,37 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>在回顾之前的SSM项目的时候，发现对流程模糊了好多，开始对SpringMVC，Spring，Mybatis进行总结一下，参考思否，CSDN，以及从图书馆借的SSM+Redis整合这本书。</p>
+<h2 id="什么是SpringMVC"><a href="#什么是SpringMVC" class="headerlink" title="什么是SpringMVC"></a>什么是SpringMVC</h2><p>参考之前的文章<a href="https://huangzhiwu98.top/2020/02/18/ssm-zheng-he-jian-jie/">Spring整合</a>,</p>
+<p>SpringMVC是Spring家族的一员，Spring是将现在开发中流行的组件进行组合而成的一个框架！它用在<strong>基于MVC的表现层开发，类似于struts2框架</strong></p>
+<h2 id="为什么用SpringMVC"><a href="#为什么用SpringMVC" class="headerlink" title="为什么用SpringMVC"></a>为什么用SpringMVC</h2><p>我们在之前已经学过了Struts2这么一个基于MVC的框架….那么我们已经学会了Struts2，为啥要要学习SpringMVC呢？？？</p>
+<p>下面我们来看一下Struts2不足之处：</p>
+<ul>
+<li>有漏洞【详细可以去搜索】</li>
+<li>运行速度较慢【比SpringMVC要慢】</li>
+<li>配置的内容较多【需要使用Struts.xml文件】</li>
+<li>比较重量级</li>
+</ul>
+<p>基于这么一些原因，并且业内现在SpringMVC已经逐渐把Struts2给替代了…因此我们<strong>学习SpringMVC一方面能够让我们跟上业界的潮流框架，一方面SpringMVC确实是非常好用</strong>！</p>
+<p>可以这么说，<strong>Struts2能做的东西，SpringMVC也能够做</strong>….</p>
+<h2 id="Struts2的工作流程"><a href="#Struts2的工作流程" class="headerlink" title="Struts2的工作流程"></a>Struts2的工作流程</h2><ul>
+<li>Struts2接收到request请求</li>
+<li>将请求转向我们的过滤分批器进行过滤</li>
+<li>读取Struts2对应的配置文件</li>
+<li>经过默认的拦截器之后创建对应的Action【多例】</li>
+<li>执行完业务方法就返回给response对象</li>
+</ul>
+<h2 id="SpringMVC工作流程"><a href="#SpringMVC工作流程" class="headerlink" title="SpringMVC工作流程"></a>SpringMVC工作流程</h2><ul>
+<li>用户发送请求</li>
+<li>请求交由核心控制器处理</li>
+<li>核心控制器找到映射器，映射器看看请求路径是什么</li>
+<li>核心控制器再找到适配器，看看有哪些类实现了Controller接口或者对应的bean对象</li>
+<li>将带过来的数据进行转换，格式化等等操作</li>
+<li>找到我们的控制器Action，处理完业务之后返回一个ModelAndView对象</li>
+<li>最后通过视图解析器来对ModelAndView进行解析</li>
+<li>跳转到对应的JSP/html页面</li>
+</ul>
+<h2 id="未完待续…"><a href="#未完待续…" class="headerlink" title="未完待续…"></a>未完待续…</h2><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -422,7 +462,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://huangzhiwu98.top/2020/02/20/kop/">https://huangzhiwu98.top/2020/02/20/kop/</a>
+                    <a href="https://huangzhiwu98.top/2020/02/19/springmvc-ji-lu/">https://huangzhiwu98.top/2020/02/19/springmvc-ji-lu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -459,7 +499,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/SpringMVC/">
+                                    <span class="chip bg-color">SpringMVC</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -627,35 +671,44 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/02/21/tesooo/">
+                <a href="/2020/02/20/spring-ji-lu/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/43.jpg" class="responsive-img" alt="tesooo">
+                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.6/wallpaper/58.jpg" class="responsive-img" alt="Spring记录">
                         
-                        <span class="card-title">tesooo</span>
+                        <span class="card-title">Spring记录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            参考归纳一下，摘取一些常用的内容
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-21
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-20
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            TabEscHzw
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/SSM%E6%A1%86%E6%9E%B6/" class="post-category">
+                                    SSM框架
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -667,35 +720,44 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/19/asd/">
+                <a href="/2020/02/18/ssm-zheng-he-jian-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1.1/feature/6.jpg" class="responsive-img" alt="asd">
+                        <img src="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/13.jpg" class="responsive-img" alt="SSM整合简介">
                         
-                        <span class="card-title">asd</span>
+                        <span class="card-title">SSM整合简介</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            简介在大学的时候，学习了Struts2的知识，但是发现企业里好像对它不重视，快被淘汰了，SpringMVC更加受欢迎，而且SpringMVC和Spring更加契合。另外，MyBatis也可以替换Hibernate，正因为MyBatis的半自
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-18
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            TabEscHzw
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/SSM%E6%A1%86%E6%9E%B6/" class="post-category">
+                                    SSM框架
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/SSM/">
+                        <span class="chip bg-color">SSM</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -844,7 +906,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">39.7k</span>&nbsp;字
+                class="white-color">44.5k</span>&nbsp;字
             
             
             
