@@ -4,11 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="kxkxk, Hzw~">
-    <meta name="description" content="
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return">
+    <meta name="keywords" content="SSM整合简介, Hzw~">
+    <meta name="description" content="简介在大学的时候，学习了Struts2的知识，但是发现企业里好像对它不重视，快被淘汰了，SpringMVC更加受欢迎，而且SpringMVC和Spring更加契合。另外，MyBatis也可以替换Hibernate，正因为MyBatis的半自">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>kxkxk | Hzw~</title>
+    <title>SSM整合简介 | Hzw~</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7/libs/awesome/css/all.css">
@@ -223,12 +220,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.1.1/feature/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/1471748102/cdn@1.7.3/wallpaper/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">kxkxk</h1>
+                    <h1 class="description center-align post-title">SSM整合简介</h1>
                 </div>
             </div>
         </div>
@@ -343,12 +340,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/SSM%E6%95%B4%E5%90%88/">
+                                <span class="chip bg-color">SSM整合</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Java/" class="post-category">
+                                Java
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -366,7 +376,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    1.2k
                 </div>
                 
 
@@ -379,7 +389,108 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>在大学的时候，学习了Struts2的知识，但是发现企业里好像对它不重视，快被淘汰了，SpringMVC更加受欢迎，而且SpringMVC和Spring更加契合。另外，MyBatis也可以替换Hibernate，正因为MyBatis的半自动特点，这会让有数据库经验的程序猿能开发出高效率的SQL语句（虽然我不是），而且XML配置管理起来也非常方便。</p>
+<h3 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h3><p><strong>SpringMVC</strong>：它用于web层，相当于controller（等价于传统的servlet和struts的action），用来处理用户请求。举个例子，用户在地址栏输入http://网站域名/login，那么springmvc就会拦截到这个请求，并且调用controller层中相应的方法，（中间可能包含验证用户名和密码的业务逻辑，以及查询数据库操作，但这些都不是springmvc的职责），最终把结果返回给用户，并且返回相应的页面（当然也可以只返回json/xml等格式数据）。springmvc就是做前面和后面过程的活，与用户打交道！！</p>
+<h3 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h3><p><strong>Spring</strong>：太强大了，以至于我无法用一个词或一句话来概括它。但与我们平时开发接触最多的估计就是IOC容器，它可以装载bean（也就是我们java中的类，当然也包括service dao里面的），有了这个机制，我们就不用在每次使用这个类的时候为它初始化，很少看到关键字new。另外spring的aop，事务管理等等都是我们经常用到的。</p>
+<h3 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h3><p><strong>MyBatis</strong>：如果你问我它跟鼎鼎大名的Hibernate有什么区别？第一，它能自由控制sql，这会让有数据库经验的人（当然不是说我）编写的代码能搞提升数据库访问的效率。第二，它可以使用xml的方式来组织管理我们的sql，因为一般程序出错很多情况下是sql出错，别人接手代码后能快速找到出错地方，甚至可以优化原来写的sql。</p>
+<h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><table>
+<thead>
+<tr>
+<th>文件名</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>src</td>
+<td>根目录，没什么好说的，下面有main和test。</td>
+</tr>
+<tr>
+<td>-main</td>
+<td>主要目录，可以放java代码和一些资源文件。</td>
+</tr>
+<tr>
+<td>–java</td>
+<td>存放我们的java代码，这个文件夹要使用Build Path -&gt; Use as Source Folder，这样看包结构会方便很多，新建的包就相当于在这里新建文件夹咯。</td>
+</tr>
+<tr>
+<td>–resource</td>
+<td>存放资源文件，譬如各种的spring，mybatis，log配置文件。</td>
+</tr>
+<tr>
+<td>—mapper</td>
+<td>存放dao中每个方法对应的sql，在这里配置，无需写daoImpl。</td>
+</tr>
+<tr>
+<td>—spring</td>
+<td>这里当然是存放spring相关的配置文件，有dao service web三层。</td>
+</tr>
+<tr>
+<td>—sql</td>
+<td>其实这个可以没有，但是为了项目完整性还是加上吧。</td>
+</tr>
+<tr>
+<td>—webapp</td>
+<td>这个貌似是最熟悉的目录了，用来存放我们前端的静态资源，如jsp js css。</td>
+</tr>
+<tr>
+<td>—resources</td>
+<td>这里的资源是指项目的静态资源，如js css images等。</td>
+</tr>
+<tr>
+<td>—WEB-INF</td>
+<td>很重要的一个目录，外部浏览器无法访问，只有羡慕内部才能访问，可以把jsp放在这里，另外就是web.xml了。</td>
+</tr>
+<tr>
+<td>-test</td>
+<td>这里是测试分支。</td>
+</tr>
+<tr>
+<td>–java</td>
+<td>测试java代码，应遵循包名相同的原则，这个文件夹同样要使用Build Path -&gt; Use as Source Folder，这样看包结构会方便很多。</td>
+</tr>
+<tr>
+<td>–resources</td>
+<td>没什么好说的，好像也很少用到，但这个是maven的规范。</td>
+</tr>
+</tbody></table>
+<h2 id="包"><a href="#包" class="headerlink" title="包"></a>包</h2><p>新建好几个必要的包，理解一下每个包的作用，顺便理清一下后台的思路</p>
+<table>
+<thead>
+<tr>
+<th>包名</th>
+<th>名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>dao</td>
+<td>数据访问层（接口）</td>
+<td>与数据打交道，可以是数据库操作，也可以是文件读写操作，甚至是redis缓存操作，总之与数据操作有关的都放在这里，也有人叫做dal或者数据持久层都差不多意思。为什么没有daoImpl，因为我们用的是mybatis，所以可以直接在配置文件中实现接口的每个方法。</td>
+</tr>
+<tr>
+<td>entity</td>
+<td>实体类</td>
+<td>一般与数据库的表相对应，封装dao层取出来的数据为一个对象，也就是我们常说的pojo，一般只在dao层与service层之间传输。</td>
+</tr>
+<tr>
+<td>service</td>
+<td>业务逻辑（接口）</td>
+<td>写我们的业务逻辑，也有人叫bll，在设计业务接口时候应该站在“使用者”的角度。</td>
+</tr>
+<tr>
+<td>serviceImpl</td>
+<td>业务逻辑（实现）</td>
+<td>实现我们业务接口，一般事务控制是写在这里，没什么好说的。</td>
+</tr>
+<tr>
+<td>web</td>
+<td>控制层</td>
+<td>springmvc就是在这里发挥作用的，一般人叫做controller控制器，相当于struts中的action。</td>
+</tr>
+</tbody></table>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>最后，代码就不往这里贴了，<a href="https://github.com/1471748102" target="_blank" rel="noopener">源码地址</a></p>
+<p>还是要多写项目多练习</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -422,7 +533,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://huangzhiwu98.top/2020/02/18/kxkxk/">https://huangzhiwu98.top/2020/02/18/kxkxk/</a>
+                    <a href="https://huangzhiwu98.top/2020/02/18/ssm-zheng-he-jian-jie/">https://huangzhiwu98.top/2020/02/18/ssm-zheng-he-jian-jie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -459,7 +570,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/SSM%E6%95%B4%E5%90%88/">
+                                    <span class="chip bg-color">SSM整合</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -844,7 +959,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">38.5k</span>&nbsp;字
+                class="white-color">39.7k</span>&nbsp;字
             
             
             
